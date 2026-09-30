@@ -49,8 +49,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <html className={`${primary_font.variable} ${secondary_font.variable}`} lang="en" suppressHydrationWarning>
       <head>
         <InitTheme />
-        <link href="/favicon.ico" rel="icon" sizes="32x32" />
-        <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+        <link href="/favicon.ico" rel="icon" sizes="any" />
+        <link href="/icon-32.png" rel="icon" type="image/png" sizes="32x32" />
+        <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
       </head>
       <body>
         <ErrorBoundary>
