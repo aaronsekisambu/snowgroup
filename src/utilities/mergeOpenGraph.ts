@@ -1,16 +1,26 @@
 import type { Metadata } from 'next'
 import { getServerSideURL } from './getURL'
 
+// What link previews (WhatsApp, Facebook, LinkedIn, Google) show when a page sets nothing more specific
+export const SITE_NAME = 'Snow Holdings Limited'
+export const SITE_DESCRIPTION =
+  'Snow Holdings Limited is a Ugandan construction and building materials company. We build homes, commercial and public projects, and supply concrete blocks, pavers and materials. From Vision to Value.'
+export const SITE_OG_IMAGE = '/snow-og.jpg'
+
 const defaultOpenGraph: Metadata['openGraph'] = {
   type: 'website',
-  description: 'Payload and Next.js creative portfolio and agency website template',
+  description: SITE_DESCRIPTION,
   images: [
     {
-      url: `${getServerSideURL()}/website-template-OG.webp`,
+      url: `${getServerSideURL()}${SITE_OG_IMAGE}`,
+      width: 1200,
+      height: 630,
+      alt: `${SITE_NAME} — From Vision to Value`,
     },
   ],
-  siteName: 'Lumex Template',
-  title: 'Lumex Template',
+  locale: 'en_UG',
+  siteName: SITE_NAME,
+  title: SITE_NAME,
 }
 
 export const mergeOpenGraph = (og?: Metadata['openGraph']): Metadata['openGraph'] => {

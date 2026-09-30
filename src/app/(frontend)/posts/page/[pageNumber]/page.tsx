@@ -58,7 +58,7 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
   const { pageNumber } = await paramsPromise
   const blogData: Blog = getBlog()
   return {
-    title: `${blogData.meta?.title} | Page ${pageNumber || ''} | Lumex Template`,
+    title: `${blogData.meta?.title} | Page ${pageNumber || ''}`,
   }
 }
 

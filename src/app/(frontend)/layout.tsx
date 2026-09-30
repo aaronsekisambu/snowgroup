@@ -6,7 +6,7 @@ import { Header } from '@/globals/Header/Component'
 import { Preloader } from '@/components/Preloader'
 import { Providers } from '@/providers'
 import { InitTheme } from '@/providers/Theme/InitTheme'
-import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
+import { mergeOpenGraph, SITE_DESCRIPTION, SITE_NAME, SITE_OG_IMAGE } from '@/utilities/mergeOpenGraph'
 import { getServerSideURL } from '@/utilities/getURL'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 
@@ -90,9 +90,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
 export const metadata: Metadata = {
   metadataBase: new URL(getServerSideURL()),
+  title: SITE_NAME,
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
   openGraph: mergeOpenGraph(),
   twitter: {
     card: 'summary_large_image',
-    creator: '@bslthemes',
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    images: [SITE_OG_IMAGE],
   },
 }
