@@ -1,0 +1,127 @@
+{
+  "title": "Muyenga Residential Project",
+  "slug": "muyenga-residential-project",
+  "category": "Residential Construction",
+  "filters": [
+    "Residential"
+  ],
+  "client": "Private client",
+  "location": "Muyenga",
+  "short_description": "A two-storey family home in Muyenga with columned entrance, arched windows and balconies, delivered through to finishing and a paved compound.",
+  "meta": {
+    "title": "Muyenga Residential Project | Snow Holdings Limited",
+    "description": "A two-storey family home in Muyenga with columned entrance, arched windows and balconies, delivered through to finishing and a paved compound.",
+    "image": {
+      "url": "/media/projects/muyenga-residential-project-1.jpg",
+      "alt": "Muyenga Residential Project",
+      "width": 1600,
+      "height": 1200
+    }
+  },
+  "order": 5,
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/projects/muyenga-residential-project-1.jpg",
+        "alt": "Muyenga Residential Project",
+        "width": 1600,
+        "height": 1200
+      },
+      "short_title": "Projects",
+      "title": "Muyenga Residential Project"
+    },
+    {
+      "blockType": "about_project",
+      "badge": "Residential Construction",
+      "title": "Muyenga Residential Project",
+      "info_items": [
+        {
+          "label": "Client",
+          "value": "Private client"
+        },
+        {
+          "label": "Location",
+          "value": "Muyenga"
+        },
+        {
+          "label": "Category",
+          "value": "Residential Construction"
+        },
+        {
+          "label": "Services",
+          "value": "Residential Construction, Finishing"
+        }
+      ],
+      "intro_title": "About the Project",
+      "intro_description": "<p>This two-storey residence in Muyenga combines a grand columned entrance, arched openings and balconies with a paved compound. Snow Holdings delivered the construction and finishing works to create a home built for comfort and durability.</p>",
+      "image": {
+        "url": "/media/projects/muyenga-residential-project-2.jpg",
+        "alt": "Muyenga Residential Project — photo 2",
+        "width": 832,
+        "height": 624
+      },
+      "approach_title": "Our Approach",
+      "approach_description": "<p>We worked through the structure, walling and roofing, then focused on the details that define the home: the columns, arches, balconies and external finishes. The compound was completed with paving to finish the property.</p>",
+      "delivered_title": "What We Delivered",
+      "delivered_items": [
+        {
+          "title": "Structure, walling and roofing",
+          "description": "for a two-storey home."
+        },
+        {
+          "title": "Architectural details",
+          "description": "including columns, arches and balconies."
+        },
+        {
+          "title": "External finishes",
+          "description": "and a paved compound."
+        }
+      ],
+      "goals_title": "Project Priorities",
+      "goals_items": [
+        {
+          "title": "Quality finishing",
+          "description": "— careful workmanship on the features that give the home its character."
+        },
+        {
+          "title": "Durability",
+          "description": "— construction that lasts."
+        }
+      ],
+      "conclusion_description": "<p>The Muyenga project is one of the homes featured in our portfolio, showing the level of finish Snow Holdings brings to residential construction.</p>"
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "relatedProjects": [
+    {
+      "slug": "bunga-residential-development"
+    },
+    {
+      "slug": "mukono-residential-project"
+    },
+    {
+      "slug": "triple-j-agro-farm-development"
+    }
+  ]
+}

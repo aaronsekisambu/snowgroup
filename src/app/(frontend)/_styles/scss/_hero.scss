@@ -1,0 +1,631 @@
+@use 'variables' as *;
+
+/* -------------------------------------------
+
+hero 1
+
+------------------------------------------- */
+
+.mil-hero-1 {
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: $m-1;
+    display: flex;
+    align-items: flex-end;
+    padding: 10rem 0;
+    position: relative;
+    overflow: hidden;
+
+    & .mil-hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+    }
+
+    & .mil-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(249.77deg, rgba($b-1, .35) 35.14%, rgba($b-1, .8) 58.94%);
+    }
+
+    & .mil-hero-content {
+        position: relative;
+        width: 100%;
+        z-index: 2;
+
+        & h1 {
+            font-size: 10rem;
+            line-height: 95%;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        & .mil-hero-content {
+            & h1 {
+                font-size: 8.2rem;
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        height: auto;
+        padding-top: 20rem;
+
+        & .mil-overlay {
+            background: rgba($b-1, .7);
+        }
+
+        & .mil-hero-content {
+
+            & h1 {
+                font-size: 7.2rem;
+                line-height: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        & .mil-hero-content {
+            & h1 {
+                font-size: 5.2rem;
+            }
+        }
+    }
+}
+
+/* -------------------------------------------
+
+hero 2
+
+------------------------------------------- */
+
+.mil-hero-2 {
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: $m-5;
+    position: relative;
+    overflow: hidden;
+
+    & .mil-hero-content {
+        position: relative;
+        height: 50%;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 10rem;
+
+        & .mil-circle-text-position {
+            bottom: -9rem;
+            left: calc(50% - 9rem);
+        }
+    }
+
+    & .mil-hero-banner {
+        height: 50%;
+        overflow: hidden;
+        position: relative;
+        background-color: $m-1;
+
+        & .mil-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        & .mil-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($b-1, .3)
+        }
+    }
+
+    @media (max-width: 1200px) {
+        height: auto;
+
+        & .mil-hero-content {
+            height: auto;
+            padding-top: 20rem;
+        }
+
+        & .mil-hero-banner {
+            height: auto;
+            padding-bottom: 33%;
+        }
+    }
+}
+
+/* -------------------------------------------
+
+hero 3
+
+------------------------------------------- */
+
+.mil-hero-3 {
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: $m-1;
+    display: flex;
+    align-items: flex-end;
+    padding: 10rem 0;
+    position: relative;
+    overflow: hidden;
+
+    & .mil-hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    & .mil-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(179.35deg, rgba($b-1, 0.80) 8.43%, rgba($b-1, 0.5) 18.04%, rgba($b-1, 0.6) 46.5%, rgba($b-1, 0.88) 73.55%);
+    }
+
+    & .mil-hero-content {
+        position: relative;
+        width: 100%;
+
+        &.mil-asterisk {
+            &:after {
+                top: -40rem;
+                right: 12rem;
+            }
+        }
+
+        & .mil-text-row-wrapper {
+            position: relative;
+            width: 100%;
+            z-index: 1;
+
+            & .mil-text-row {
+                display: flex;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100%;
+                white-space: nowrap;
+                transition: all 1s ease;
+
+                & > div {
+                    display: flex;
+                    -webkit-animation: scrollText 33s infinite linear;
+                    animation: scrollText 33s infinite linear;
+                }
+
+                & h1 {
+                    font-size: 22rem;
+                }
+
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        height: auto;
+        padding-top: 60rem;
+
+        & .mil-hero-content {
+            &.mil-asterisk {
+                &:after {
+                    display: none;
+                }
+            }
+
+            & .mil-text-row-wrapper {
+                & .mil-text-row {
+                    & > div {
+                        display: block;
+                        white-space: normal;
+                        animation: none;
+                        padding: 0 3rem;
+                    }
+
+                    & h1 {
+                        font-size: 5rem;
+
+                        &:last-child {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* -------------------------------------------
+
+hero 4
+
+------------------------------------------- */
+
+.mil-hero-4 {
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: $m-5;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+
+    & .mil-hero-content {
+        height: calc(var(--vh, 1vh) * 100 - 12rem);
+        position: relative;
+        width: 100%;
+        padding-bottom: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        &.mil-asterisk {
+            &:after {
+                top: 12rem;
+                right: 12rem;
+            }
+        }
+    }
+
+    & .mil-hero-banner {
+        width: 100%;
+        height: calc(var(--vh, 1vh) * 100 - 14rem);
+        overflow: hidden;
+        position: relative;
+        background-color: $m-1;
+
+        & .mil-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+
+            &:before {
+                content: '';
+                width: 100%;
+                height: 14rem;
+                background-color: red;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 9;
+            }
+
+        }
+
+        & .mil-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($b-1, .3)
+        }
+    }
+
+    @media (max-width: 992px) {
+        height: auto;
+
+        & .mil-hero-content {
+            height: auto;
+            padding-top: 20rem;
+            padding-bottom: 0;
+
+            &.mil-asterisk {
+                &:after {
+                    top: 12rem;
+                    right: -8rem;
+                }
+            }
+        }
+
+        & .mil-hero-banner {
+            height: auto;
+            padding-bottom: 120%;
+            transform: none;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        & .mil-hero-banner {
+            margin-bottom: 10rem;
+        }
+    }
+}
+
+/* -------------------------------------------
+
+hero 5
+
+------------------------------------------- */
+
+.mil-hero-5 {
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: $m-1;
+    display: flex;
+    align-items: center;
+    padding: 10rem 0;
+    position: relative;
+    overflow: hidden;
+
+    & .mil-slider-bg-img {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    & .mil-hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+    }
+
+    & .mil-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // ~60% behind the centred text so it reads on any photo (even a bright one),
+        // fading to 35% at the edges so the photo keeps its colour
+        background:
+            radial-gradient(ellipse 70% 60% at 50% 50%, rgba($b-1, .4) 50%, rgba($b-1, 0) 100%),
+            linear-gradient(180deg, rgba($b-1, .55) 0%, rgba($b-1, .35) 30%, rgba($b-1, .35) 65%, rgba($b-1, .7) 100%);
+    }
+
+    & .mil-hero-content {
+        position: relative;
+        width: 100%;
+        padding-bottom: 5rem;
+
+        & h1 {
+            font-size: 10rem;
+            line-height: 95%;
+            letter-spacing: -.02em;
+        }
+
+        // the title slider crops its content: leave room for descenders (g, y, p)
+        // and the text glow, without moving the title or the spacing around it
+        & .mil-slider-title {
+            padding: 2rem 4rem 3rem;
+            margin: -2rem -4rem 1rem;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        & .mil-hero-content {
+            & h1 {
+                font-size: 8.2rem;
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        height: auto;
+        padding-top: 20rem;
+
+        &.mil-hero-404 {
+            height: calc(var(--vh, 1vh) * 100);
+            padding-top: 10rem;
+
+            .mil-hero-content {
+                padding-bottom: 0rem;
+            }
+        }
+
+        & .mil-overlay {
+            background: rgba($b-1, .6);
+        }
+
+        & .mil-hero-content {
+            padding-bottom: 15rem;
+
+            & h1 {
+                font-size: 7.2rem;
+                line-height: 100%;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        & .mil-hero-content {
+            & h1 {
+                font-size: 5.2rem;
+            }
+        }
+    }
+}
+
+
+/* -------------------------------------------
+
+hero inner pages
+
+------------------------------------------- */
+
+.mil-hero-inner {
+    width: 100%;
+    height: auto;
+    background-color: $m-1;
+    display: flex;
+    align-items: flex-end;
+    padding: 14rem 0;
+    position: relative;
+    overflow: hidden;
+
+    & .mil-hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    & .mil-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($b-1, .75);
+    }
+
+    & .mil-hero-content {
+        padding-top: 12rem;
+        position: relative;
+        width: 100%;
+
+        & h1 {
+            font-size: 6.2rem;
+        }
+    }
+
+    @media (max-width: 992px) {
+        height: auto;
+        padding: 10rem 0;
+
+        & .mil-hero-content {
+            padding-top: 10rem;
+            position: relative;
+            width: 100%;
+
+            & h1 {
+                font-size: 5.8rem;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        & .mil-hero-content {
+            & h1 {
+                font-size: 4.2rem;
+            }
+        }
+    }
+}
+
+/* -------------------------------------------
+
+text on photos
+
+------------------------------------------- */
+
+// Keeps hero text readable on any photo, even a bright one, without a heavy overlay
+.mil-hero-1,
+.mil-hero-3,
+.mil-hero-5,
+.mil-hero-inner {
+    & .mil-hero-content {
+        text-shadow: 0 .2rem 2.4rem rgba($b-1, .45);
+
+        // muted text is meant for solid dark backgrounds, it gets lost on photos
+        & .mil-c-m-3 {
+            color: $m-5;
+        }
+
+        & .mil-opacity-text {
+            opacity: .75;
+        }
+
+        & .mil-btn {
+            text-shadow: none;
+
+            &:not(.mil-link-type) {
+                @include mil-btn-light;
+            }
+        }
+
+        & .mil-breadcrumbs {
+            & li {
+                &:after {
+                    color: $m-4;
+                }
+
+                &:last-child {
+                    & a {
+                        color: $m-5;
+                        text-decoration: underline;
+                        text-decoration-color: $a-1;
+                        text-decoration-thickness: .2rem;
+                        text-underline-offset: .6rem;
+                    }
+                }
+            }
+        }
+    }
+}

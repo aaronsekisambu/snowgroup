@@ -1,0 +1,68 @@
+{
+  "title": "Terms and Conditions",
+  "slug": "terms-and-conditions",
+  "meta": {
+    "title": "Terms and Conditions | Snow Holdings Limited",
+    "description": "The terms that apply when you use this website."
+  },
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/services/project-management.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 900
+      },
+      "short_title": "Legal",
+      "title": "Terms and Conditions"
+    },
+    {
+      "blockType": "legal",
+      "button_text": "Contact us",
+      "button_url": "/contact",
+      "updated": "1 October 2026",
+      "badge": "Terms",
+      "title": "Terms and <span class=\"mil-opacity-text\">Conditions</span>",
+      "intro": "The terms that apply when you use this website.",
+      "sections": [
+        {
+          "heading": "About these terms",
+          "body": "<p>By using this website you agree to these terms. If you do not agree, please do not use the website.</p>"
+        },
+        {
+          "heading": "Information on this website",
+          "body": "<p>We aim to keep the information on this website accurate and up to date, but it is provided for general information only. Descriptions of services, products, plans and projects do not form an offer or a contract. The scope, price and timeline of any work are agreed in writing with you before work begins.</p>"
+        },
+        {
+          "heading": "Plans",
+          "body": "<p>Our plans (Plan & Save, Build in Phases, and Start & Build Now) are marked as coming soon. Details may change before launch, and no plan can be purchased through this website until it is launched.</p>"
+        },
+        {
+          "heading": "Quotes and orders",
+          "body": "<p>Prices, availability and delivery of products, materials and machinery hire are confirmed when you request a quote. A quote is valid only for the period stated on it.</p>"
+        },
+        {
+          "heading": "Intellectual property",
+          "body": "<p>The content of this website, including text, photographs of our projects, logos and the Snow Holdings name, belongs to Snow Holdings Limited or is used under licence. See our <a href=\"/license\">License</a> page for details.</p>"
+        },
+        {
+          "heading": "Links to other websites",
+          "body": "<p>This website links to services run by others, such as WhatsApp, LinkedIn and Google Maps. We are not responsible for the content or practices of those services.</p>"
+        },
+        {
+          "heading": "Liability",
+          "body": "<p>We are not liable for any loss arising from reliance on the general information on this website. Nothing in these terms limits any liability that cannot be limited under the laws of Uganda.</p>"
+        },
+        {
+          "heading": "Governing law",
+          "body": "<p>These terms are governed by the laws of the Republic of Uganda.</p>"
+        },
+        {
+          "heading": "Contact",
+          "body": "<ul><li>Email: <a href=\"mailto:info@snowgroup.ltd\">info@snowgroup.ltd</a></li><li>WhatsApp: +49 15679 137020</li><li>Office: Acacia Mall, 4th Floor, 14-18 Cooper Road, Kisimenti, Kampala</li></ul>"
+        }
+      ]
+    }
+  ]
+}

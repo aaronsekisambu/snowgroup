@@ -1,0 +1,153 @@
+{
+  "categories": [
+    {
+      "title": "Concrete Products",
+      "slug": "concrete-products",
+      "short": "Quality concrete products for strong, lasting structures, from everyday blocks to precast and structural elements.",
+      "items": [
+        {
+          "title": "Blocks",
+          "description": "Concrete blocks manufactured for walling on residential, commercial and farm buildings.",
+          "image": {
+            "url": "/media/products/blocks.jpg",
+            "width": 1200,
+            "height": 900,
+            "alt": "Blocks"
+          }
+        },
+        {
+          "title": "Precast Concrete",
+          "description": "Concrete elements cast ahead of time, ready to install on site for faster, more consistent construction.",
+          "image": {
+            "url": "/media/products/precast-concrete.jpg",
+            "width": 1200,
+            "height": 900,
+            "alt": "Precast Concrete"
+          }
+        },
+        {
+          "title": "Structural Products",
+          "description": "Concrete products for the load-bearing parts of a building, supporting a safe and solid structure.",
+          "image": {
+            "url": "/media/products/structural-products.jpg",
+            "width": 1200,
+            "height": 900,
+            "alt": "Structural Products"
+          }
+        }
+      ],
+      "image": {
+        "url": "/media/products/cat-concrete-products.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Concrete Products"
+      }
+    },
+    {
+      "title": "Paving & External Works",
+      "slug": "paving-external-works",
+      "short": "Everything you need to finish the outside of your property, from paved driveways and walkways to drainage and landscaping.",
+      "items": [
+        {
+          "title": "Pavers",
+          "description": "Durable concrete pavers for driveways, walkways, compounds and parking areas.",
+          "image": {
+            "url": "/media/products/pavers.jpg",
+            "width": 1200,
+            "height": 900,
+            "alt": "Pavers"
+          }
+        },
+        {
+          "title": "Curbstones",
+          "description": "Curbstones that define and protect the edges of roads, driveways and paved areas.",
+          "image": {
+            "url": "/media/products/curbstones.jpg",
+            "width": 1200,
+            "height": 900,
+            "alt": "Curbstones"
+          }
+        },
+        {
+          "title": "Drainage",
+          "description": "Drainage products that carry rainwater away and help protect your property and paving.",
+          "image": {
+            "url": "/media/products/drainage.jpg",
+            "width": 1200,
+            "height": 900,
+            "alt": "Drainage"
+          }
+        },
+        {
+          "title": "Landscaping Products",
+          "description": "Products for shaping and finishing gardens, compounds and outdoor spaces.",
+          "image": {
+            "url": "/media/products/landscaping-products.jpg",
+            "width": 1200,
+            "height": 900,
+            "alt": "Landscaping Products"
+          }
+        }
+      ],
+      "image": {
+        "url": "/media/products/cat-paving-external-works.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Paving & External Works"
+      }
+    },
+    {
+      "title": "Building Materials & Equipment",
+      "slug": "building-materials-equipment",
+      "short": "The core materials for your build, together with the heavy machinery and equipment to get the job done.",
+      "items": [
+        {
+          "title": "Aggregates",
+          "description": "Aggregates for concrete, foundations and road works.",
+          "image": {
+            "url": "/media/products/aggregates.jpg",
+            "width": 1200,
+            "height": 900,
+            "alt": "Aggregates"
+          }
+        },
+        {
+          "title": "Cement",
+          "description": "Cement for concrete, masonry and plastering, including our pre-mixed cement with sand.",
+          "image": {
+            "url": "/media/products/cement.jpg",
+            "width": 1200,
+            "height": 900,
+            "alt": "Cement"
+          }
+        },
+        {
+          "title": "Sand",
+          "description": "Sand for building, plastering and concrete work.",
+          "image": {
+            "url": "/media/products/sand.jpg",
+            "width": 1200,
+            "height": 900,
+            "alt": "Sand"
+          }
+        },
+        {
+          "title": "Machinery & Equipment",
+          "description": "Heavy machinery for hire, such as excavators, road rollers and more, for site preparation and construction.",
+          "image": {
+            "url": "/media/products/machinery-equipment.jpg",
+            "width": 1200,
+            "height": 900,
+            "alt": "Machinery & Equipment"
+          }
+        }
+      ],
+      "image": {
+        "url": "/media/products/cat-building-materials-equipment.jpg",
+        "width": 1200,
+        "height": 900,
+        "alt": "Building Materials & Equipment"
+      }
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "title": "Claire Jensen",
+  "slug": "claire-jensen",
+  "short": "Strategy Consultant",
+  "meta": {
+    "title": "Claire Jensen | Lumex Template",
+    "image": {
+      "url": "/media/team-2.jpg",
+      "alt": "",
+      "width": 290,
+      "height": 436
+    }
+  },
+  "order": 2,
+  "publishedAt": "2025-11-19T22:16:25.988Z",
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/img-7.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1042,
+        "sizes": {
+          "og": {
+            "url": "/media/img-7-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "short_title": "Claire Jensen",
+      "title": "Meet the Experts Driving <br class=\"mil-sm-hidden\">Your Behind <span class=\"mil-opacity-text\">Business</span> Forward"
+    },
+    {
+      "blockType": "about_team",
+      "portrait": {
+        "url": "/media/team-2.jpg",
+        "alt": "",
+        "width": 290,
+        "height": 436
+      },
+      "name": "Claire Jensen",
+      "position": "Strategy Consultant",
+      "contact_items": [
+        {
+          "label": "Call",
+          "value": "+38 (068) 133-35-89"
+        },
+        {
+          "label": "Write",
+          "value": "lumex.inbox@mail.com"
+        },
+        {
+          "label": "Visit",
+          "value": "742 Crescent road, Toronto, Canada"
+        }
+      ],
+      "social_links": [
+        {
+          "icon_class": "fab fa-instagram",
+          "url": "https://instagram.com/"
+        },
+        {
+          "icon_class": "fab fa-linkedin-in",
+          "url": "https://linkedin.com/"
+        },
+        {
+          "icon_class": "fab fa-whatsapp",
+          "url": "https://whatsapp.com/"
+        },
+        {
+          "icon_class": "fab fa-facebook-f",
+          "url": "https://facebook.com/"
+        }
+      ],
+      "intro_description": "<p>We adapt quickly, think critically, and stay aligned with your goals from day one. That’s how collaboration becomes progress — and progress becomes results.</p><p>We mix clarity, speed, and experience to turn complexity into momentum. Our team blends strategic clarity, fast execution, and open communication to move projects forward with precision. We adapt quickly, think critically, and stay aligned with your goals from day one. That’s how collaboration becomes progress — and progress becomes results.</p>",
+      "quote": "Our team blends strategic clarity, fast execution, and open communication to move projects forward with precision.",
+      "bio_description": "<p>Daniel brings over 12 years of experience in strategic operations and organizational development. Prior to joining our team, he served as a senior advisor for several Fortune 500 companies, focusing on scaling processes and restructuring teams for high growth. With a sharp analytical mind and calm leadership style, Daniel helps businesses simplify complexity and build systems that last.</p>",
+      "skills": [
+        {
+          "name": "Strategic Thinking",
+          "percentage": "85%"
+        },
+        {
+          "name": "Client Communication",
+          "percentage": "95%"
+        },
+        {
+          "name": "Market Analysis",
+          "percentage": "90%"
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2006–2009",
+          "title": "Harvard Business School",
+          "description": "MBA in Strategic Management. Focused on corporate growth models, organizational leadership, and operational scaling."
+        },
+        {
+          "date": "2010–2011",
+          "title": "McKinsey Executive Program",
+          "description": "Completed an advanced program in business transformation and stakeholder alignment for consulting professionals."
+        },
+        {
+          "date": "2014–2015",
+          "title": "London School of Economics",
+          "description": "Certificate in Data-Driven Decision Making — explored market intelligence, predictive analytics, and scenario modeling."
+        },
+        {
+          "date": "2020",
+          "title": "IDEO U – Design Thinking for Business Innovation",
+          "description": "Hands-on workshop series on creative problem-solving and user-centered innovation frameworks."
+        }
+      ],
+      "certificate_image": {
+        "url": "/media/cert.jpg",
+        "alt": "",
+        "width": 864,
+        "height": 645,
+        "sizes": {
+          "og": {
+            "url": "/media/cert-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "closing_description": "<p>Collaborating with Daniel is both productive and effortless — he brings structure, clarity, and just the right amount of challenge to every conversation.</p>"
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "relatedTeam": [
+    {
+      "slug": "david-oldman",
+      "title": "David Oldman",
+      "short": "Business Analyst",
+      "meta": {
+        "title": "David Oldman | Lumex Template",
+        "image": {
+          "url": "/media/team-6.jpg",
+          "alt": "",
+          "width": 290,
+          "height": 436
+        }
+      }
+    },
+    {
+      "slug": "daniel-hartman",
+      "title": "Daniel Hartman",
+      "short": "Operations Manager",
+      "meta": {
+        "title": "Daniel Hartman | Lumex Template",
+        "image": {
+          "url": "/media/team-4.jpg",
+          "alt": "",
+          "width": 290,
+          "height": 436
+        }
+      }
+    },
+    {
+      "slug": "marcus-reed",
+      "title": "Marcus Reed",
+      "short": "Business Analyst",
+      "meta": {
+        "title": "Marcus Reed | Lumex Template",
+        "image": {
+          "url": "/media/team-3.jpg",
+          "alt": "",
+          "width": 290,
+          "height": 436
+        }
+      }
+    },
+    {
+      "slug": "olga-kovalsky",
+      "title": "Olga Kovalsky",
+      "short": "Operations Manager",
+      "meta": {
+        "title": "Olga Kovalsky | Lumex Template",
+        "image": {
+          "url": "/media/team-7.jpg",
+          "alt": "",
+          "width": 290,
+          "height": 436
+        }
+      }
+    }
+  ],
+  "updatedAt": "2025-12-05T16:45:04.546Z"
+}

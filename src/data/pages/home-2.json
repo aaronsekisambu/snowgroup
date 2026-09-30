@@ -1,0 +1,345 @@
+{
+  "title": "Home 2",
+  "slug": "home-2",
+  "headerStyle": "invert",
+  "footerLayout": "minimal",
+  "meta": {
+    "title": "Home 2 | Lumex Template"
+  },
+  "publishedAt": "2025-05-23T12:00:00.000Z",
+  "layout": [
+    {
+      "blockType": "hero_two",
+      "title": "Leadership <br>for a Sustainable<br> <span class=\"mil-opacity-text\">Growth</span>",
+      "users": [
+        {
+          "image": {
+            "url": "/media/users-1.jpg",
+            "alt": "",
+            "width": 100,
+            "height": 100
+          }
+        },
+        {
+          "image": {
+            "url": "/media/users-2.jpg",
+            "alt": "",
+            "width": 100,
+            "height": 100
+          }
+        },
+        {
+          "image": {
+            "url": "/media/users-3.jpg",
+            "alt": "",
+            "width": 100,
+            "height": 100
+          }
+        },
+        {
+          "image": {
+            "url": "/media/users-4.jpg",
+            "alt": "",
+            "width": 100,
+            "height": 100
+          }
+        }
+      ],
+      "description": "<i>Your partner in making bold decisions, solving complex <br class=\"mil-lg-hidden\">problems, and sustaining success</i>",
+      "button_text": "Read more",
+      "button_url": "/team",
+      "bgImage": {
+        "url": "/media/img-2.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 443,
+        "sizes": {
+          "og": {
+            "url": "/media/img-2-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    },
+    {
+      "blockType": "services_two",
+      "badge": "Services",
+      "title": "Solutions That <br class=\"mil-sm-hidden\">Drive <span class=\"mil-opacity-text\">Business</span> Forward",
+      "description": "<p>It’s not just what we do — it’s how we do it.</p><p>Our team blends strategic clarity, fast execution, and open communication to move projects forward with precision. We adapt quickly, think critically, and stay aligned with your goals from day one. That’s how collaboration becomes progress — and progress becomes results.</p>",
+      "button1_text": "View all",
+      "button1_url": "/services",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact",
+      "services": [
+        {
+          "title": "Business Strategy <br>& Planning",
+          "description": "We help organizations define clear objectives, align teams, and build roadmaps that drive long-term value and adaptability in changing markets.",
+          "list": [
+            {
+              "item": "Strategic roadmapping"
+            },
+            {
+              "item": "Strategic roadmapping"
+            },
+            {
+              "item": "Growth forecasting"
+            },
+            {
+              "item": "Competitive positioning"
+            },
+            {
+              "item": "Stakeholder alignment"
+            }
+          ],
+          "button_text": "Read more",
+          "button_url": "/services/service-1"
+        },
+        {
+          "title": "Market Research <br>& Insights",
+          "description": "Our team delivers data-driven insights into customer behavior, industry trends, and market dynamics — empowering confident, strategic decisions.",
+          "list": [
+            {
+              "item": "Industry and competitor analysis"
+            },
+            {
+              "item": "Consumer behavior profiling"
+            },
+            {
+              "item": "Trend and opportunity mapping"
+            },
+            {
+              "item": "Qualitative & quantitative surveys"
+            },
+            {
+              "item": "Go-to-market research reports"
+            }
+          ],
+          "button_text": "Read more",
+          "button_url": "/services/service-2"
+        },
+        {
+          "title": "Operations & Process <br>Optimization",
+          "description": "We identify inefficiencies, improve workflows, and streamline core processes to increase productivity, reduce costs, and support sustainable scaling.",
+          "list": [
+            {
+              "item": "Workflow assessment and redesign"
+            },
+            {
+              "item": "KPI tracking and process audits"
+            },
+            {
+              "item": "Technology integration consulting"
+            },
+            {
+              "item": "Resource and cost efficiency planning"
+            },
+            {
+              "item": "Operational risk identification"
+            }
+          ],
+          "button_text": "Read more",
+          "button_url": "/services/service-3"
+        }
+      ]
+    },
+    {
+      "blockType": "counters",
+      "counters": [
+        {
+          "value": "479",
+          "suffix": "+",
+          "suffix_class": "mil-sub-text-2",
+          "title": "Projects Completed"
+        },
+        {
+          "value": "99",
+          "suffix": "%",
+          "suffix_class": "mil-sub-text-1",
+          "title": "Client Satisfaction"
+        }
+      ],
+      "description": "Our approach starts with people — clear communication, long-term thinking, and deep business insight. We believe sustainable success is built on trust, transparency, and bold ideas translated into purposeful action. From day one, we’re fully committed to making your goals ours.",
+      "image": {
+        "url": "/media/img-9.jpg",
+        "alt": "",
+        "width": 864,
+        "height": 576
+      }
+    },
+    {
+      "blockType": "portfolio",
+      "badge": "Cases",
+      "title": "See How We Help <br class=\"mil-sm-hidden\">Drive <span class=\"mil-opacity-text\">Business</span> Grow",
+      "description": "Focused. Strategic. Built for growth.",
+      "button_label": "View all",
+      "button_link": "/projects",
+      "populateBy": "collection",
+      "relationTo": "projects",
+      "limit": 3,
+      "info": "These are just a few highlights. Discover more of our impactful work.",
+      "more_label": "Discover",
+      "more_link": "/projects",
+      "items": [
+        {
+          "slug": "sustainability-drive-for-an-energy-sector-pioneer",
+          "title": "Sustainability Drive for an Energy Sector Pioneer",
+          "short_description": "We helped a mid-sized SaaS company restructure its go-to-market strategy, transition to a subscription model, and optimize sales funnels. The result: +22% MRR, reduced CAC, and improved user retention.",
+          "price": "$7 500",
+          "meta": {
+            "title": "Sustainability Drive for an Energy Sector | Lumex Template",
+            "image": {
+              "url": "/media/project-9.jpg",
+              "alt": "",
+              "width": 500,
+              "height": 332
+            }
+          }
+        },
+        {
+          "slug": "customer-centric-shift-for-an-e-commerce-platform",
+          "title": "Customer-Centric Shift for an E-Commerce Platform",
+          "short_description": "Designed and implemented a full ESG strategy for a national construction firm, aligning their operations with ISO standards and unlocking eligibility for global tenders and green financing.",
+          "price": "$5 000",
+          "meta": {
+            "title": "Customer-Centric Shift for an E-Commerce | Lumex Template",
+            "image": {
+              "url": "/media/project-8.jpg",
+              "alt": "",
+              "width": 500,
+              "height": 332
+            }
+          }
+        },
+        {
+          "slug": "agile-transformation-for-a-manufacturing-leader",
+          "title": "Agile Transformation for a Manufacturing Leader",
+          "short_description": "Strategic rebranding and operational unification for a global logistics provider operating in 20+ countries",
+          "price": "$6 000",
+          "meta": {
+            "title": "Agile Transformation for a Manufacturing | Lumex Template",
+            "image": {
+              "url": "/media/project-7.jpg",
+              "alt": "",
+              "width": 500,
+              "height": 332
+            }
+          }
+        }
+      ]
+    },
+    {
+      "blockType": "prices_two",
+      "badge": "Plans",
+      "title": "Flexible <span class=\"mil-opacity-text\">Plans</span><br> for Every One",
+      "description": "One vision. Three flexible ways to make it happen.",
+      "button_text": "Read more",
+      "button_url": "/plans",
+      "plansSource": "plans",
+      "card_style": "mil-gray-card"
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    },
+    {
+      "blockType": "team_block",
+      "badge": "Our Team",
+      "title": "Meet the Experts Driving <br class=\"mil-sm-hidden\">Your Behind <span class=\"mil-opacity-text\">Business</span> Forward",
+      "description": "One-time pricing. Scalable to need.",
+      "button_text": "View all",
+      "button_url": "/team",
+      "populateBy": "collection",
+      "relationTo": "team",
+      "limit": 4,
+      "items": [
+        {
+          "slug": "olga-kovalsky",
+          "title": "Olga Kovalsky",
+          "short": "Operations Manager",
+          "meta": {
+            "title": "Olga Kovalsky | Lumex Template",
+            "image": {
+              "url": "/media/team-7.jpg",
+              "alt": "",
+              "width": 290,
+              "height": 436
+            }
+          }
+        },
+        {
+          "slug": "david-oldman",
+          "title": "David Oldman",
+          "short": "Business Analyst",
+          "meta": {
+            "title": "David Oldman | Lumex Template",
+            "image": {
+              "url": "/media/team-6.jpg",
+              "alt": "",
+              "width": 290,
+              "height": 436
+            }
+          }
+        },
+        {
+          "slug": "emma-miller",
+          "title": "Emma Miller",
+          "short": "Strategy Consultant",
+          "meta": {
+            "title": "Emma Miller | Lumex Template",
+            "image": {
+              "url": "/media/team-5.jpg",
+              "alt": "",
+              "width": 290,
+              "height": 436
+            }
+          }
+        },
+        {
+          "slug": "daniel-hartman",
+          "title": "Daniel Hartman",
+          "short": "Operations Manager",
+          "meta": {
+            "title": "Daniel Hartman | Lumex Template",
+            "image": {
+              "url": "/media/team-4.jpg",
+              "alt": "",
+              "width": 290,
+              "height": 436
+            }
+          }
+        }
+      ]
+    },
+    {
+      "blockType": "faq",
+      "badge": "Faq",
+      "title": "Do you have <br>any questions?",
+      "description": "We've gathered answers to frequent questions — but feel free to contact us if you need more clarity.",
+      "button1_text": "View all",
+      "button1_url": "/faq",
+      "button2_text": "Contact us",
+      "button2_url": "/contact",
+      "gray_bg_position": "left",
+      "faqsSource": "general"
+    }
+  ],
+  "updatedAt": "2025-12-03T21:46:59.414Z"
+}

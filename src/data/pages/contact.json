@@ -1,0 +1,124 @@
+{
+  "title": "Contact",
+  "slug": "contact",
+  "meta": {
+    "title": "Contact | Lumex Template"
+  },
+  "publishedAt": "2025-05-23T12:00:00.000Z",
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/img-18.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 700,
+        "sizes": {
+          "og": {
+            "url": "/media/img-18-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "short_title": "Contact",
+      "title": "Let’s Build Something Great"
+    },
+    {
+      "blockType": "formBlock",
+      "badge": "Contact",
+      "title": "Get in Touch",
+      "contact_items": [
+        {
+          "label": "WhatsApp",
+          "value": "+49 15679 137020",
+          "link": "https://wa.me/4915679137020"
+        },
+        {
+          "label": "Email",
+          "value": "info@snowgroup.ltd",
+          "link": "mailto:info@snowgroup.ltd"
+        },
+        {
+          "label": "Visit",
+          "value": "Acacia Mall, 4th Floor, 14-18 Cooper Road, Kisimenti"
+        }
+      ],
+      "social_links": [
+        {
+          "icon_class": "fab fa-linkedin-in",
+          "url": "https://www.linkedin.com/company/snow-holdings-ltd/"
+        },
+        {
+          "icon_class": "fab fa-whatsapp",
+          "url": "https://wa.me/4915679137020"
+        },
+        {
+          "icon_class": "fal fa-envelope",
+          "url": "mailto:info@snowgroup.ltd"
+        }
+      ],
+      "desc_title": "Let’s Talk Strategy",
+      "desc_content": "<p>We’re always open to new ideas, questions, and opportunities. Whether you're a growing business looking for guidance, a potential partner exploring collaboration, or just someone curious to learn more — we’d love to hear from you.</p><p>Fill out the form below or reach out directly, and someone from our team will get back to you shortly. Let’s explore how we can move your business forward, together.</p>",
+      "form_title": "Send request",
+      "form": {
+        "title": "Contact Form",
+        "fields": [
+          {
+            "blockType": "text",
+            "name": "cf_name",
+            "label": "Name",
+            "width": 100,
+            "required": true
+          },
+          {
+            "blockType": "email",
+            "name": "cf_email",
+            "label": "Email",
+            "width": 100,
+            "required": true
+          },
+          {
+            "blockType": "textarea",
+            "name": "cf_message",
+            "label": "Message",
+            "width": 100,
+            "required": true
+          }
+        ],
+        "submitButtonLabel": "Send",
+        "confirmationType": "message",
+        "confirmationMessage": "<h3>The contact form has been submitted successfully.</h3>"
+      },
+      "gmap_title": "Visit us",
+      "gmap": "https://www.google.com/maps?q=Acacia%20Mall%2C%20Kampala&z=17&output=embed"
+    },
+    {
+      "blockType": "call_to_action",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "icon": {
+        "url": "/media/icons-2.png",
+        "alt": "",
+        "width": 120,
+        "height": 120
+      },
+      "title": "Building Today <br>Shaping <span class=\"mil-opacity-text\">Tomorrow</span>",
+      "description": "Quality construction, reliable materials <br class=\"mil-sm-hidden\">and expert project delivery built around your vision.",
+      "button1_text": "Read more",
+      "button1_url": "/services"
+    }
+  ],
+  "updatedAt": "2025-11-18T23:57:46.051Z"
+}

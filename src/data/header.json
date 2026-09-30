@@ -1,0 +1,289 @@
+{
+  "logo": {
+    "type": "image",
+    "logo": {
+      "url": "/media/snow-logo-white.png",
+      "alt": "Snow Holdings Limited",
+      "width": 600,
+      "height": 548
+    },
+    "logo_invert": {
+      "url": "/media/snow-logo-color.png",
+      "alt": "Snow Holdings Limited",
+      "width": 600,
+      "height": 548
+    },
+    "alt": "Snow Holdings Limited",
+    "fontawesome_icon": "far fa-cube",
+    "text": "Snow Holdings",
+    "link": "/",
+    "scroll_text": "Snow"
+  },
+  "contact": {
+    "actionType": "popup",
+    "label": "Let's Talk",
+    "fontawesome_icon": "fal fa-envelope",
+    "link": "#",
+    "popupTitle": "Contact info",
+    "popupItems": [
+      {
+        "label": "WhatsApp",
+        "value": "+49 15679 137020",
+        "link": "https://wa.me/4915679137020"
+      },
+      {
+        "label": "Email",
+        "value": "info@snowgroup.ltd",
+        "link": "mailto:info@snowgroup.ltd"
+      },
+      {
+        "label": "Visit",
+        "value": "Acacia Mall, 4th Floor, 14-18 Cooper Road, Kisimenti"
+      }
+    ],
+    "formTitle": "Send request",
+    "form": {
+      "title": "Lets Talk Form",
+      "fields": [
+        {
+          "blockType": "text",
+          "name": "ltf_name",
+          "label": "Name",
+          "width": 100,
+          "required": true
+        },
+        {
+          "blockType": "email",
+          "name": "ltf_email",
+          "label": "Email",
+          "width": 100,
+          "required": true
+        },
+        {
+          "blockType": "textarea",
+          "name": "ltf_message",
+          "label": "Message",
+          "width": 100,
+          "required": true
+        }
+      ],
+      "submitButtonLabel": "Send",
+      "confirmationType": "message",
+      "confirmationMessage": "<h3>The contact form has been submitted successfully.</h3>"
+    }
+  },
+  "navItems": [
+    {
+      "link": {
+        "type": "reference",
+        "reference": {
+          "relationTo": "pages",
+          "value": {
+            "slug": "about",
+            "title": "About"
+          }
+        },
+        "url": "",
+        "label": "About",
+        "submenu": [],
+        "hidden": true
+      }
+    },
+    {
+      "link": {
+        "type": "custom",
+        "url": "/services",
+        "label": "Services",
+        "submenu": [],
+        "submenuSource": "service_categories"
+      }
+    },
+    {
+      "link": {
+        "type": "custom",
+        "url": "/projects",
+        "label": "Projects",
+        "submenu": []
+      }
+    },
+    {
+      "link": {
+        "type": "reference",
+        "reference": {
+          "relationTo": "pages",
+          "value": {
+            "slug": "plans",
+            "title": "Plans"
+          }
+        },
+        "url": "",
+        "label": "Plans",
+        "submenu": []
+      }
+    },
+    {
+      "link": {
+        "type": "custom",
+        "url": "#.",
+        "label": "Products",
+        "submenu": [],
+        "submenuSource": "product_categories"
+      }
+    },
+    {
+      "link": {
+        "type": "custom",
+        "url": "#.",
+        "label": "Pages",
+        "submenu": [
+          {
+            "sub_type": "custom",
+            "sub_url": "/services",
+            "label": "Services"
+          },
+          {
+            "sub_type": "reference",
+            "sub_reference": {
+              "relationTo": "services",
+              "value": {
+                "slug": "building-construction",
+                "title": "Building Construction"
+              }
+            },
+            "label": "Service Single"
+          },
+          {
+            "sub_type": "custom",
+            "sub_url": "/projects",
+            "label": "Projects"
+          },
+          {
+            "sub_type": "reference",
+            "sub_reference": {
+              "relationTo": "projects",
+              "value": {
+                "slug": "triple-j-agro-farm-development",
+                "title": "Triple J Agro Farm Development"
+              }
+            },
+            "label": "Project Single"
+          },
+          {
+            "sub_type": "custom",
+            "sub_url": "/team",
+            "label": "Team"
+          },
+          {
+            "sub_type": "reference",
+            "sub_reference": {
+              "relationTo": "team",
+              "value": {
+                "slug": "david-stone",
+                "title": "David Stone"
+              }
+            },
+            "label": "Team Member"
+          },
+          {
+            "sub_type": "reference",
+            "sub_reference": {
+              "relationTo": "pages",
+              "value": {
+                "slug": "plans",
+                "title": "Plans"
+              }
+            },
+            "label": "Plans"
+          },
+          {
+            "sub_type": "reference",
+            "sub_reference": {
+              "relationTo": "pages",
+              "value": {
+                "slug": "faq",
+                "title": "FAQ"
+              }
+            },
+            "label": "FAQ"
+          }
+        ],
+        "hidden": true
+      }
+    },
+    {
+      "link": {
+        "type": "reference",
+        "reference": {
+          "relationTo": "pages",
+          "value": {
+            "slug": "contact",
+            "title": "Contact"
+          }
+        },
+        "url": "",
+        "label": "Contact",
+        "submenu": []
+      }
+    },
+    {
+      "link": {
+        "type": "custom",
+        "url": "/posts",
+        "label": "Blog",
+        "submenu": [
+          {
+            "sub_type": "custom",
+            "sub_url": "/posts",
+            "label": "Blog Grid"
+          },
+          {
+            "sub_type": "reference",
+            "sub_reference": {
+              "relationTo": "posts",
+              "value": {
+                "slug": "play-to-your-strengths-and-supercharge-your-business",
+                "title": "Play to Your Strengths and Supercharge Your Business"
+              }
+            },
+            "sub_url": "",
+            "label": "Single Publication"
+          }
+        ],
+        "hidden": true
+      }
+    }
+  ],
+  "headerStyle": "default",
+  "ordercall": {
+    "actionType": "popup",
+    "formTitle": "Leave your number, <br/>and we'll call you back",
+    "form": {
+      "title": "Order Call Form",
+      "fields": [
+        {
+          "blockType": "text",
+          "name": "ocf_name",
+          "label": "Name",
+          "width": 100,
+          "required": true
+        },
+        {
+          "blockType": "text",
+          "name": "ocf_tel",
+          "label": "Tel",
+          "width": 100,
+          "required": true
+        }
+      ],
+      "submitButtonLabel": "Order a call",
+      "confirmationType": "message",
+      "confirmationMessage": "<h3>The contact form has been submitted successfully.</h3>"
+    },
+    "bgImage": {
+      "url": "/media/call-back.jpg",
+      "alt": "A finished Snow Holdings home in Muyenga",
+      "width": 501,
+      "height": 701
+    }
+  }
+}

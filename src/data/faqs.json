@@ -1,0 +1,72 @@
+{
+  "groups": {
+    "general": [
+      {
+        "question": "Who is Snow Holdings Limited?",
+        "answer": "<p>Snow Holdings (Construction) Ltd is a construction company that manufactures quality building materials and delivers end-to-end construction solutions. From the first idea to the final build, we aim to be a one-stop partner for all your construction needs.</p>"
+      },
+      {
+        "question": "What services do you offer?",
+        "answer": "<p>We build residential and commercial houses, take on civil and infrastructure works, renovations and fit-outs, farmland projects and compound fixing. We also offer architectural design, structural and MEP engineering, design & build, project management, quantity surveying, cost estimation, and procurement & supervision.</p>"
+      },
+      {
+        "question": "Do you manufacture building materials?",
+        "answer": "<p>Yes. We manufacture high-quality concrete blocks, pavers and pre-mixed cement with sand. Contact us for availability and to place an order.</p>"
+      },
+      {
+        "question": "Can I hire heavy machinery from you?",
+        "answer": "<p>Yes. We hire out heavy machinery such as excavators, road rollers and more. Get in touch with the details of your project and we will confirm what is available.</p>"
+      },
+      {
+        "question": "Do you work on both residential and commercial projects?",
+        "answer": "<p>Yes. We work on homes, commercial buildings, farmland projects and compounds, and we can advise on the right approach for your project whatever its size.</p>"
+      },
+      {
+        "question": "Can you build from plans I already have?",
+        "answer": "<p>Yes. You can bring your own plans, or our team can design the project with you. If you only have an idea so far, we can help you turn it into a practical, buildable plan.</p>"
+      },
+      {
+        "question": "How do I get started?",
+        "answer": "<p>Tell us about your project through the Let's Talk button or our Contact page. Share your idea, plans, budget and project location, and we will get back to you to discuss the next steps.</p>"
+      },
+      {
+        "question": "How can I contact you?",
+        "answer": "<p>You can reach us through the Contact page, the Let's Talk button at the top of every page, or the call button at the bottom right of the screen.</p>"
+      }
+    ],
+    "projects": [
+      {
+        "question": "How does your construction process work?",
+        "answer": "<p>Every project follows three stages. <strong>Plan & Define:</strong> you share your idea, plans, budget and location, and we agree a clear scope. <strong>Design & Prepare:</strong> we coordinate design, costing, materials, schedules and site preparation. <strong>Build & Deliver:</strong> construction begins, with supervision, quality control and progress updates until handover.</p>"
+      },
+      {
+        "question": "Which plan is right for me?",
+        "answer": "<p><strong>Plan & Save</strong> is for clients preparing for a future project who want a structured path toward it. <strong>Build in Phases</strong> is for clients who prefer to complete their project step by step. <strong>Start & Build Now</strong> is for clients with approved plans who are ready to build. See the Plans page for full details.</p>"
+      },
+      {
+        "question": "When will the plans be available?",
+        "answer": "<p>Our plans are launching soon. In the meantime, talk to us about your project and register your interest, and we will let you know as soon as they are available.</p>"
+      },
+      {
+        "question": "Can I build my project in phases?",
+        "answer": "<p>Yes. With Build in Phases, your project is planned as a whole and then split into stages, such as the foundation, walling, roofing and finishing. Each phase has its own budget, and you pay as agreed milestones are reached.</p>"
+      },
+      {
+        "question": "How is the cost of my project estimated?",
+        "answer": "<p>We start with a preliminary estimate based on your idea or plans. Once the site has been assessed and the design is confirmed, we prepare a detailed budget covering the work, materials and schedule, so you know what the project will cost before construction starts.</p>"
+      },
+      {
+        "question": "Do you supply the building materials?",
+        "answer": "<p>We plan and procure the materials your project needs, and we manufacture our own concrete blocks, pavers and pre-mixed cement with sand.</p>"
+      },
+      {
+        "question": "Do you supervise the work on site?",
+        "answer": "<p>Yes. Our team supervises the work on site and coordinates every trade, with quality control at each stage of construction.</p>"
+      },
+      {
+        "question": "Will I be kept informed about progress?",
+        "answer": "<p>Yes. You receive transparent progress updates at every stage, from the start of construction through to completion and handover.</p>"
+      }
+    ]
+  }
+}

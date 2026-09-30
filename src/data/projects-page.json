@@ -1,0 +1,58 @@
+{
+  "layout_before": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/projects/bunga-residential-development-1.jpg",
+        "alt": "",
+        "width": 1080,
+        "height": 810
+      },
+      "short_title": "Projects",
+      "title": "Built <span class=\"mil-opacity-text\">Across</span> Uganda"
+    }
+  ],
+  "layout_after": [
+    {
+      "blockType": "call_to_action",
+      "bgImage": {
+        "url": "/media/img-11.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 727,
+        "sizes": {
+          "og": {
+            "url": "/media/img-11-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "icon": {
+        "url": "/media/icons-2.png",
+        "alt": "",
+        "width": 120,
+        "height": 120
+      },
+      "title": "Building Today <br>Shaping <span class=\"mil-opacity-text\">Tomorrow</span>",
+      "description": "Quality construction, reliable materials <br class=\"mil-sm-hidden\">and expert project delivery built around your vision.",
+      "button1_text": "Read more",
+      "button1_url": "/services",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "meta": {
+    "title": "Projects | Snow Holdings Limited"
+  },
+  "badge": "Portfolio",
+  "description": "From family homes and apartments to farm buildings, public offices and materials supply, our work spans Uganda. We can’t list every project here, so talk to us to learn more.",
+  "title": "Homes, Farms <br class=\"mil-sm-hidden\">and <span class=\"mil-opacity-text\">Public</span> Works",
+  "filters": [
+    "Residential",
+    "Commercial & Public",
+    "Civil & Infrastructure",
+    "Agricultural",
+    "Materials Supply"
+  ]
+}

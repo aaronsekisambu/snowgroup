@@ -1,0 +1,31 @@
+{
+  "title": "Sitemap",
+  "slug": "sitemap",
+  "meta": {
+    "title": "Sitemap | Snow Holdings Limited",
+    "description": "All the pages on our website in one place."
+  },
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/services/project-management.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 900
+      },
+      "short_title": "Sitemap",
+      "title": "Sitemap"
+    },
+    {
+      "blockType": "legal",
+      "button_text": "Contact us",
+      "button_url": "/contact",
+      "updated": "1 October 2026",
+      "badge": "Sitemap",
+      "title": "Every Page <span class=\"mil-opacity-text\">at a Glance</span>",
+      "intro": "All the pages on our website in one place.",
+      "linksSource": "sitemap"
+    }
+  ]
+}

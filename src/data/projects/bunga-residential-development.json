@@ -1,0 +1,168 @@
+{
+  "title": "Bunga Residential Development",
+  "slug": "bunga-residential-development",
+  "category": "Residential Construction",
+  "filters": [
+    "Residential"
+  ],
+  "client": "Private client",
+  "location": "Bunga, Kawuku–Ggaba Road",
+  "short_description": "A multi-storey residential development in Bunga, taken from the structural frame through walling and finishing to a completed building.",
+  "meta": {
+    "title": "Bunga Residential Development | Snow Holdings Limited",
+    "description": "A multi-storey residential development in Bunga, taken from the structural frame through walling and finishing to a completed building.",
+    "image": {
+      "url": "/media/projects/bunga-residential-development-1.jpg",
+      "alt": "Bunga Residential Development",
+      "width": 1080,
+      "height": 810
+    }
+  },
+  "order": 4,
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/projects/bunga-residential-development-1.jpg",
+        "alt": "Bunga Residential Development",
+        "width": 1080,
+        "height": 810
+      },
+      "short_title": "Projects",
+      "title": "Bunga Residential Development"
+    },
+    {
+      "blockType": "about_project",
+      "badge": "Residential Construction",
+      "title": "Bunga Residential Development",
+      "info_items": [
+        {
+          "label": "Client",
+          "value": "Private client"
+        },
+        {
+          "label": "Location",
+          "value": "Bunga, Kawuku–Ggaba Road"
+        },
+        {
+          "label": "Category",
+          "value": "Residential Construction"
+        },
+        {
+          "label": "Services",
+          "value": "Building Construction, Site Supervision, Project Management"
+        }
+      ],
+      "intro_title": "About the Project",
+      "intro_description": "<p>The Bunga Residential Development, off the Kawuku–Ggaba Road, is a multi-storey residential building delivered by Snow Holdings from the structure through to the finished facade.</p><p>It shows the full journey of a residential project: a reinforced concrete frame, walling, scaffolding and external works, and a clean, modern finish.</p>",
+      "image": {
+        "url": "/media/projects/bunga-residential-development-2.jpg",
+        "alt": "Bunga Residential Development — photo 2",
+        "width": 810,
+        "height": 1080
+      },
+      "approach_title": "Our Approach",
+      "approach_description": "<p>We built the reinforced concrete frame floor by floor, followed by walling, plastering and the external finishes. Scaffolding and site supervision kept the work safe and organised at height, and each stage was checked before the next began.</p>",
+      "delivered_title": "What We Delivered",
+      "delivered_items": [
+        {
+          "title": "Reinforced concrete frame",
+          "description": "with columns and slabs built floor by floor."
+        },
+        {
+          "title": "Walling and plastering",
+          "description": "across all floors."
+        },
+        {
+          "title": "External finishes",
+          "description": "giving the building its completed facade."
+        },
+        {
+          "title": "Site supervision and coordination",
+          "description": "throughout construction."
+        }
+      ],
+      "goals_title": "Project Priorities",
+      "goals_items": [
+        {
+          "title": "Structural quality",
+          "description": "— a strong frame for a multi-storey building."
+        },
+        {
+          "title": "Safe working at height",
+          "description": "— scaffolding and supervision at every level."
+        },
+        {
+          "title": "A finished, lasting result",
+          "description": "— a building ready for residents."
+        }
+      ],
+      "gallery_title": "Project Gallery",
+      "gallery": [
+        {
+          "url": "/media/projects/bunga-residential-development-3.jpg",
+          "alt": "Bunga Residential Development — photo 3",
+          "width": 1080,
+          "height": 810
+        },
+        {
+          "url": "/media/projects/bunga-residential-development-4.jpg",
+          "alt": "Bunga Residential Development — photo 4",
+          "width": 1080,
+          "height": 810
+        },
+        {
+          "url": "/media/projects/bunga-residential-development-5.jpg",
+          "alt": "Bunga Residential Development — photo 5",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "url": "/media/projects/bunga-residential-development-6.jpg",
+          "alt": "Bunga Residential Development — photo 6",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "url": "/media/projects/bunga-residential-development-7.jpg",
+          "alt": "Bunga Residential Development — photo 7",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "conclusion_description": "<p>The Bunga development demonstrates Snow Holdings’ capability on multi-storey residential construction, from the first floor slab to the final finish.</p>"
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "relatedProjects": [
+    {
+      "slug": "muyenga-residential-project"
+    },
+    {
+      "slug": "mukono-residential-project"
+    },
+    {
+      "slug": "triple-j-agro-farm-development"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "title": "Mukono Residential Project",
+  "slug": "mukono-residential-project",
+  "category": "Residential Construction",
+  "filters": [
+    "Residential"
+  ],
+  "client": "Private client",
+  "location": "Mukono",
+  "short_description": "A family bungalow in Mukono, built with concrete block walling and a pitched tiled roof.",
+  "meta": {
+    "title": "Mukono Residential Project | Snow Holdings Limited",
+    "description": "A family bungalow in Mukono, built with concrete block walling and a pitched tiled roof.",
+    "image": {
+      "url": "/media/projects/mukono-residential-project-1.jpg",
+      "alt": "Mukono Residential Project",
+      "width": 900,
+      "height": 405
+    }
+  },
+  "order": 7,
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/projects/mukono-residential-project-1.jpg",
+        "alt": "Mukono Residential Project",
+        "width": 900,
+        "height": 405
+      },
+      "short_title": "Projects",
+      "title": "Mukono Residential Project"
+    },
+    {
+      "blockType": "about_project",
+      "badge": "Residential Construction",
+      "title": "Mukono Residential Project",
+      "info_items": [
+        {
+          "label": "Client",
+          "value": "Private client"
+        },
+        {
+          "label": "Location",
+          "value": "Mukono"
+        },
+        {
+          "label": "Category",
+          "value": "Residential Construction"
+        },
+        {
+          "label": "Services",
+          "value": "Residential Construction"
+        }
+      ],
+      "intro_title": "About the Project",
+      "intro_description": "<p>This bungalow in Mukono was built by Snow Holdings with concrete block walling and a pitched roof, creating a solid family home.</p>",
+      "image": {
+        "url": "/media/projects/mukono-residential-project-1.jpg",
+        "alt": "Mukono Residential Project",
+        "width": 900,
+        "height": 405
+      },
+      "approach_title": "Our Approach",
+      "approach_description": "<p>We laid the foundations, built the walls with concrete blocks, and completed the roof structure and roofing, supervising each stage on site.</p>",
+      "delivered_title": "What We Delivered",
+      "delivered_items": [
+        {
+          "title": "Foundations",
+          "description": "for a single-storey home."
+        },
+        {
+          "title": "Concrete block walling",
+          "description": "for strong, lasting walls."
+        },
+        {
+          "title": "Roof structure and roofing",
+          "description": "with a pitched roof."
+        }
+      ],
+      "goals_title": "Project Priorities",
+      "goals_items": [
+        {
+          "title": "Value",
+          "description": "— a solid family home built efficiently."
+        },
+        {
+          "title": "Quality materials",
+          "description": "— concrete blocks and roofing built to last."
+        }
+      ],
+      "conclusion_description": "<p>The Mukono project shows Snow Holdings delivering practical, well-built family homes.</p>"
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "relatedProjects": [
+    {
+      "slug": "bunga-residential-development"
+    },
+    {
+      "slug": "muyenga-residential-project"
+    },
+    {
+      "slug": "triple-j-agro-farm-development"
+    }
+  ]
+}

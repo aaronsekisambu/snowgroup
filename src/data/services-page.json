@@ -1,0 +1,75 @@
+{
+  "layout_before": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/services/building-construction.jpg",
+        "alt": "",
+        "width": 1080,
+        "height": 810
+      },
+      "short_title": "Services",
+      "title": "Construction <span class=\"mil-opacity-text\">Services</span>"
+    }
+  ],
+  "layout_after": [
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    },
+    {
+      "blockType": "prices_block",
+      "badge": "Plans",
+      "title": "Flexible <span class=\"mil-opacity-text\">Plans</span><br> for Every One",
+      "description": "One vision. Three flexible ways to make it happen.",
+      "button_text": "Read more",
+      "button_url": "/plans",
+      "plansSource": "plans",
+      "card_style": "mil-gray-card"
+    },
+    {
+      "blockType": "call_to_action",
+      "bgImage": {
+        "url": "/media/services/project-management.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 900
+      },
+      "icon": {
+        "url": "/media/icons-2.png",
+        "alt": "",
+        "width": 120,
+        "height": 120
+      },
+      "title": "Building Today <br>Shaping <span class=\"mil-opacity-text\">Tomorrow</span>",
+      "description": "Quality construction, reliable materials <br class=\"mil-sm-hidden\">and expert project delivery built around your vision.",
+      "button1_text": "Read more",
+      "button1_url": "/services",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "meta": {
+    "title": "Services | Snow Holdings Limited"
+  },
+  "badge": "Services",
+  "description": "From design and engineering to construction and project management, we cover every stage of your project. We support clients locally and in the diaspora, with our own team on the ground.",
+  "title": "Everything You Need <br class=\"mil-sm-hidden\"/>to <span class=\"mil-opacity-text\">Build</span>"
+}

@@ -1,0 +1,52 @@
+{
+  "title": "Legal Information",
+  "slug": "legal-information",
+  "meta": {
+    "title": "Legal Information | Snow Holdings Limited",
+    "description": "Details about the company that operates this website."
+  },
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/services/project-management.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 900
+      },
+      "short_title": "Legal",
+      "title": "Legal Information"
+    },
+    {
+      "blockType": "legal",
+      "button_text": "Contact us",
+      "button_url": "/contact",
+      "updated": "1 October 2026",
+      "badge": "Company",
+      "title": "Legal <span class=\"mil-opacity-text\">Information</span>",
+      "intro": "Details about the company that operates this website.",
+      "sections": [
+        {
+          "heading": "Company",
+          "body": "<p><strong>Snow Holdings Limited</strong> (trading as Snow Holdings and Snow Group) is a private limited company registered in the Republic of Uganda under the Companies Act, 2012.</p><p>We are a Ugandan construction and materials supply company, delivering residential, commercial and public works projects, and manufacturing concrete blocks and pavers.</p>"
+        },
+        {
+          "heading": "Contact details",
+          "body": "<ul><li>Email: <a href=\"mailto:info@snowgroup.ltd\">info@snowgroup.ltd</a></li><li>WhatsApp: +49 15679 137020</li><li>Office: Acacia Mall, 4th Floor, 14-18 Cooper Road, Kisimenti, Kampala</li></ul>"
+        },
+        {
+          "heading": "Website operator",
+          "body": "<p>This website is owned and operated by Snow Holdings Limited. All references to “we”, “us” and “our” on this website refer to Snow Holdings Limited.</p>"
+        },
+        {
+          "heading": "Governing law",
+          "body": "<p>This website and any dispute arising from its use are governed by the laws of the Republic of Uganda, and the courts of Uganda have jurisdiction.</p>"
+        },
+        {
+          "heading": "Related pages",
+          "body": "<ul><li><a href=\"/terms-and-conditions\">Terms and Conditions</a></li><li><a href=\"/privacy-policy\">Privacy Policy</a></li><li><a href=\"/cookie-policy\">Cookie Policy</a></li><li><a href=\"/license\">License</a></li></ul>"
+        }
+      ]
+    }
+  ]
+}

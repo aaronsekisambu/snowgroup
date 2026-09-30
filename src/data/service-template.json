@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "title": "{{title}} | Snow Holdings Limited",
+    "description": "{{short}}",
+    "image": {
+      "url": "/media/service-5.jpg",
+      "alt": "",
+      "width": 500,
+      "height": 691,
+      "sizes": {
+        "og": {
+          "url": "/media/service-5-1200x630.jpg",
+          "width": 1200,
+          "height": 630
+        }
+      }
+    }
+  },
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "short_title": "{{category}}",
+      "title": "{{title}}"
+    },
+    {
+      "blockType": "about_service",
+      "badge": "{{category}}",
+      "title": "{{title}}",
+      "intro_text": "{{short}}",
+      "counter_value": "50",
+      "counter_suffix": "+",
+      "counter_label": "Projects Completed",
+      "button_text": "View projects",
+      "button_url": "/projects",
+      "right_title": "How We Deliver <br>{{title}}",
+      "description": "<p>Every project starts with a clear understanding of your goals, site and budget. Our team brings the experience and discipline to deliver {{title}} safely, efficiently and to the highest standard.</p><p>We work closely with you from the first conversation to final handover, keeping you informed at every stage and resolving issues before they become problems.</p>",
+      "features": [
+        {
+          "title": "Experienced Team",
+          "description": "Qualified professionals who have delivered projects of every size and complexity."
+        },
+        {
+          "title": "Quality & Safety",
+          "description": "Rigorous standards on site and in the office, with safety built into every decision."
+        },
+        {
+          "title": "Transparent Costs",
+          "description": "Clear pricing and regular reporting, so there are no surprises along the way."
+        },
+        {
+          "title": "On-Time Delivery",
+          "description": "Realistic programmes, tight coordination and proactive management of every milestone."
+        }
+      ],
+      "process_title": "Our process",
+      "process_steps": [
+        {
+          "title": "Consultation",
+          "description": "We learn about your project, requirements, site and budget."
+        },
+        {
+          "title": "Planning & Design",
+          "description": "We develop the scope, drawings, programme and cost plan."
+        },
+        {
+          "title": "Delivery",
+          "description": "We carry out the work with close supervision and regular progress updates."
+        },
+        {
+          "title": "Handover & Support",
+          "description": "We complete final inspections, hand over documentation and stay available afterwards."
+        }
+      ],
+      "deliverables_title": "What You Get",
+      "deliverables": [
+        {
+          "title": "Clear Scope & Programme",
+          "description": "A defined scope of work and timeline agreed before work begins."
+        },
+        {
+          "title": "Regular Progress Reports",
+          "description": "Updates on progress, costs and any decisions needed from you."
+        },
+        {
+          "title": "Completion Documentation",
+          "description": "Certificates, warranties and as-built information at handover."
+        }
+      ]
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ]
+}

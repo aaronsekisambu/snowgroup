@@ -1,0 +1,52 @@
+{
+  "title": "Cookie Policy",
+  "slug": "cookie-policy",
+  "meta": {
+    "title": "Cookie Policy | Snow Holdings Limited",
+    "description": "How cookies and similar technologies are used on this website."
+  },
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/services/project-management.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 900
+      },
+      "short_title": "Legal",
+      "title": "Cookie Policy"
+    },
+    {
+      "blockType": "legal",
+      "button_text": "Contact us",
+      "button_url": "/contact",
+      "updated": "1 October 2026",
+      "badge": "Cookies",
+      "title": "Cookie <span class=\"mil-opacity-text\">Policy</span>",
+      "intro": "How cookies and similar technologies are used on this website.",
+      "sections": [
+        {
+          "heading": "What are cookies",
+          "body": "<p>Cookies are small files stored on your device by a website. They help websites work and remember information about your visit.</p>"
+        },
+        {
+          "heading": "Cookies we use",
+          "body": "<p>This website does not use advertising cookies. Your browser may store small amounts of information needed for the website to work, such as display settings.</p>"
+        },
+        {
+          "heading": "Third-party services",
+          "body": "<p>Some pages include services from other companies that may set their own cookies:</p><ul><li><strong>Google Maps</strong> on our Contact page, to show our location;</li><li><strong>WhatsApp</strong> and <strong>LinkedIn</strong>, if you follow links to them.</li></ul><p>These services are covered by their own privacy and cookie policies.</p>"
+        },
+        {
+          "heading": "Managing cookies",
+          "body": "<p>You can block or delete cookies in your browser settings. Some parts of the website, such as the map, may not work fully if you do.</p>"
+        },
+        {
+          "heading": "Contact",
+          "body": "<ul><li>Email: <a href=\"mailto:info@snowgroup.ltd\">info@snowgroup.ltd</a></li><li>WhatsApp: +49 15679 137020</li><li>Office: Acacia Mall, 4th Floor, 14-18 Cooper Road, Kisimenti, Kampala</li></ul>"
+        }
+      ]
+    }
+  ]
+}

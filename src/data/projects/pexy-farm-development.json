@@ -1,0 +1,127 @@
+{
+  "title": "Pexy Farm Development",
+  "slug": "pexy-farm-development",
+  "category": "Agricultural Construction",
+  "filters": [
+    "Agricultural"
+  ],
+  "client": "Pexy Farm",
+  "location": "Busunju",
+  "short_description": "Agricultural construction for Pexy Farm in Busunju, delivering practical, durable farm structures built around the day-to-day needs of the farm.",
+  "meta": {
+    "title": "Pexy Farm Development | Snow Holdings Limited",
+    "description": "Agricultural construction for Pexy Farm in Busunju, delivering practical, durable farm structures built around the day-to-day needs of the farm.",
+    "image": {
+      "url": "/media/projects/pexy-farm-development-1.jpg",
+      "alt": "Pexy Farm Development",
+      "width": 1200,
+      "height": 900
+    }
+  },
+  "order": 3,
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/projects/pexy-farm-development-1.jpg",
+        "alt": "Pexy Farm Development",
+        "width": 1200,
+        "height": 900
+      },
+      "short_title": "Projects",
+      "title": "Pexy Farm Development"
+    },
+    {
+      "blockType": "about_project",
+      "badge": "Agricultural Construction",
+      "title": "Pexy Farm Development",
+      "info_items": [
+        {
+          "label": "Client",
+          "value": "Pexy Farm"
+        },
+        {
+          "label": "Location",
+          "value": "Busunju"
+        },
+        {
+          "label": "Category",
+          "value": "Agricultural Construction"
+        },
+        {
+          "label": "Services",
+          "value": "Building Construction, Site Supervision"
+        }
+      ],
+      "intro_title": "About the Project",
+      "intro_description": "<p>Pexy Farm in Busunju needed farm structures that are practical, durable and suited to daily agricultural work. Snow Holdings delivered construction works for the farm, applying the same standards we bring to every building project.</p>",
+      "image": {
+        "url": "/media/projects/pexy-farm-development-1.jpg",
+        "alt": "Pexy Farm Development",
+        "width": 1200,
+        "height": 900
+      },
+      "approach_title": "Our Approach",
+      "approach_description": "<p>We began by understanding how the farm operates, then planned the works around those needs. Our team handled the construction on site with ongoing supervision, so the finished structures are solid, functional and ready for use.</p>",
+      "delivered_title": "What We Delivered",
+      "delivered_items": [
+        {
+          "title": "Planning around farm operations",
+          "description": "so the structures support the way the farm works."
+        },
+        {
+          "title": "Construction of farm structures",
+          "description": "built for durability and daily use."
+        },
+        {
+          "title": "Site supervision",
+          "description": "and quality control throughout the works."
+        }
+      ],
+      "goals_title": "Project Priorities",
+      "goals_items": [
+        {
+          "title": "Function first",
+          "description": "— structures designed around the farm’s daily routines."
+        },
+        {
+          "title": "Durability",
+          "description": "— construction that stands up to agricultural use."
+        }
+      ],
+      "conclusion_description": "<p>Together with Triple J Agro Farm, the Pexy Farm development shows Snow Holdings’ growing experience in agricultural construction.</p>"
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "relatedProjects": [
+    {
+      "slug": "triple-j-agro-farm-development"
+    },
+    {
+      "slug": "ministry-of-lands-zonal-offices"
+    },
+    {
+      "slug": "bunga-residential-development"
+    }
+  ]
+}

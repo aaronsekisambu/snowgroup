@@ -1,0 +1,104 @@
+/* -------------------------------------------
+
+fonts
+
+------------------------------------------- */
+
+$font-1: var(--font-primary),
+sans-serif;
+
+$font-2: var(--font-secondary),
+cursive;
+
+/* -------------------------------------------
+
+local connection
+
+------------------------------------------- */
+
+/* ---
+@font-face {
+    font-family: 'font-name';
+    src: url('../fonts/font-name.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$font-3: 'font-name',
+sans-serif;
+--- */
+
+/* -------------------------------------------
+
+colors
+
+------------------------------------------- */
+
+// Snow Holdings brand palette
+$m-1: rgba(2, 58, 109, 1); // Marine Blue #023a6d - dark backgrounds, headings
+$m-2: rgba(85, 85, 85, 1); // Gray #555555 - body text on light backgrounds
+$m-3: rgba(153, 176, 197, 1); // Marine Blue tint - muted text on dark backgrounds
+$m-4: rgba(225, 235, 245, 1); // Alice Blue tint - light sections
+$m-5: rgba(244, 248, 252, 1); // Alice Blue tint - page background, light text
+
+$a-1: rgba(102, 154, 204, 1); // Alice Blue #669acc - accent
+
+$b-1: rgba(17, 17, 17, 1); // Black #111111 - overlays on photos and buttons
+
+/* -------------------------------------------
+
+buttons
+
+------------------------------------------- */
+
+// Buttons follow the brand logo rules: black on light backgrounds,
+// white on dark backgrounds and photos. The Alice Blue arrow circle keeps the accent on both.
+@mixin mil-btn-dark {
+    background-color: $b-1;
+    color: $m-5;
+
+    & i {
+        background-color: $a-1;
+        color: $b-1;
+    }
+}
+
+@mixin mil-btn-light {
+    background-color: $m-5;
+    color: $b-1;
+
+    & i {
+        background-color: $a-1;
+        color: $b-1;
+    }
+
+    &:hover {
+        color: $m-1;
+    }
+}
+
+/* -------------------------------------------
+
+font size
+
+------------------------------------------- */
+
+$fs-xxxl: 11rem;
+$fs-xxl: 10rem;
+$fs-xl: 9.2rem;
+$fs-lg: 7.8rem;
+$fs-md: 6.4rem;
+$fs-sm: 4.8rem;
+$fs-xs: 3.2rem;
+$fs-xxs: 2.2rem;
+
+/* -------------------------------------------
+
+trasition
+
+------------------------------------------- */
+
+$t-sm: .2s cubic-bezier(0, 0, 0.3642, 1);
+$t-md: .4s cubic-bezier(0, 0, 0.3642, 1);
+$t-lg: .6s cubic-bezier(0, 0, 0.3642, 1);
+$t-xl: .8s cubic-bezier(0, 0, 0.3642, 1);

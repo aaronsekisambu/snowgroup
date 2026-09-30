@@ -1,0 +1,292 @@
+{
+  "title": "Plans",
+  "slug": "plans",
+  "meta": {
+    "title": "Plans | Lumex Template",
+    "description": "Three flexible ways to build with Snow Holdings: Plan & Save, Build in Phases, and Start & Build Now."
+  },
+  "publishedAt": "2025-11-13T11:36:04.275Z",
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/img-7.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1042,
+        "sizes": {
+          "og": {
+            "url": "/media/img-7-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "short_title": "Plans",
+      "title": "Flexible <span class=\"mil-opacity-text\">Plans</span> <br class=\"mil-sm-hidden\">for Every One"
+    },
+    {
+      "blockType": "prices_block",
+      "badge": "Plans",
+      "title": "One Vision. <br class=\"mil-sm-hidden\">Three Ways to <span class=\"mil-opacity-text\">Build</span>",
+      "description": "Whether you are saving toward a future home, building step by step, or ready to break ground today, there is a plan that fits where you are now. Each plan is explained in detail below.",
+      "plansSource": "plans",
+      "button_text": "Compare plans",
+      "button_url": "#plan-details"
+    },
+    {
+      "blockType": "plan_tabs",
+      "badge": "Compare",
+      "title": "Which Plan <span class=\"mil-opacity-text\">Fits</span> You?",
+      "description": "Choose a plan to see who it is for, what is included and how it works. All plans are launching soon, so talk to us to register your interest.",
+      "plans": [
+        {
+          "label": "Plan & Save",
+          "tier": "Essential Start",
+          "tagline": "Build for Tomorrow",
+          "summary": "Many great projects start years before the first block is laid. Plan & Save is for you if you have a dream home, rental units or a commercial space in mind, but are not ready to build yet.",
+          "status": "Coming soon",
+          "button_text": "Talk to us",
+          "button_url": "/contact",
+          "benefits": [
+            {
+              "title": "A realistic plan:",
+              "description": "A house plan and project idea shaped around your needs and your land."
+            },
+            {
+              "title": "A clear cost picture:",
+              "description": "A preliminary estimate so you know what your project will take."
+            },
+            {
+              "title": "A target to work toward:",
+              "description": "A defined goal and a simple way to track your progress toward it."
+            }
+          ],
+          "features": [
+            {
+              "title": "Start with an idea or existing plan",
+              "description": "Bring a sketch, a picture of a house you like, or plans you already have. Every project starts from where you are."
+            },
+            {
+              "title": "Initial project consultation",
+              "description": "We sit down with you to understand your goals, your land and your budget, and explain the options available to you."
+            },
+            {
+              "title": "House planning & design support",
+              "description": "Our team helps you shape your idea into a practical, buildable house plan that fits your needs and your plot."
+            },
+            {
+              "title": "Preliminary cost estimation",
+              "description": "You get an early estimate of what your project is likely to cost, so you know what you are working toward."
+            },
+            {
+              "title": "Set your construction target",
+              "description": "Together we set a clear target for your project, what you want to build and the amount needed to get there."
+            },
+            {
+              "title": "Save toward construction or materials",
+              "description": "Set money aside step by step toward your construction, or toward the materials you will need to build."
+            },
+            {
+              "title": "Track progress toward your goal",
+              "description": "Stay on top of how close you are to your target, so you always know when you are ready to start."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Share your idea",
+              "description": "Tell us what you want to build, whether it is a rough idea or a complete plan."
+            },
+            {
+              "title": "Plan & estimate",
+              "description": "We help with the house plan and give you a preliminary cost estimate."
+            },
+            {
+              "title": "Set your target",
+              "description": "We agree on a clear construction target based on your plan and estimate."
+            },
+            {
+              "title": "Save & track",
+              "description": "You save toward construction or materials and follow your progress."
+            },
+            {
+              "title": "Ready to build",
+              "description": "When you reach your target, you move on to building with a plan already in place."
+            }
+          ]
+        },
+        {
+          "label": "Build in Phases",
+          "tier": "Growth Focus",
+          "tagline": "Build at Your Pace",
+          "summary": "Not every project needs to be built all at once. Build in Phases lets you complete your house or building one stage at a time, at a pace that suits you.",
+          "status": "Coming soon",
+          "button_text": "Talk to us",
+          "button_url": "/contact",
+          "benefits": [
+            {
+              "title": "A phased project plan:",
+              "description": "A clear breakdown of every phase and its budget."
+            },
+            {
+              "title": "Control over your pace:",
+              "description": "Build as your budget allows, without compromising on quality."
+            },
+            {
+              "title": "Payments tied to progress:",
+              "description": "You only pay for each stage as it is completed."
+            }
+          ],
+          "features": [
+            {
+              "title": "Use your own plans or design with us",
+              "description": "Build from plans you already have, or let our team design the project with you."
+            },
+            {
+              "title": "Project budget & phase planning",
+              "description": "We break your project into clear phases and set a budget for each one, so you always know what comes next."
+            },
+            {
+              "title": "Foundation & substructure",
+              "description": "Setting out, excavation and a strong foundation, the base everything else is built on."
+            },
+            {
+              "title": "Walling & structural works",
+              "description": "Walls, columns, beams and slabs that give your building its shape and strength."
+            },
+            {
+              "title": "Roofing",
+              "description": "Roof structure and covering that protect your building and let the next phase begin."
+            },
+            {
+              "title": "Finishing & installations",
+              "description": "Plastering, floors, doors, windows, fittings and installations that make the building ready to use."
+            },
+            {
+              "title": "Pay and build by agreed milestones",
+              "description": "You pay as each agreed stage is completed, so progress and payments always move together."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Plan the full project",
+              "description": "We start from your plans, or design with you, and look at the project as a whole."
+            },
+            {
+              "title": "Split into phases",
+              "description": "The project is divided into phases, each with its own budget and milestone."
+            },
+            {
+              "title": "Build phase by phase",
+              "description": "We build each phase, from the foundation through walling, roofing and finishing."
+            },
+            {
+              "title": "Pay by milestone",
+              "description": "Each phase is paid for as its agreed milestone is reached."
+            },
+            {
+              "title": "Handover",
+              "description": "Once the final phase is complete, your finished building is handed over to you."
+            }
+          ]
+        },
+        {
+          "label": "Start & Build Now",
+          "tier": "Core",
+          "tagline": "Ready to Build",
+          "summary": "You have your approved plans and you are ready to begin. Start & Build Now takes your project from plans to a finished building with one team handling it from start to end.",
+          "status": "Coming soon",
+          "button_text": "Talk to us",
+          "button_url": "/contact",
+          "benefits": [
+            {
+              "title": "One team, start to finish:",
+              "description": "Planning, materials, construction and supervision handled by one team."
+            },
+            {
+              "title": "A clear budget up front:",
+              "description": "A detailed cost estimate before construction begins."
+            },
+            {
+              "title": "A finished building:",
+              "description": "Your project completed and handed over, ready to use."
+            }
+          ],
+          "features": [
+            {
+              "title": "Start with your own approved plans",
+              "description": "Bring your approved plans and we take it from there."
+            },
+            {
+              "title": "Planning & project consultation",
+              "description": "We go through your plans, goals and timeline, and agree how the project will run."
+            },
+            {
+              "title": "Site assessment & preparation",
+              "description": "We assess your site and get it ready for construction."
+            },
+            {
+              "title": "Budgeting & cost estimation",
+              "description": "A detailed budget and cost estimate, so you know what the project will cost before work starts."
+            },
+            {
+              "title": "Materials planning & procurement",
+              "description": "We plan what materials are needed, and when, and source them for your project."
+            },
+            {
+              "title": "Full construction execution",
+              "description": "Our team carries out the complete construction, from the foundation to the finishing."
+            },
+            {
+              "title": "Project supervision & coordination",
+              "description": "We supervise the work on site and coordinate every trade, keeping the project on track."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Consultation",
+              "description": "We review your approved plans and agree on the scope and timeline."
+            },
+            {
+              "title": "Site & budget",
+              "description": "We assess your site and prepare a detailed budget and cost estimate."
+            },
+            {
+              "title": "Materials",
+              "description": "We plan and procure the materials your project needs."
+            },
+            {
+              "title": "Construction",
+              "description": "We carry out the full construction under close supervision."
+            },
+            {
+              "title": "Handover",
+              "description": "We complete final checks and hand over your finished building."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ]
+}

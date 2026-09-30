@@ -1,0 +1,862 @@
+{
+  "categories": [
+    {
+      "title": "Build",
+      "slug": "build",
+      "items": [
+        {
+          "title": "Building Construction",
+          "slug": "building-construction",
+          "short": "End-to-end construction of new buildings, delivered safely, on schedule and to specification.",
+          "image": {
+            "url": "/media/services/building-construction.jpg",
+            "alt": "Building Construction",
+            "width": 1080,
+            "height": 810
+          },
+          "list": [
+            "New buildings from foundation to finish",
+            "Homes, apartments and commercial buildings",
+            "Quality blocks from our own production",
+            "Supervision at every stage",
+            "Clear progress updates"
+          ],
+          "right_title": "Solid Buildings, <br>Built to Last",
+          "description": "<p>Building construction is at the heart of what we do. We take new buildings from the foundation to the final finish, including family homes, apartment blocks and commercial buildings, with our own team supervising the work on site.</p><p>Because we manufacture concrete blocks and pavers ourselves, we control the quality of key materials from the start. And whether you are in Uganda or building from abroad, we keep you informed at every stage.</p>",
+          "features": [
+            {
+              "title": "Foundations & substructure",
+              "description": "Setting out, excavation and strong foundations that everything else is built on."
+            },
+            {
+              "title": "Frame & walling",
+              "description": "Reinforced concrete frames and quality block walling for a solid structure."
+            },
+            {
+              "title": "Roofing",
+              "description": "Roof structures and coverings that protect your building for years."
+            },
+            {
+              "title": "Finishing",
+              "description": "Plastering, floors, doors, windows and fittings that make the building ready to use."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Consultation",
+              "description": "We review your plans, site and budget, and agree the scope of work."
+            },
+            {
+              "title": "Planning & costing",
+              "description": "We prepare a clear budget and programme for your build."
+            },
+            {
+              "title": "Construction",
+              "description": "We build stage by stage with supervision and quality checks."
+            },
+            {
+              "title": "Handover",
+              "description": "We complete final checks and hand over your finished building."
+            }
+          ],
+          "deliverables": [
+            {
+              "title": "A finished building",
+              "description": "Built to your approved plans and to a lasting standard."
+            },
+            {
+              "title": "One accountable team",
+              "description": "Supervision and coordination handled by us."
+            },
+            {
+              "title": "Regular updates",
+              "description": "Progress you can follow, wherever you are."
+            }
+          ]
+        },
+        {
+          "title": "Residential & Commercial",
+          "slug": "residential-commercial",
+          "short": "Homes, offices and retail spaces built to last, with quality finishes and clear communication throughout.",
+          "image": {
+            "url": "/media/services/residential-commercial.jpg",
+            "alt": "Residential & Commercial",
+            "width": 1080,
+            "height": 1080
+          },
+          "list": [
+            "Bungalows, villas and apartments",
+            "Office blocks, shops and malls",
+            "Your plans, or plans designed with us",
+            "Quality materials and workmanship",
+            "Support for clients in the diaspora"
+          ],
+          "right_title": "Homes and Business <br>Spaces That Work",
+          "description": "<p>We build residential and commercial property: bungalows, villas and apartments for families and investors, and office blocks, shops and malls for businesses.</p><p>Many of our clients are building back home from the diaspora. We act as your team on the ground, with your plans, your budget and your goals guiding every decision, and we keep you updated throughout the build.</p>",
+          "features": [
+            {
+              "title": "Residential construction",
+              "description": "Bungalows, villas and apartment buildings, built for comfort and durability."
+            },
+            {
+              "title": "Commercial buildings",
+              "description": "Office blocks, shops and malls designed around how the space will be used."
+            },
+            {
+              "title": "Build from your plans",
+              "description": "Bring approved plans, or let us design the building with you."
+            },
+            {
+              "title": "Build from abroad",
+              "description": "We are your eyes on site, with progress updates wherever you are."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Tell us your idea",
+              "description": "Share what you want to build, where, and your budget."
+            },
+            {
+              "title": "Design & budget",
+              "description": "We confirm the plans, costs and schedule with you."
+            },
+            {
+              "title": "Build",
+              "description": "We carry out the construction with supervision and quality control."
+            },
+            {
+              "title": "Hand over",
+              "description": "You receive a finished property, ready to live in, rent or trade from."
+            }
+          ],
+          "deliverables": [
+            {
+              "title": "A property built for its purpose",
+              "description": "Whether it is a home, a rental or a business space."
+            },
+            {
+              "title": "Transparent costs",
+              "description": "A clear budget before construction starts."
+            },
+            {
+              "title": "Peace of mind",
+              "description": "Regular updates, even if you are overseas."
+            }
+          ]
+        },
+        {
+          "title": "Civil & Infrastructure",
+          "slug": "civil-infrastructure",
+          "short": "Roads, drainage, foundations and site works that form the backbone of every successful development.",
+          "image": {
+            "url": "/media/services/civil-infrastructure.jpg",
+            "alt": "Civil & Infrastructure",
+            "width": 1200,
+            "height": 1600
+          },
+          "list": [
+            "Roads and access routes",
+            "Drainage systems",
+            "Earthworks and site preparation",
+            "Foundations and ground works",
+            "Heavy machinery available"
+          ],
+          "right_title": "The Groundwork <br>Behind Every Project",
+          "description": "<p>Civil works make every other part of a development possible. We deliver roads, drainage systems, earthworks and site preparation, laying the groundwork for homes, farms, compounds and public projects.</p><p>With our own heavy machinery, such as road rollers, we can prepare and compact ground efficiently and keep the works moving.</p>",
+          "features": [
+            {
+              "title": "Roads & access",
+              "description": "Access roads and driveways that are properly prepared and compacted."
+            },
+            {
+              "title": "Drainage",
+              "description": "Drainage systems that carry water away and protect your property."
+            },
+            {
+              "title": "Earthworks",
+              "description": "Excavation, levelling and site preparation for construction."
+            },
+            {
+              "title": "Machinery",
+              "description": "Road rollers and other equipment to get the work done efficiently."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Site assessment",
+              "description": "We assess the site, ground conditions and drainage needs."
+            },
+            {
+              "title": "Planning",
+              "description": "We plan the works, equipment and materials required."
+            },
+            {
+              "title": "Execution",
+              "description": "Our team carries out the works with supervision on site."
+            },
+            {
+              "title": "Completion",
+              "description": "We check the finished works and hand them over."
+            }
+          ],
+          "deliverables": [
+            {
+              "title": "A prepared, stable site",
+              "description": "Ready for construction or use."
+            },
+            {
+              "title": "Working drainage",
+              "description": "Water managed away from buildings and surfaces."
+            },
+            {
+              "title": "Durable access",
+              "description": "Roads and driveways built to take traffic."
+            }
+          ]
+        },
+        {
+          "title": "Renovation & Fit-Out",
+          "slug": "renovation-fit-out",
+          "short": "Refurbishments and interior fit-outs that transform existing spaces with minimal disruption.",
+          "image": {
+            "url": "/media/services/renovation-fit-out.jpg",
+            "alt": "Renovation & Fit-Out",
+            "width": 1600,
+            "height": 1067
+          },
+          "list": [
+            "Renovations and upgrades",
+            "Extensions to existing buildings",
+            "Interior fit-outs",
+            "Plastering, flooring and finishes",
+            "Minimal disruption"
+          ],
+          "right_title": "New Life for <br>Existing Spaces",
+          "description": "<p>Not every project starts from the ground up. We renovate, extend and fit out existing buildings, whether that means modernising a home, adding space for a growing family, or preparing a commercial unit for a new business.</p><p>We plan renovation work carefully to keep disruption low, and we match new work to the existing building so the result looks complete.</p>",
+          "features": [
+            {
+              "title": "Renovations",
+              "description": "Repairs and upgrades that restore and modernise a building."
+            },
+            {
+              "title": "Extensions",
+              "description": "Additional rooms or floors that blend with the existing structure."
+            },
+            {
+              "title": "Interior fit-out",
+              "description": "Partitions, ceilings, floors and finishes for homes and businesses."
+            },
+            {
+              "title": "Finishing works",
+              "description": "Plastering, painting, tiling and fittings to a high standard."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Site visit",
+              "description": "We assess the existing building and discuss what you want to change."
+            },
+            {
+              "title": "Scope & quote",
+              "description": "We agree the scope of work, budget and timeline."
+            },
+            {
+              "title": "Works",
+              "description": "We carry out the renovation with care for the existing building."
+            },
+            {
+              "title": "Final finish",
+              "description": "We complete the finishing and clean up before handover."
+            }
+          ],
+          "deliverables": [
+            {
+              "title": "An upgraded space",
+              "description": "Renovated or extended to meet your needs."
+            },
+            {
+              "title": "A consistent finish",
+              "description": "New work that matches the existing building."
+            },
+            {
+              "title": "Low disruption",
+              "description": "Works planned around you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Design & Engineering",
+      "slug": "design-engineering",
+      "items": [
+        {
+          "title": "Architectural Design",
+          "slug": "architectural-design",
+          "short": "Functional, buildable designs that balance aesthetics, budget and planning requirements.",
+          "image": {
+            "url": "/media/services/architectural-design.jpg",
+            "alt": "Architectural Design",
+            "width": 1067,
+            "height": 1600
+          },
+          "list": [
+            "Custom house plans",
+            "3D visualisations",
+            "Designs that fit your plot and budget",
+            "Practical, buildable layouts",
+            "Support through approvals"
+          ],
+          "right_title": "See Your Building <br>Before It Is Built",
+          "description": "<p>Every good building starts with a good plan. We create custom house plans shaped around your needs, your plot and your budget, and bring them to life with 3D visualisations so you can see your building before construction starts.</p><p>Our designs are practical and buildable, created with construction in mind so the plan on paper becomes a building on site without costly surprises.</p>",
+          "features": [
+            {
+              "title": "Custom house plans",
+              "description": "Layouts designed around how you want to live or work."
+            },
+            {
+              "title": "3D visualisations",
+              "description": "Realistic views of your building before it is built."
+            },
+            {
+              "title": "Budget-aware design",
+              "description": "Designs that respect what you plan to spend."
+            },
+            {
+              "title": "Buildable detail",
+              "description": "Plans prepared with construction in mind."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Brief",
+              "description": "Tell us your needs, style, plot and budget."
+            },
+            {
+              "title": "Concept",
+              "description": "We prepare an initial layout for your feedback."
+            },
+            {
+              "title": "3D & refinement",
+              "description": "We refine the design and show it in 3D."
+            },
+            {
+              "title": "Final plans",
+              "description": "You receive plans ready for approvals and construction."
+            }
+          ],
+          "deliverables": [
+            {
+              "title": "House plans",
+              "description": "A complete, practical design for your building."
+            },
+            {
+              "title": "3D visualisations",
+              "description": "A clear picture of the finished result."
+            },
+            {
+              "title": "A path to construction",
+              "description": "Plans ready to build with us or your chosen team."
+            }
+          ]
+        },
+        {
+          "title": "Structural Engineering",
+          "slug": "structural-engineering",
+          "short": "Safe, efficient structural solutions backed by detailed calculations and code compliance.",
+          "image": {
+            "url": "/media/services/structural-engineering.jpg",
+            "alt": "Structural Engineering",
+            "width": 1600,
+            "height": 1200
+          },
+          "list": [
+            "Structural design for buildings",
+            "Foundations, columns, beams and slabs",
+            "Safe, efficient structures",
+            "Checks during construction",
+            "Residential, commercial and farm buildings"
+          ],
+          "right_title": "Strength Where <br>It Matters Most",
+          "description": "<p>A building is only as good as its structure. Our structural engineering makes sure foundations, columns, beams and slabs are designed to carry their loads safely and efficiently.</p><p>We design structures for homes, multi-storey buildings, commercial spaces and farm buildings, and follow the design through on site so what is built matches what was engineered.</p>",
+          "features": [
+            {
+              "title": "Foundation design",
+              "description": "Foundations suited to your building and ground conditions."
+            },
+            {
+              "title": "Frame design",
+              "description": "Columns, beams and slabs sized to carry their loads."
+            },
+            {
+              "title": "Efficient structures",
+              "description": "Safe designs that avoid unnecessary material and cost."
+            },
+            {
+              "title": "Site checks",
+              "description": "Inspections during construction to confirm the work matches the design."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Review",
+              "description": "We review the architectural plans and site."
+            },
+            {
+              "title": "Design",
+              "description": "We design the structure and prepare drawings."
+            },
+            {
+              "title": "Coordination",
+              "description": "We coordinate the structure with the building design."
+            },
+            {
+              "title": "Supervision",
+              "description": "We check the structural works during construction."
+            }
+          ],
+          "deliverables": [
+            {
+              "title": "Structural drawings",
+              "description": "Clear details for construction."
+            },
+            {
+              "title": "A safe structure",
+              "description": "Designed to carry its loads with confidence."
+            },
+            {
+              "title": "Confidence on site",
+              "description": "Work checked against the design."
+            }
+          ]
+        },
+        {
+          "title": "Design & Build",
+          "slug": "design-build",
+          "short": "One team responsible for design and construction, for faster delivery and a single point of contact.",
+          "image": {
+            "url": "/media/services/design-build.jpg",
+            "alt": "Design & Build",
+            "width": 1080,
+            "height": 810
+          },
+          "list": [
+            "One team from design to handover",
+            "Single point of contact",
+            "Faster, better-coordinated delivery",
+            "Budget set early",
+            "Ideal for clients building from abroad"
+          ],
+          "right_title": "From Your Idea <br>to the Final Build",
+          "description": "<p>With design & build, one team is responsible for your project from the first sketch to the finished building. We design it, cost it and build it, so there is no gap between the designer and the builder.</p><p>This makes delivery faster and simpler, and it is especially helpful for clients building from abroad, who need one trusted team to handle everything on the ground.</p>",
+          "features": [
+            {
+              "title": "Design",
+              "description": "House plans and 3D visualisations shaped around your needs."
+            },
+            {
+              "title": "Costing",
+              "description": "A budget set early and kept in view as the design develops."
+            },
+            {
+              "title": "Construction",
+              "description": "The same team builds what it designed."
+            },
+            {
+              "title": "One contact",
+              "description": "A single point of contact for the whole project."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Plan & define",
+              "description": "Share your idea, budget and location, and we agree the scope."
+            },
+            {
+              "title": "Design & prepare",
+              "description": "We design, cost and plan the build."
+            },
+            {
+              "title": "Build & deliver",
+              "description": "We construct, supervise and keep you updated."
+            },
+            {
+              "title": "Handover",
+              "description": "We hand over your completed building."
+            }
+          ],
+          "deliverables": [
+            {
+              "title": "A complete project",
+              "description": "Designed and built by one team."
+            },
+            {
+              "title": "Fewer surprises",
+              "description": "Design and budget aligned from the start."
+            },
+            {
+              "title": "Simple communication",
+              "description": "One team answerable for everything."
+            }
+          ]
+        },
+        {
+          "title": "MEP Engineering",
+          "slug": "mep-engineering",
+          "short": "Mechanical, electrical and plumbing systems designed and coordinated for performance and efficiency.",
+          "image": {
+            "url": "/media/services/mep-engineering.jpg",
+            "alt": "MEP Engineering",
+            "width": 1600,
+            "height": 1060
+          },
+          "list": [
+            "Electrical installations",
+            "Plumbing and water supply",
+            "Drainage and waste",
+            "Coordinated with the structure",
+            "Installed during construction"
+          ],
+          "right_title": "The Systems That <br>Make a Building Work",
+          "description": "<p>Mechanical, electrical and plumbing (MEP) systems turn a structure into a working building. We plan and coordinate electrical, plumbing and drainage systems so they fit the building design and are installed at the right stage of construction.</p><p>Planning services early avoids costly changes later, such as cutting into finished walls or rerouting pipes.</p>",
+          "features": [
+            {
+              "title": "Electrical",
+              "description": "Power and lighting installations planned around how the building is used."
+            },
+            {
+              "title": "Plumbing",
+              "description": "Water supply to kitchens, bathrooms and outlets."
+            },
+            {
+              "title": "Drainage & waste",
+              "description": "Systems that carry waste and water away safely."
+            },
+            {
+              "title": "Coordination",
+              "description": "Services planned with the structure to avoid clashes."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Needs assessment",
+              "description": "We confirm what services the building needs."
+            },
+            {
+              "title": "Layout",
+              "description": "We plan the routes and positions of each system."
+            },
+            {
+              "title": "Installation",
+              "description": "Systems are installed at the right stage of construction."
+            },
+            {
+              "title": "Testing",
+              "description": "We test the systems before handover."
+            }
+          ],
+          "deliverables": [
+            {
+              "title": "Working services",
+              "description": "Power, water and drainage ready to use."
+            },
+            {
+              "title": "Fewer changes later",
+              "description": "Systems planned before walls are finished."
+            },
+            {
+              "title": "Tested installations",
+              "description": "Checked before you move in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Manage",
+      "slug": "manage",
+      "items": [
+        {
+          "title": "Project Management",
+          "slug": "project-management",
+          "short": "Planning, coordination and reporting that keep your project on time, on budget and on track.",
+          "image": {
+            "url": "/media/services/project-management.jpg",
+            "alt": "Project Management",
+            "width": 1600,
+            "height": 900
+          },
+          "list": [
+            "Planning and scheduling",
+            "Coordination of trades and suppliers",
+            "Budget and progress tracking",
+            "Regular client reporting",
+            "Your eyes on site from anywhere"
+          ],
+          "right_title": "Keeping Your Project <br>on Track",
+          "description": "<p>Good project management keeps construction on time, on budget and to standard. We plan the works, coordinate every trade and supplier, and track progress and costs throughout.</p><p>For clients in the diaspora, we are your eyes on the field, with regular updates so you always know how your project is progressing.</p>",
+          "features": [
+            {
+              "title": "Planning",
+              "description": "A realistic programme with clear milestones."
+            },
+            {
+              "title": "Coordination",
+              "description": "Trades, suppliers and deliveries organised on site."
+            },
+            {
+              "title": "Cost control",
+              "description": "Spending tracked against the budget."
+            },
+            {
+              "title": "Reporting",
+              "description": "Regular updates on progress and decisions needed."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Set up",
+              "description": "We agree the scope, budget and programme."
+            },
+            {
+              "title": "Coordinate",
+              "description": "We organise trades, materials and deliveries."
+            },
+            {
+              "title": "Track",
+              "description": "We monitor progress, quality and costs."
+            },
+            {
+              "title": "Report",
+              "description": "We keep you informed until handover."
+            }
+          ],
+          "deliverables": [
+            {
+              "title": "A managed project",
+              "description": "Organised from start to finish."
+            },
+            {
+              "title": "Visibility",
+              "description": "Regular reports, wherever you are."
+            },
+            {
+              "title": "Control",
+              "description": "Time, cost and quality kept in check."
+            }
+          ]
+        },
+        {
+          "title": "Quantity Surveying",
+          "slug": "quantity-surveying",
+          "short": "Accurate measurement, valuation and cost control from tender through to final account.",
+          "image": {
+            "url": "/media/services/quantity-surveying.jpg",
+            "alt": "Quantity Surveying",
+            "width": 1083,
+            "height": 1600
+          },
+          "list": [
+            "Bills of quantities",
+            "Material and labour take-offs",
+            "Tender and contract support",
+            "Valuations during construction",
+            "Cost control to final account"
+          ],
+          "right_title": "Know What Your <br>Project Needs",
+          "description": "<p>Quantity surveying gives you a clear, measured picture of what your project needs. We prepare bills of quantities and material take-offs, so you know the materials, labour and costs involved before you commit.</p><p>During construction we value the work done and keep costs under control through to the final account.</p>",
+          "features": [
+            {
+              "title": "Bills of quantities",
+              "description": "Measured quantities for the whole project."
+            },
+            {
+              "title": "Take-offs",
+              "description": "Material and labour requirements worked out from the plans."
+            },
+            {
+              "title": "Valuations",
+              "description": "Work valued during construction."
+            },
+            {
+              "title": "Cost control",
+              "description": "Spending kept in line with the budget."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Review plans",
+              "description": "We study the drawings and specifications."
+            },
+            {
+              "title": "Measure",
+              "description": "We prepare quantities and take-offs."
+            },
+            {
+              "title": "Cost",
+              "description": "We price the works and advise on savings."
+            },
+            {
+              "title": "Monitor",
+              "description": "We value progress and track costs to completion."
+            }
+          ],
+          "deliverables": [
+            {
+              "title": "Clear quantities",
+              "description": "Know exactly what your project needs."
+            },
+            {
+              "title": "Informed decisions",
+              "description": "Costs understood before you commit."
+            },
+            {
+              "title": "Controlled spending",
+              "description": "Costs monitored throughout."
+            }
+          ]
+        },
+        {
+          "title": "Cost Estimation",
+          "slug": "cost-estimation",
+          "short": "Reliable early-stage and detailed estimates so you can budget and decide with confidence.",
+          "image": {
+            "url": "/media/services/cost-estimation.jpg",
+            "alt": "Cost Estimation",
+            "width": 1600,
+            "height": 1067
+          },
+          "list": [
+            "Early-stage estimates",
+            "Detailed construction budgets",
+            "Phase-by-phase costing",
+            "Materials cost guidance",
+            "Support for savings plans"
+          ],
+          "right_title": "Plan With <br>Confidence",
+          "description": "<p>Knowing what your project will cost is the first step to building it. We provide early estimates from an idea or plan, and detailed budgets once the design and site are confirmed.</p><p>If you are saving toward a project or building in phases, we can break the cost down stage by stage, so you know what each phase needs.</p>",
+          "features": [
+            {
+              "title": "Preliminary estimates",
+              "description": "An early idea of cost from your idea or plans."
+            },
+            {
+              "title": "Detailed budgets",
+              "description": "A full breakdown once the design is confirmed."
+            },
+            {
+              "title": "Phase costing",
+              "description": "Costs split by foundation, walls, roof and finishing."
+            },
+            {
+              "title": "Materials guidance",
+              "description": "Advice on materials and how they affect cost."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Share your plans",
+              "description": "Send your idea, plans and location."
+            },
+            {
+              "title": "Estimate",
+              "description": "We prepare a preliminary estimate."
+            },
+            {
+              "title": "Refine",
+              "description": "We refine the budget as the design develops."
+            },
+            {
+              "title": "Plan ahead",
+              "description": "We help you plan savings or phases around the budget."
+            }
+          ],
+          "deliverables": [
+            {
+              "title": "A realistic budget",
+              "description": "Based on your plans and site."
+            },
+            {
+              "title": "Phase breakdown",
+              "description": "Know what each stage will cost."
+            },
+            {
+              "title": "A plan to get there",
+              "description": "Whether you are ready now or saving."
+            }
+          ]
+        },
+        {
+          "title": "Procurement & Supervision",
+          "slug": "procurement-supervision",
+          "short": "Sourcing the right contractors and materials, and supervising work on site to the agreed standard.",
+          "image": {
+            "url": "/media/services/procurement-supervision.jpg",
+            "alt": "Procurement & Supervision",
+            "width": 1600,
+            "height": 1067
+          },
+          "list": [
+            "Sourcing materials and contractors",
+            "Quality checks on deliveries",
+            "On-site supervision",
+            "Work checked against plans",
+            "Materials from our own production"
+          ],
+          "right_title": "The Right Materials, <br>the Right Standard",
+          "description": "<p>We source the right materials and contractors for your project and supervise the work on site to the agreed standard. Where it makes sense, we supply concrete blocks and pavers from our own production.</p><p>Our supervisors check deliveries and workmanship, so problems are spotted early and your project is built as planned.</p>",
+          "features": [
+            {
+              "title": "Procurement",
+              "description": "Sourcing materials and contractors at the right price and quality."
+            },
+            {
+              "title": "Own production",
+              "description": "Concrete blocks and pavers supplied by us."
+            },
+            {
+              "title": "Supervision",
+              "description": "Our team on site, checking work every day."
+            },
+            {
+              "title": "Quality control",
+              "description": "Work and deliveries checked against the plans and specifications."
+            }
+          ],
+          "steps": [
+            {
+              "title": "Plan needs",
+              "description": "We confirm the materials and contractors required."
+            },
+            {
+              "title": "Source",
+              "description": "We procure materials and appoint contractors."
+            },
+            {
+              "title": "Supervise",
+              "description": "We supervise the works on site."
+            },
+            {
+              "title": "Verify",
+              "description": "We check quality before sign-off."
+            }
+          ],
+          "deliverables": [
+            {
+              "title": "Reliable supply",
+              "description": "Materials on site when needed."
+            },
+            {
+              "title": "Quality workmanship",
+              "description": "Work supervised to standard."
+            },
+            {
+              "title": "Early problem solving",
+              "description": "Issues caught before they become costly."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

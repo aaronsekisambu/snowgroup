@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "title": "{{title}} | Lumex Template",
+    "description": "{{short}}"
+  },
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/img-6.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-6-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "short_title": "Products",
+      "title": "{{title}}"
+    },
+    {
+      "blockType": "about_service",
+      "badge": "Products",
+      "title": "{{title}}",
+      "intro_text": "{{short}}",
+      "button_text": "Request a quote",
+      "button_url": "/contact",
+      "right_title": "What We Offer",
+      "description": "<p>{{short}}</p><p>Tell us what you need for your project and our team will confirm availability, quantities and how you will receive your order.</p>",
+      "featuresSource": "items",
+      "process_title": "How to order",
+      "process_steps": [
+        {
+          "title": "Tell us what you need",
+          "description": "Share the products, quantities and project location through the Let's Talk button or our Contact page."
+        },
+        {
+          "title": "Confirm your order",
+          "description": "We confirm availability, quantities and a quote for your order."
+        },
+        {
+          "title": "Receive your order",
+          "description": "We agree how and when you will receive your order, so it is ready when your project needs it."
+        }
+      ]
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ]
+}

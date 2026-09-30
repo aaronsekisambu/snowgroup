@@ -1,0 +1,164 @@
+{
+  "title": "Ministry of Lands Zonal Offices",
+  "slug": "ministry-of-lands-zonal-offices",
+  "category": "Public / Commercial Construction",
+  "filters": [
+    "Commercial & Public"
+  ],
+  "client": "Ministry of Lands · Yanjan Contractors",
+  "location": "Uganda",
+  "short_description": "Construction works on zonal office buildings for the Ministry of Lands, delivered with Yanjan Contractors to the standard expected of public buildings.",
+  "meta": {
+    "title": "Ministry of Lands Zonal Offices | Snow Holdings Limited",
+    "description": "Construction works on zonal office buildings for the Ministry of Lands, delivered with Yanjan Contractors to the standard expected of public buildings.",
+    "image": {
+      "url": "/media/projects/ministry-of-lands-zonal-offices-1.jpg",
+      "alt": "Ministry of Lands Zonal Offices",
+      "width": 1080,
+      "height": 1080
+    }
+  },
+  "order": 2,
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/projects/ministry-of-lands-zonal-offices-1.jpg",
+        "alt": "Ministry of Lands Zonal Offices",
+        "width": 1080,
+        "height": 1080
+      },
+      "short_title": "Projects",
+      "title": "Ministry of Lands Zonal Offices"
+    },
+    {
+      "blockType": "about_project",
+      "badge": "Public / Commercial Construction",
+      "title": "Ministry of Lands Zonal Offices",
+      "info_items": [
+        {
+          "label": "Client",
+          "value": "Ministry of Lands · Yanjan Contractors"
+        },
+        {
+          "label": "Location",
+          "value": "Uganda"
+        },
+        {
+          "label": "Category",
+          "value": "Public / Commercial Construction"
+        },
+        {
+          "label": "Services",
+          "value": "Building Construction, Project Management"
+        }
+      ],
+      "intro_title": "About the Project",
+      "intro_description": "<p>Public buildings need to be functional, durable and built to a consistent standard. Snow Holdings worked with Yanjan Contractors on the Ministry of Lands Zonal Offices, contributing construction works to deliver office and service facilities for the Ministry.</p>",
+      "image": {
+        "url": "/media/projects/ministry-of-lands-zonal-offices-2.jpg",
+        "alt": "Ministry of Lands Zonal Offices — photo 2",
+        "width": 1080,
+        "height": 1080
+      },
+      "approach_title": "Our Approach",
+      "approach_description": "<p>Working alongside the main project team, we focused on quality workmanship, careful coordination on site and keeping our part of the programme on track. Public projects bring clear requirements and inspections, so we worked to the agreed specifications at every stage.</p>",
+      "delivered_title": "What We Delivered",
+      "delivered_items": [
+        {
+          "title": "Structural and walling works",
+          "description": "for the office buildings."
+        },
+        {
+          "title": "Site coordination",
+          "description": "with the main contractor and other trades."
+        },
+        {
+          "title": "Quality control",
+          "description": "at each stage, in line with the project specifications."
+        }
+      ],
+      "goals_title": "Project Priorities",
+      "goals_items": [
+        {
+          "title": "Standards and compliance",
+          "description": "— building to the specifications required for public works."
+        },
+        {
+          "title": "Reliable delivery",
+          "description": "— keeping our works on programme within a larger project."
+        },
+        {
+          "title": "Long-lasting quality",
+          "description": "— durable construction for buildings in daily public use."
+        }
+      ],
+      "gallery_title": "Project Gallery",
+      "gallery": [
+        {
+          "url": "/media/projects/ministry-of-lands-zonal-offices-3.jpg",
+          "alt": "Ministry of Lands Zonal Offices — photo 3",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "url": "/media/projects/ministry-of-lands-zonal-offices-4.jpg",
+          "alt": "Ministry of Lands Zonal Offices — photo 4",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "url": "/media/projects/ministry-of-lands-zonal-offices-5.jpg",
+          "alt": "Ministry of Lands Zonal Offices — photo 5",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "url": "/media/projects/ministry-of-lands-zonal-offices-6.jpg",
+          "alt": "Ministry of Lands Zonal Offices — photo 6",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "url": "/media/projects/ministry-of-lands-zonal-offices-7.jpg",
+          "alt": "Ministry of Lands Zonal Offices — photo 7",
+          "width": 1080,
+          "height": 1080
+        }
+      ],
+      "conclusion_description": "<p>This project reflects Snow Holdings’ ability to work within larger public-sector projects and deliver to the standards institutional clients expect.</p>"
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "relatedProjects": [
+    {
+      "slug": "triple-j-agro-farm-development"
+    },
+    {
+      "slug": "pexy-farm-development"
+    },
+    {
+      "slug": "bunga-residential-development"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "layout_before": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/projects/bunga-residential-development-2.jpg",
+        "alt": "",
+        "width": 810,
+        "height": 1080
+      },
+      "short_title": "Team",
+      "title": "Meet the Experts Driving <br class=\"mil-sm-hidden\">Your Behind <span class=\"mil-opacity-text\">Business</span> Forward"
+    }
+  ],
+  "layout_after": [
+    {
+      "blockType": "call_to_action",
+      "bgImage": {
+        "url": "/media/img-11.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 727,
+        "sizes": {
+          "og": {
+            "url": "/media/img-11-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "icon": {
+        "url": "/media/icons-2.png",
+        "alt": "",
+        "width": 120,
+        "height": 120
+      },
+      "title": "Building Today <br>Shaping <span class=\"mil-opacity-text\">Tomorrow</span>",
+      "description": "Quality construction, reliable materials <br class=\"mil-sm-hidden\">and expert project delivery built around your vision.",
+      "button1_text": "Read more",
+      "button1_url": "/services",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "badge": "Our Team",
+  "title": "Meet the people <br class=\"mil-md-hidden\">behind the strategy",
+  "description": "Our team is a blend of strategists, consultants, analysts, and creatives — each bringing deep expertise and fresh perspective. Together, we help organizations navigate complexity, unlock growth, and build a smarter future.",
+  "meta": {
+    "title": "Team | Lumex Template"
+  }
+}

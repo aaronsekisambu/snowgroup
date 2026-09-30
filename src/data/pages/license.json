@@ -1,0 +1,52 @@
+{
+  "title": "License",
+  "slug": "license",
+  "meta": {
+    "title": "License | Snow Holdings Limited",
+    "description": "Who owns the content on this website, and the third-party work it uses."
+  },
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/services/project-management.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 900
+      },
+      "short_title": "Legal",
+      "title": "License"
+    },
+    {
+      "blockType": "legal",
+      "button_text": "Contact us",
+      "button_url": "/contact",
+      "updated": "1 October 2026",
+      "badge": "License",
+      "title": "Copyright <span class=\"mil-opacity-text\">&amp;</span> Licenses",
+      "intro": "Who owns the content on this website, and the third-party work it uses.",
+      "sections": [
+        {
+          "heading": "Copyright",
+          "body": "<p>© 2026 Snow Holdings Limited. All rights reserved. The text, project photographs, logos and branding on this website may not be copied, reproduced or used without our written permission.</p>"
+        },
+        {
+          "heading": "Trademarks",
+          "body": "<p>All product and service names are trademarks of Snow Holdings Limited and may not be used without authorisation.</p>"
+        },
+        {
+          "heading": "Website design",
+          "body": "<p>This website is built on the Lumex Next.js template by bslthemes, used under a licence purchased from ThemeForest (Envato Market).</p>"
+        },
+        {
+          "heading": "Third-party assets",
+          "body": "<ul><li><strong>Montserrat</strong> typeface — SIL Open Font License 1.1</li><li><strong>Font Awesome</strong> icons — licensed with the website template</li><li><strong>Line Awesome</strong> icons — MIT License</li><li>Selected stock photographs from <strong>Unsplash</strong> — Unsplash License</li><li>Open-source software including Next.js, React, Swiper and GSAP — used under their respective licences</li></ul>"
+        },
+        {
+          "heading": "Permissions",
+          "body": "<p>To request permission to use our content, contact us at <a href=\"mailto:info@snowgroup.ltd\">info@snowgroup.ltd</a>.</p>"
+        }
+      ]
+    }
+  ]
+}

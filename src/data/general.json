@@ -1,0 +1,20 @@
+{
+  "not_found": {
+    "bgImage": {
+      "url": "/media/img-6.jpg",
+      "alt": "",
+      "width": 1728,
+      "height": 1043,
+      "sizes": {
+        "og": {
+          "url": "/media/img-6-1200x630.jpg",
+          "width": 1200,
+          "height": 630
+        }
+      }
+    },
+    "subtitle": "Oops!",
+    "title": "Error <span class=\"mil-opacity-text\">404</span>",
+    "description": "Looks like you got lost (:"
+  }
+}

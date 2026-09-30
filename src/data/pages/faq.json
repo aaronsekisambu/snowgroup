@@ -1,0 +1,51 @@
+{
+  "title": "FAQ",
+  "slug": "faq",
+  "headerStyle": "invert",
+  "footerLayout": "minimal",
+  "meta": {
+    "title": "FAQ | Lumex Template"
+  },
+  "publishedAt": "2025-11-13T12:52:46.802Z",
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/img-14.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 700,
+        "sizes": {
+          "og": {
+            "url": "/media/img-14-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "short_title": "FAQ",
+      "title": "Frequently <br class=\"mil-sm-hidden\"> Asked <span class=\"mil-opacity-text\">Questions</span>"
+    },
+    {
+      "blockType": "faq",
+      "badge": "Faq",
+      "title": "General Questions",
+      "description": "Everything you need to know about who we are, what we do and how to get started.",
+      "button1_text": "Contact Us",
+      "button1_url": "/contact",
+      "gray_bg_position": "left",
+      "faqsSource": "general"
+    },
+    {
+      "blockType": "faq",
+      "badge": "Help",
+      "title": "Projects & Plans",
+      "description": "How our process works, what to expect on site, and how our plans fit your project.",
+      "button1_text": "View Plans",
+      "button1_url": "/plans",
+      "gray_bg_position": "right",
+      "faqsSource": "projects"
+    }
+  ],
+  "updatedAt": "2025-12-03T03:33:43.788Z"
+}

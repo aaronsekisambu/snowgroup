@@ -1,0 +1,127 @@
+{
+  "title": "Concrete Block Supply Project",
+  "slug": "concrete-block-supply-project",
+  "category": "Materials Supply",
+  "filters": [
+    "Materials Supply"
+  ],
+  "client": "Customer project",
+  "location": "Uganda",
+  "short_description": "Production and supply of concrete blocks for a private construction project, delivered to site ready for building.",
+  "meta": {
+    "title": "Concrete Block Supply Project | Snow Holdings Limited",
+    "description": "Production and supply of concrete blocks for a private construction project, delivered to site ready for building.",
+    "image": {
+      "url": "/media/projects/concrete-block-supply-project-1.jpg",
+      "alt": "Concrete Block Supply Project",
+      "width": 800,
+      "height": 896
+    }
+  },
+  "order": 9,
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/projects/concrete-block-supply-project-1.jpg",
+        "alt": "Concrete Block Supply Project",
+        "width": 800,
+        "height": 896
+      },
+      "short_title": "Projects",
+      "title": "Concrete Block Supply Project"
+    },
+    {
+      "blockType": "about_project",
+      "badge": "Materials Supply",
+      "title": "Concrete Block Supply Project",
+      "info_items": [
+        {
+          "label": "Client",
+          "value": "Customer project"
+        },
+        {
+          "label": "Location",
+          "value": "Uganda"
+        },
+        {
+          "label": "Category",
+          "value": "Materials Supply"
+        },
+        {
+          "label": "Services",
+          "value": "Concrete Products, Delivery"
+        }
+      ],
+      "intro_title": "About the Project",
+      "intro_description": "<p>Snow Holdings manufactures concrete blocks, and for this project we produced and supplied blocks for a private construction project, delivered to site ready for use.</p>",
+      "image": {
+        "url": "/media/projects/concrete-block-supply-project-1.jpg",
+        "alt": "Concrete Block Supply Project",
+        "width": 800,
+        "height": 896
+      },
+      "approach_title": "Our Approach",
+      "approach_description": "<p>We confirmed the block types and quantities the project needed, produced them, and delivered them to site so construction could continue without waiting on materials.</p>",
+      "delivered_title": "What We Delivered",
+      "delivered_items": [
+        {
+          "title": "Advice on block type and quantity",
+          "description": "for the project."
+        },
+        {
+          "title": "Production of concrete blocks",
+          "description": "made to our quality standards."
+        },
+        {
+          "title": "Delivery to site",
+          "description": "ready for building."
+        }
+      ],
+      "goals_title": "Project Priorities",
+      "goals_items": [
+        {
+          "title": "Consistent quality",
+          "description": "— blocks that are strong and uniform."
+        },
+        {
+          "title": "Reliable supply",
+          "description": "— materials on site when the project needs them."
+        }
+      ],
+      "conclusion_description": "<p>Our block supply work shows that Snow Holdings supports construction projects with quality materials, not only as a builder.</p>"
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "relatedProjects": [
+    {
+      "slug": "paver-supply-installation-project"
+    },
+    {
+      "slug": "triple-j-agro-farm-development"
+    },
+    {
+      "slug": "ministry-of-lands-zonal-offices"
+    }
+  ]
+}

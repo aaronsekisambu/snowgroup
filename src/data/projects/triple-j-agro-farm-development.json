@@ -1,0 +1,190 @@
+{
+  "title": "Triple J Agro Farm Development",
+  "slug": "triple-j-agro-farm-development",
+  "category": "Agricultural Construction",
+  "filters": [
+    "Agricultural"
+  ],
+  "client": "Triple J Agro Farm Ltd",
+  "location": "Uganda",
+  "short_description": "Construction of farm buildings for Triple J Agro Farm, from foundations and steel columns to roofed livestock housing with concrete floors and walkways.",
+  "meta": {
+    "title": "Triple J Agro Farm Development | Snow Holdings Limited",
+    "description": "Construction of farm buildings for Triple J Agro Farm, from foundations and steel columns to roofed livestock housing with concrete floors and walkways.",
+    "image": {
+      "url": "/media/projects/triple-j-agro-farm-development-1.jpg",
+      "alt": "Triple J Agro Farm Development",
+      "width": 1080,
+      "height": 810
+    }
+  },
+  "order": 1,
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/projects/triple-j-agro-farm-development-1.jpg",
+        "alt": "Triple J Agro Farm Development",
+        "width": 1080,
+        "height": 810
+      },
+      "short_title": "Projects",
+      "title": "Triple J Agro Farm Development"
+    },
+    {
+      "blockType": "about_project",
+      "badge": "Agricultural Construction",
+      "title": "Triple J Agro Farm Development",
+      "info_items": [
+        {
+          "label": "Client",
+          "value": "Triple J Agro Farm Ltd"
+        },
+        {
+          "label": "Location",
+          "value": "Uganda"
+        },
+        {
+          "label": "Category",
+          "value": "Agricultural Construction"
+        },
+        {
+          "label": "Services",
+          "value": "Building Construction, Civil Works, Site Supervision"
+        }
+      ],
+      "intro_title": "About the Project",
+      "intro_description": "<p>Triple J Agro Farm needed durable farm buildings that could stand up to daily use, cleaning and the demands of livestock. Snow Holdings delivered the construction works on site, taking the structures from ground works through to roofed, usable farm housing.</p><p>The project shows the kind of practical, hard-wearing construction a working farm depends on: strong foundations, a robust frame, and floors and walkways built for heavy daily use.</p>",
+      "image": {
+        "url": "/media/projects/triple-j-agro-farm-development-2.jpg",
+        "alt": "Triple J Agro Farm Development — photo 2",
+        "width": 1080,
+        "height": 810
+      },
+      "approach_title": "Our Approach",
+      "approach_description": "<p>We started with setting out and excavation, then built the foundations and ground beams that carry the structure. Steel columns were erected on the foundations to form the frame, followed by the roof structure and roofing.</p><p>Inside, we laid concrete floors and walkways, and formed channels to help keep the housing clean and drained. Our team supervised the work on site throughout, coordinating each stage so the next could follow without delay.</p>",
+      "delivered_title": "What We Delivered",
+      "delivered_items": [
+        {
+          "title": "Setting out and excavation",
+          "description": "to prepare the site and position the buildings correctly."
+        },
+        {
+          "title": "Foundations and ground beams",
+          "description": "to give the structures a strong, level base."
+        },
+        {
+          "title": "Steel frame",
+          "description": "— columns erected on the foundations to carry the roof."
+        },
+        {
+          "title": "Roof structure and roofing",
+          "description": "to provide covered, weather-protected farm housing."
+        },
+        {
+          "title": "Concrete floors, walkways and channels",
+          "description": "built for heavy daily use and easy cleaning."
+        }
+      ],
+      "goals_title": "Project Priorities",
+      "goals_items": [
+        {
+          "title": "Durability",
+          "description": "— structures and surfaces that hold up to livestock and daily farm work."
+        },
+        {
+          "title": "Hygiene",
+          "description": "— hard concrete surfaces and channels that are easy to clean and drain."
+        },
+        {
+          "title": "Practical layout",
+          "description": "— walkways and housing arranged around the way the farm works."
+        }
+      ],
+      "gallery_title": "Project Gallery",
+      "gallery": [
+        {
+          "url": "/media/projects/triple-j-agro-farm-development-3.jpg",
+          "alt": "Triple J Agro Farm Development — photo 3",
+          "width": 1080,
+          "height": 810
+        },
+        {
+          "url": "/media/projects/triple-j-agro-farm-development-4.jpg",
+          "alt": "Triple J Agro Farm Development — photo 4",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "url": "/media/projects/triple-j-agro-farm-development-5.jpg",
+          "alt": "Triple J Agro Farm Development — photo 5",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "url": "/media/projects/triple-j-agro-farm-development-6.jpg",
+          "alt": "Triple J Agro Farm Development — photo 6",
+          "width": 810,
+          "height": 1080
+        },
+        {
+          "url": "/media/projects/triple-j-agro-farm-development-7.jpg",
+          "alt": "Triple J Agro Farm Development — photo 7",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "url": "/media/projects/triple-j-agro-farm-development-8.jpg",
+          "alt": "Triple J Agro Farm Development — photo 8",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "url": "/media/projects/triple-j-agro-farm-development-9.jpg",
+          "alt": "Triple J Agro Farm Development — photo 9",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "url": "/media/projects/triple-j-agro-farm-development-10.jpg",
+          "alt": "Triple J Agro Farm Development — photo 10",
+          "width": 1280,
+          "height": 720
+        }
+      ],
+      "conclusion_description": "<p>The Triple J Agro Farm development shows Snow Holdings delivering beyond residential building, with dependable agricultural construction built around how a working farm operates.</p>"
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "relatedProjects": [
+    {
+      "slug": "pexy-farm-development"
+    },
+    {
+      "slug": "ministry-of-lands-zonal-offices"
+    },
+    {
+      "slug": "bunga-residential-development"
+    }
+  ]
+}

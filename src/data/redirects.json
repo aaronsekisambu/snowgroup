@@ -1,0 +1,7 @@
+[
+  {
+    "from": "/prices",
+    "to": "/plans",
+    "statusCode": 301
+  }
+]

@@ -1,0 +1,560 @@
+@use 'variables' as *;
+
+/* -------------------------------------------
+
+default
+
+------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    &:focus {
+        outline: inherit;
+    }
+}
+
+*::selection {
+    color: $m-1;
+    background-color: $a-1;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: $m-1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $a-1;
+}
+
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+body {
+    overscroll-behavior: none;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    font-family: $font-1;
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+/* -------------------------------------------
+
+page scale
+
+------------------------------------------- */
+
+html {
+    font-size: 9px;
+
+    /*
+    font-size: 10px;
+    @media (min-width: 1920px) {
+        font-size: 11px;
+    }
+    @media (max-width: 1800px) {
+        font-size: 9px;
+    }
+    @media (max-width: 1600px) {
+        font-size: 8px;
+    }
+    */
+}
+
+/* -------------------------------------------
+
+typography
+
+------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.mil-h1,
+.mil-h2,
+.mil-h3,
+.mil-h4,
+.mil-h5,
+.mil-h6 {
+    font-weight: 800;
+    color: $m-1;
+    line-height: 100%;
+    letter-spacing: -.02em;
+}
+
+.mil-h1,
+h1 {
+    font-size: 8.4rem;
+
+    @media (max-width: 1200px) {
+        font-size: 6.2rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 5.2rem;
+    }
+}
+
+.mil-h2,
+h2 {
+    font-size: 4.2rem;
+    line-height: 110%;
+
+    @media (max-width: 768px) {
+        font-size: 3.6rem;
+    }
+}
+
+.mil-h3,
+h3 {
+    font-size: 2.6rem;
+    line-height: 110%;
+    letter-spacing: -.01em;
+
+    @media (max-width: 768px) {
+        font-size: 3rem;
+    }
+}
+
+.mil-h4,
+h4 {
+    font-size: 2.2rem;
+    line-height: 110%;
+    letter-spacing: -.01em;
+}
+
+.mil-h5,
+h5 {
+    font-size: 2.2rem;
+    line-height: 110%;
+    font-weight: 700;
+    letter-spacing: -.01em;
+}
+
+.mil-h6,
+h6 {
+    font-size: 1.8rem;
+    line-height: 120%;
+    font-weight: 700;
+    letter-spacing: -.01em;
+}
+
+.mil-t-14 {
+    font-size: 1.4rem;
+    line-height: 175%;
+}
+
+.mil-t-16 {
+    font-size: 1.6rem;
+    line-height: 175%;
+}
+
+/* Richtext wrapper: apply site styles to content coming from Payload richtext */
+.payload-richtext {
+    // Headings
+    h1 { @extend .mil-h1; margin-bottom: 4rem; }
+    h2 { @extend .mil-h2; margin-bottom: 4rem; }
+    h3 { @extend .mil-h3; margin-bottom: 4rem; }
+    h4 { @extend .mil-h4; margin-bottom: 4rem; }
+    h5 { @extend .mil-h5; margin-bottom: 2rem; }
+    h6 { @extend .mil-h6; margin-bottom: 2rem; }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin-top: 4rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    // Paragraphs & text
+    p { @extend .mil-t-16; margin-bottom: 2rem; color: $m-2; }
+    small { font-size: 1.2rem; color: $m-3; }
+
+    // Links
+    a { color: $a-1; text-decoration: none; border-bottom: 1px solid rgba($a-1, .12); transition: opacity .18s ease; }
+    a:hover { opacity: .85; }
+
+    // Lists
+    ul, ol { margin: 0 0 1rem 2rem; }
+    ul { list-style: none; }
+    ol { list-style: decimal; }
+    li { 
+        margin-bottom: .6rem; line-height: 1.6; 
+        list-style-type: none;
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+        line-height: 175%;
+        color: $m-2;
+
+        &:before {
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 400;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-right: 1.5rem;
+            content: "\f00c";
+            font-size: 1.2rem;
+            background-color: $a-1;
+            color: $m-1;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            -webkit-transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
+            transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
+        }
+    }
+
+    
+
+    // Blockquote
+    blockquote {
+        margin: 2rem 0;
+        padding: 1rem 1.2rem;
+        border-left: .4rem solid $a-1;
+        background: rgba($a-1, .03);
+        font-style: italic;
+    }
+
+    // Code / Pre
+    pre, code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+        background: $m-1;
+        color: $m-5;
+        padding: .8rem;
+        border-radius: .4rem;
+        overflow: auto;
+    }
+    pre { margin-bottom: 1rem; }
+
+    // Images and media inside richtext
+    img { max-width: 100%; height: auto; }
+
+    // Tables
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+    th, td { padding: .8rem; border: 1px solid rgba(0,0,0,.06); text-align: left; }
+
+    // Helper: center text blocks
+    .mil-center, .text-center { text-align: center; }
+
+    & > *:last-child {
+        margin-bottom: 0 !important;
+    }
+}
+
+/* -------------------------------------------
+
+colors
+
+------------------------------------------- */
+
+.mil-c-m-1 {
+    color: $m-1;
+}
+
+.mil-c-m-2 {
+    color: $m-2;
+}
+
+.mil-c-m-3 {
+    color: $m-3;
+
+    .mil-text-link {
+        color: $a-1;
+    }
+}
+
+.mil-c-m-4 {
+    color: $m-4;
+}
+
+.mil-c-m-5 {
+    color: $m-5;
+}
+
+.mil-c-a-1 {
+    color: $a-1;
+}
+
+/* -------------------------------------------
+
+responsive utils
+
+------------------------------------------- */
+.mil-hidden {
+    display: none !important;
+}
+
+@media (max-width: 1200px) {
+    .mil-lg-hidden {
+        display: none !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .mil-md-hidden {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .mil-sm-hidden {
+        display: none !important;
+    }
+}
+
+$breakpoints: ("": null,
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px);
+
+$margin-directions: ("mt": margin-top,
+    "mb": margin-bottom,
+    "ml": margin-left,
+    "mr": margin-right);
+
+$flex-directions: ("flex-row": row,
+    "flex-column": column);
+
+$justify: ("jcc": center,
+    "jcs": flex-start,
+    "jce": flex-end,
+    "jcb": space-between);
+
+$align: ("aic": center,
+    "ais": flex-start,
+    "aie": flex-end);
+
+// Base
+@for $i from 0 through 10 {
+
+    @each $short,
+    $prop in $margin-directions {
+        .mil-#{$short}-#{$i} {
+            #{$prop}: #{$i}rem;
+        }
+    }
+}
+
+@each $class,
+$value in $flex-directions {
+    .mil-#{$class} {
+        display: flex;
+        flex-direction: #{$value};
+    }
+}
+
+@each $class,
+$value in $justify {
+    .mil-#{$class} {
+        justify-content: #{$value};
+    }
+}
+
+@each $class,
+$value in $align {
+    .mil-#{$class} {
+        align-items: #{$value};
+    }
+}
+
+// Responsive
+@each $prefix,
+$bp in $breakpoints {
+    @if $bp !=null {
+        @media (max-width: $bp) {
+
+            // Margin 0–10
+            @for $i from 0 through 10 {
+
+                @each $short,
+                $prop in $margin-directions {
+                    .mil-#{$prefix}-#{$short}-#{$i} {
+                        #{$prop}: #{$i}rem;
+                    }
+                }
+            }
+
+            // Flex
+            @each $class,
+            $value in $flex-directions {
+                .mil-#{$prefix}-#{$class} {
+                    display: flex;
+                    flex-direction: #{$value};
+                }
+            }
+
+            @each $class,
+            $value in $justify {
+                .mil-#{$prefix}-#{$class} {
+                    justify-content: #{$value};
+                }
+            }
+
+            @each $class,
+            $value in $align {
+                .mil-#{$prefix}-#{$class} {
+                    align-items: #{$value};
+                }
+            }
+        }
+    }
+}
+
+.mil-ml-auto {
+    margin-left: auto;
+}
+
+.mil-mr-auto {
+    margin-right: auto;
+}
+
+.mil-p-10-10 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.mil-p-0-10 {
+    padding-bottom: 10rem;
+}
+
+.mil-p-10-8 {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+
+.mil-p-10-6 {
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+}
+
+.mil-p-0-8 {
+    padding-top: 0;
+    padding-bottom: 8rem;
+}
+
+.mil-p-10-5 {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+}
+
+.mil-p-10-0 {
+    padding-top: 10rem;
+}
+
+.mil-w-100 {
+    width: 100%;
+}
+
+.mil-w-80 {
+    width: 80%;
+
+    @media (max-width: 992px) {
+        width: 100%;
+    }
+}
+
+.mil-w-60 {
+    width: 60%;
+
+    @media (max-width: 992px) {
+        width: 100%;
+    }
+}
+
+.mil-tac {
+    text-align: center;
+}
+
+.mil-tal {
+    text-align: left;
+}
+
+.mil-tar {
+    text-align: right;
+}
+
+@media (max-width: 1200px) {
+    .mil-lg-tac {
+        text-align: center;
+    }
+
+    .mil-lg-tal {
+        text-align: left;
+    }
+
+    .mil-lg-tar {
+        text-align: right;
+    }
+}
+
+@media (max-width: 992px) {
+    .mil-md-tac {
+        text-align: center;
+    }
+
+    .mil-md-tal {
+        text-align: left;
+    }
+
+    .mil-md-tar {
+        text-align: right;
+    }
+}
+
+@media (max-width: 768px) {
+    .mil-sm-tac {
+        text-align: center;
+    }
+
+    .mil-sm-tal {
+        text-align: left;
+    }
+
+    .mil-sm-tar {
+        text-align: right;
+    }
+}

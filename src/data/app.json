@@ -1,0 +1,12 @@
+{
+  "settings": {
+    "siteName": "Lumex",
+    "siteDescription": "Lumex website",
+    "formspreeURL": "",
+    "mailchimp": {
+      "url": "YOUR_MAILCHIMP_ACTION_URL",
+      "key": "YOUR_MAILCHIMP_PUBLIC_KEY"
+    },
+    "perPage": 6
+  }
+}

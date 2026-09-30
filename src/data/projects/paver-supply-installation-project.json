@@ -1,0 +1,128 @@
+{
+  "title": "Paver Supply & Installation Project",
+  "slug": "paver-supply-installation-project",
+  "category": "Materials & Paving",
+  "filters": [
+    "Materials Supply",
+    "Civil & Infrastructure"
+  ],
+  "client": "Customer project",
+  "location": "Uganda",
+  "short_description": "Supply of concrete pavers for external works, compound and access-area development.",
+  "meta": {
+    "title": "Paver Supply & Installation Project | Snow Holdings Limited",
+    "description": "Supply of concrete pavers for external works, compound and access-area development.",
+    "image": {
+      "url": "/media/projects/paver-supply-installation-project-1.jpg",
+      "alt": "Paver Supply & Installation Project",
+      "width": 1080,
+      "height": 1080
+    }
+  },
+  "order": 10,
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/projects/paver-supply-installation-project-1.jpg",
+        "alt": "Paver Supply & Installation Project",
+        "width": 1080,
+        "height": 1080
+      },
+      "short_title": "Projects",
+      "title": "Paver Supply & Installation Project"
+    },
+    {
+      "blockType": "about_project",
+      "badge": "Materials & Paving",
+      "title": "Paver Supply & Installation Project",
+      "info_items": [
+        {
+          "label": "Client",
+          "value": "Customer project"
+        },
+        {
+          "label": "Location",
+          "value": "Uganda"
+        },
+        {
+          "label": "Category",
+          "value": "Materials & Paving"
+        },
+        {
+          "label": "Services",
+          "value": "Paving & External Works"
+        }
+      ],
+      "intro_title": "About the Project",
+      "intro_description": "<p>A finished property needs a finished compound. For this project, Snow Holdings supplied concrete pavers for external works, creating a durable compound and access area.</p>",
+      "image": {
+        "url": "/media/projects/paver-supply-installation-project-1.jpg",
+        "alt": "Paver Supply & Installation Project",
+        "width": 1080,
+        "height": 1080
+      },
+      "approach_title": "Our Approach",
+      "approach_description": "<p>We advised on the paver type and quantity, supplied the pavers, and supported the paving of the compound and access areas for a neat, hard-wearing finish.</p>",
+      "delivered_title": "What We Delivered",
+      "delivered_items": [
+        {
+          "title": "Advice on paver type and quantity",
+          "description": "for the area to be paved."
+        },
+        {
+          "title": "Supply of concrete pavers",
+          "description": "for the compound and access areas."
+        },
+        {
+          "title": "Paving of external areas",
+          "description": "for a durable, finished look."
+        }
+      ],
+      "goals_title": "Project Priorities",
+      "goals_items": [
+        {
+          "title": "Durability",
+          "description": "— paving that handles foot traffic and vehicles."
+        },
+        {
+          "title": "A finished property",
+          "description": "— a clean, attractive compound."
+        }
+      ],
+      "conclusion_description": "<p>Paving and external works complete a property, and Snow Holdings supplies the pavers to do it.</p>"
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "relatedProjects": [
+    {
+      "slug": "concrete-block-supply-project"
+    },
+    {
+      "slug": "triple-j-agro-farm-development"
+    },
+    {
+      "slug": "ministry-of-lands-zonal-offices"
+    }
+  ]
+}

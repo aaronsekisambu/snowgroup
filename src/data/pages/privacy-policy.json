@@ -1,0 +1,60 @@
+{
+  "title": "Privacy Policy",
+  "slug": "privacy-policy",
+  "meta": {
+    "title": "Privacy Policy | Snow Holdings Limited",
+    "description": "How we collect and use your personal information, in line with the Data Protection and Privacy Act, 2019 of Uganda."
+  },
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/services/project-management.jpg",
+        "alt": "",
+        "width": 1600,
+        "height": 900
+      },
+      "short_title": "Legal",
+      "title": "Privacy Policy"
+    },
+    {
+      "blockType": "legal",
+      "button_text": "Contact us",
+      "button_url": "/contact",
+      "updated": "1 October 2026",
+      "badge": "Privacy",
+      "title": "Privacy <span class=\"mil-opacity-text\">Policy</span>",
+      "intro": "How we collect and use your personal information, in line with the Data Protection and Privacy Act, 2019 of Uganda.",
+      "sections": [
+        {
+          "heading": "Who we are",
+          "body": "<p>Snow Holdings Limited is responsible for the personal information collected through this website.</p>"
+        },
+        {
+          "heading": "What we collect",
+          "body": "<p>We only collect the information you choose to give us, for example when you:</p><ul><li>send a request through a contact or call-back form (such as your name, phone number, email and message);</li><li>contact us by email or WhatsApp.</li></ul>"
+        },
+        {
+          "heading": "How we use it",
+          "body": "<ul><li>to respond to your enquiry or request a call back;</li><li>to prepare quotes and discuss your project;</li><li>to keep in touch about work we are doing for you.</li></ul><p>We do not sell your personal information.</p>"
+        },
+        {
+          "heading": "Sharing",
+          "body": "<p>We share your information only where needed to answer your request or deliver your project, for example with our team, or with service providers that help us run this website and receive form submissions, or where required by law.</p>"
+        },
+        {
+          "heading": "How long we keep it",
+          "body": "<p>We keep your information only for as long as we need it for the purposes above, or as required by law.</p>"
+        },
+        {
+          "heading": "Your rights",
+          "body": "<p>Under the Data Protection and Privacy Act, 2019 you may ask to access, correct or delete the personal information we hold about you, or object to how we use it. Contact us using the details below.</p>"
+        },
+        {
+          "heading": "Contact",
+          "body": "<ul><li>Email: <a href=\"mailto:info@snowgroup.ltd\">info@snowgroup.ltd</a></li><li>WhatsApp: +49 15679 137020</li><li>Office: Acacia Mall, 4th Floor, 14-18 Cooper Road, Kisimenti, Kampala</li></ul>"
+        }
+      ]
+    }
+  ]
+}

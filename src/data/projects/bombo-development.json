@@ -1,0 +1,125 @@
+{
+  "title": "Bombo Development",
+  "slug": "bombo-development",
+  "category": "Building Construction",
+  "filters": [],
+  "client": "Private client",
+  "location": "Bombo",
+  "short_description": "Building construction in Bombo, covering structural works, walling and the building frame.",
+  "meta": {
+    "title": "Bombo Development | Snow Holdings Limited",
+    "description": "Building construction in Bombo, covering structural works, walling and the building frame.",
+    "image": {
+      "url": "/media/projects/bombo-development-1.jpg",
+      "alt": "Bombo Development",
+      "width": 1536,
+      "height": 1152
+    }
+  },
+  "order": 6,
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/projects/bombo-development-1.jpg",
+        "alt": "Bombo Development",
+        "width": 1536,
+        "height": 1152
+      },
+      "short_title": "Projects",
+      "title": "Bombo Development"
+    },
+    {
+      "blockType": "about_project",
+      "badge": "Building Construction",
+      "title": "Bombo Development",
+      "info_items": [
+        {
+          "label": "Client",
+          "value": "Private client"
+        },
+        {
+          "label": "Location",
+          "value": "Bombo"
+        },
+        {
+          "label": "Category",
+          "value": "Building Construction"
+        },
+        {
+          "label": "Services",
+          "value": "Building Construction"
+        }
+      ],
+      "intro_title": "About the Project",
+      "intro_description": "<p>In Bombo, Snow Holdings delivered building construction works including structural works, walling and the building frame, carried out with supervision on site.</p>",
+      "image": {
+        "url": "/media/projects/bombo-development-1.jpg",
+        "alt": "Bombo Development",
+        "width": 1536,
+        "height": 1152
+      },
+      "approach_title": "Our Approach",
+      "approach_description": "<p>We organised the site, built the structure and walling in stages, and supervised the works to make sure each stage met the required standard before moving on.</p>",
+      "delivered_title": "What We Delivered",
+      "delivered_items": [
+        {
+          "title": "Structural works",
+          "description": "and building frame."
+        },
+        {
+          "title": "Walling",
+          "description": "using quality blocks and materials."
+        },
+        {
+          "title": "Site supervision",
+          "description": "throughout construction."
+        }
+      ],
+      "goals_title": "Project Priorities",
+      "goals_items": [
+        {
+          "title": "Solid structure",
+          "description": "— a strong frame and walls."
+        },
+        {
+          "title": "Organised site",
+          "description": "— safe, well-managed works."
+        }
+      ],
+      "conclusion_description": "<p>The Bombo development is part of the portfolio that shows Snow Holdings’ range across different locations in Uganda.</p>"
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "relatedProjects": [
+    {
+      "slug": "kampala-building-project"
+    },
+    {
+      "slug": "triple-j-agro-farm-development"
+    },
+    {
+      "slug": "ministry-of-lands-zonal-offices"
+    }
+  ]
+}

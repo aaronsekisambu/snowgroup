@@ -1,0 +1,77 @@
+{
+  "layout_before": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/img-20.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 700,
+        "sizes": {
+          "og": {
+            "url": "/media/img-20-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "short_title": "Blog",
+      "title": "The Business Consulting Journal"
+    }
+  ],
+  "layout_after": [
+    {
+      "blockType": "call_to_action",
+      "bgImage": {
+        "url": "/media/img-19.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 969,
+        "sizes": {
+          "og": {
+            "url": "/media/img-19-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "icon": {
+        "url": "/media/icons-2.png",
+        "alt": "",
+        "width": 120,
+        "height": 120
+      },
+      "title": "Pure Clarity <br>For Competitive<br> <span class=\"mil-opacity-text\">Advantage</span>",
+      "description": "Quality construction, reliable materials <br class=\"mil-sm-hidden\">and expert project delivery built around your vision.",
+      "button1_text": "Read more",
+      "button1_url": "/services",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "meta": {
+    "title": "Blog | Lumex Template"
+  },
+  "badge": "Blog",
+  "description": "We write about what matters — strategy, innovation, and the evolving business landscape. Explore ideas that spark action, challenge assumptions, and support smarter decisions at every stage of growth.",
+  "title": "Ideas, Strategy, <br class=\"mil-sm-hidden\">and Perspective",
+  "post_layout_after": [
+    {
+      "blockType": "subscribe",
+      "title": "Subscribe our newsletter",
+      "media_file": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      }
+    }
+  ]
+}

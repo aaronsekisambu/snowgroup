@@ -1,0 +1,347 @@
+{
+  "title": "Home 3",
+  "slug": "home-3",
+  "meta": {
+    "title": "Home 3 | Lumex Template"
+  },
+  "publishedAt": "2025-05-23T12:00:00.000Z",
+  "layout": [
+    {
+      "blockType": "hero_three",
+      "video": {
+        "url": "/media/video-3.mp4",
+        "alt": "",
+        "mimeType": "video/mp4"
+      },
+      "title": "Guidance for a Sustainable <span class=\"mil-c-a-1\">Tomorrow</span>. &nbsp;",
+      "button1_text": "Services",
+      "button1_url": "/services",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact",
+      "description": "<i>Your partner in making bold decisions, solving complex <br class=\"mil-lg-hidden\">problems, and sustaining success</i>",
+      "users": [
+        {
+          "image": {
+            "url": "/media/users-1.jpg",
+            "alt": "",
+            "width": 100,
+            "height": 100
+          }
+        },
+        {
+          "image": {
+            "url": "/media/users-2.jpg",
+            "alt": "",
+            "width": 100,
+            "height": 100
+          }
+        },
+        {
+          "image": {
+            "url": "/media/users-3.jpg",
+            "alt": "",
+            "width": 100,
+            "height": 100
+          }
+        },
+        {
+          "image": {
+            "url": "/media/users-4.jpg",
+            "alt": "",
+            "width": 100,
+            "height": 100
+          }
+        }
+      ]
+    },
+    {
+      "blockType": "about_us_two",
+      "badge": "About us",
+      "title": "Tailored Solutions <br class=\"mil-sm-hidden\">For Ambitious Businesses",
+      "left_description": "We adapt quickly, think critically, and stay aligned with your goals from day one. That’s how collaboration becomes progress — and becomes results.",
+      "counter_value": "479",
+      "counter_suffix": "+",
+      "counter_title": "Projects Completed",
+      "image": {
+        "url": "/media/img-13.jpg",
+        "alt": "",
+        "width": 864,
+        "height": 576
+      },
+      "right_description2": "<p>Through clear frameworks, proactive communication, and critical analysis, we ensure your business moves forward with confidence. Our team works collaboratively across disciplines and hierarchies to identify hidden opportunities, solve pressing challenges, and streamline operations.</p>",
+      "timeline": [
+        {
+          "period": "2006–2009",
+          "head_title": "Harvard Business School",
+          "description": "MBA in Strategic Management. Focused on corporate growth models, organizational leadership, and operational scaling."
+        },
+        {
+          "period": "2014–2015",
+          "head_title": "London School of Economics",
+          "description": "Certificate in Data-Driven Decision Making — explored market intelligence, predictive analytics, and scenario modeling."
+        },
+        {
+          "period": "2020",
+          "head_title": "IDEO U – Design Thinking for Business Innovation",
+          "description": "Hands-on workshop series on creative problem-solving and user-centered innovation frameworks."
+        }
+      ],
+      "right_description3": "<p>We’re not just consultants — we’re long-term partners focused on progress. From early planning phases to hands-on implementation, we act as an extension of your team. With a balance of logic and agility, we drive transformation that’s efficient, sustainable, and tailored to your market. Our experience spans industries and business models, allowing us to offer relevant insight and deliver custom-built solutions. Whether you’re scaling rapidly, entering new markets, or redefining your strategy — we support you every step of the way, turning ambition into action and strategy into success.</p><p>It’s our belief that real results stem from meaningful collaboration. That’s why we prioritize transparency, speed, and adaptability in everything we do. When your priorities evolve, we evolve with you — ensuring every milestone leads to lasting impact and measurable success.</p>",
+      "button1_text": "Read more",
+      "button1_url": "/services",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    },
+    {
+      "blockType": "features_two",
+      "badge": "Features",
+      "title": "What makes <span class=\"mil-opacity-text\">collaboration</span><br class=\"mil-sm-hidden\"> with us truly work",
+      "description": "We mix clarity, speed, and experience.",
+      "button_text": "Let's Talk",
+      "button_url": "/contact",
+      "features": [
+        {
+          "icon": {
+            "url": "/media/icons-1.png",
+            "alt": "",
+            "width": 120,
+            "height": 120
+          },
+          "title": "Strategic thinking",
+          "description": "We align every move with clear business goals and market opportunities."
+        },
+        {
+          "icon": {
+            "url": "/media/icons-2.png",
+            "alt": "",
+            "width": 120,
+            "height": 120
+          },
+          "title": "Data-driven insights",
+          "description": "Our recommendations are based on real data, not guesswork or trends."
+        },
+        {
+          "icon": {
+            "url": "/media/icons-3.png",
+            "alt": "",
+            "width": 120,
+            "height": 120
+          },
+          "title": "Proven expertise",
+          "description": "Years of experience across industries help us solve complex challenges fast."
+        },
+        {
+          "icon": {
+            "url": "/media/icons-4.png",
+            "alt": "",
+            "width": 120,
+            "height": 120
+          },
+          "title": "Agile delivery",
+          "description": "We adapt quickly to change and deliver solutions that scale with you."
+        },
+        {
+          "icon": {
+            "url": "/media/icons-5.png",
+            "alt": "",
+            "width": 120,
+            "height": 120
+          },
+          "title": "Seamless collaboration",
+          "description": "We integrate smoothly into your workflow and communicate with clarity."
+        },
+        {
+          "icon": {
+            "url": "/media/icons-6.png",
+            "alt": "",
+            "width": 120,
+            "height": 120
+          },
+          "title": "Long-term value",
+          "description": "Our focus is on creating strategies that bring <br>lasting business impact."
+        }
+      ]
+    },
+    {
+      "blockType": "services_three",
+      "badge": "Services",
+      "title": "Solutions That <br class=\"mil-sm-hidden\">Drive <span class=\"mil-opacity-text\">Business</span> Forward",
+      "description": "Focused. Strategic. Built for growth.",
+      "button_text": "View all",
+      "button_url": "/services",
+      "services": [
+        {
+          "image": {
+            "url": "/media/service-1.jpg",
+            "alt": "",
+            "width": 500,
+            "height": 691,
+            "sizes": {
+              "og": {
+                "url": "/media/service-1-1200x630.jpg",
+                "width": 1200,
+                "height": 630
+              }
+            }
+          },
+          "title": "Business Strategy <br>& Planning",
+          "description": "We help organizations define clear objectives, align teams, and build roadmaps that drive long-term value and adaptability in changing markets.",
+          "url": "/services/service-1"
+        },
+        {
+          "image": {
+            "url": "/media/service-2.jpg",
+            "alt": "",
+            "width": 500,
+            "height": 691,
+            "sizes": {
+              "og": {
+                "url": "/media/service-2-1200x630.jpg",
+                "width": 1200,
+                "height": 630
+              }
+            }
+          },
+          "title": "Market Research <br>& Insights",
+          "description": "Our team delivers data-driven insights into customer behavior, industry trends, and market dynamics — empowering confident, strategic decisions.",
+          "url": "/services/service-2"
+        },
+        {
+          "image": {
+            "url": "/media/service-3.jpg",
+            "alt": "",
+            "width": 500,
+            "height": 691,
+            "sizes": {
+              "og": {
+                "url": "/media/service-3-1200x630.jpg",
+                "width": 1200,
+                "height": 630
+              }
+            }
+          },
+          "title": "Operations & Process <br>Optimization",
+          "description": "We identify inefficiencies, improve workflows, and streamline core processes to increase productivity, reduce costs, and support sustainable scaling.",
+          "url": "/services/service-3"
+        },
+        {
+          "image": {
+            "url": "/media/service-4.jpg",
+            "alt": "",
+            "width": 500,
+            "height": 691,
+            "sizes": {
+              "og": {
+                "url": "/media/service-4-1200x630.jpg",
+                "width": 1200,
+                "height": 630
+              }
+            }
+          },
+          "title": "Change Management <br>& Transformation",
+          "description": "From organizational shifts to digital transitions, we guide businesses through change with structured frameworks, communication strategies, and leadership support.",
+          "url": "/services/service-4"
+        }
+      ]
+    },
+    {
+      "blockType": "portfolio_two",
+      "badge": "Cases",
+      "title": "See How We Help <br class=\"mil-sm-hidden\">Drive <span class=\"mil-opacity-text\">Business</span> Grow",
+      "counter_value": "479",
+      "counter_suffix": "+",
+      "counter_title": "Projects Completed",
+      "populateBy": "collection",
+      "relationTo": "projects",
+      "limit": 3,
+      "info": "These are just a few highlights. Discover more of our impactful work.",
+      "more_label": "Discover",
+      "more_link": "/projects",
+      "items": [
+        {
+          "slug": "sustainability-drive-for-an-energy-sector-pioneer",
+          "title": "Sustainability Drive for an Energy Sector Pioneer",
+          "short_description": "We helped a mid-sized SaaS company restructure its go-to-market strategy, transition to a subscription model, and optimize sales funnels. The result: +22% MRR, reduced CAC, and improved user retention.",
+          "price": "$7 500",
+          "meta": {
+            "title": "Sustainability Drive for an Energy Sector | Lumex Template",
+            "image": {
+              "url": "/media/project-9.jpg",
+              "alt": "",
+              "width": 500,
+              "height": 332
+            }
+          }
+        },
+        {
+          "slug": "customer-centric-shift-for-an-e-commerce-platform",
+          "title": "Customer-Centric Shift for an E-Commerce Platform",
+          "short_description": "Designed and implemented a full ESG strategy for a national construction firm, aligning their operations with ISO standards and unlocking eligibility for global tenders and green financing.",
+          "price": "$5 000",
+          "meta": {
+            "title": "Customer-Centric Shift for an E-Commerce | Lumex Template",
+            "image": {
+              "url": "/media/project-8.jpg",
+              "alt": "",
+              "width": 500,
+              "height": 332
+            }
+          }
+        },
+        {
+          "slug": "agile-transformation-for-a-manufacturing-leader",
+          "title": "Agile Transformation for a Manufacturing Leader",
+          "short_description": "Strategic rebranding and operational unification for a global logistics provider operating in 20+ countries",
+          "price": "$6 000",
+          "meta": {
+            "title": "Agile Transformation for a Manufacturing | Lumex Template",
+            "image": {
+              "url": "/media/project-7.jpg",
+              "alt": "",
+              "width": 500,
+              "height": 332
+            }
+          }
+        }
+      ]
+    },
+    {
+      "blockType": "call_to_action",
+      "bgImage": {
+        "url": "/media/img-11.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 727,
+        "sizes": {
+          "og": {
+            "url": "/media/img-11-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "icon": {
+        "url": "/media/icons-2.png",
+        "alt": "",
+        "width": 120,
+        "height": 120
+      },
+      "title": "Building Today <br>Shaping <span class=\"mil-opacity-text\">Tomorrow</span>",
+      "description": "Quality construction, reliable materials <br class=\"mil-sm-hidden\">and expert project delivery built around your vision.",
+      "button1_text": "Read more",
+      "button1_url": "/services",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    },
+    {
+      "blockType": "prices_block",
+      "badge": "Plans",
+      "title": "Flexible <span class=\"mil-opacity-text\">Plans</span><br> for Every One",
+      "description": "One vision. Three flexible ways to make it happen.",
+      "button_text": "Read more",
+      "button_url": "/plans",
+      "plansSource": "plans"
+    }
+  ],
+  "updatedAt": "2025-11-18T23:57:19.296Z"
+}

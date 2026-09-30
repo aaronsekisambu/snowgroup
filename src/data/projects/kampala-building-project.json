@@ -1,0 +1,125 @@
+{
+  "title": "Kampala Building Project",
+  "slug": "kampala-building-project",
+  "category": "Building Construction",
+  "filters": [],
+  "client": "Private client",
+  "location": "Kampala",
+  "short_description": "A multi-storey building in Kampala, delivered through the structural frame and walling with scaffolding and supervision on site.",
+  "meta": {
+    "title": "Kampala Building Project | Snow Holdings Limited",
+    "description": "A multi-storey building in Kampala, delivered through the structural frame and walling with scaffolding and supervision on site.",
+    "image": {
+      "url": "/media/projects/kampala-building-project-1.jpg",
+      "alt": "Kampala Building Project",
+      "width": 1040,
+      "height": 780
+    }
+  },
+  "order": 8,
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/projects/kampala-building-project-1.jpg",
+        "alt": "Kampala Building Project",
+        "width": 1040,
+        "height": 780
+      },
+      "short_title": "Projects",
+      "title": "Kampala Building Project"
+    },
+    {
+      "blockType": "about_project",
+      "badge": "Building Construction",
+      "title": "Kampala Building Project",
+      "info_items": [
+        {
+          "label": "Client",
+          "value": "Private client"
+        },
+        {
+          "label": "Location",
+          "value": "Kampala"
+        },
+        {
+          "label": "Category",
+          "value": "Building Construction"
+        },
+        {
+          "label": "Services",
+          "value": "Building Construction, Site Supervision"
+        }
+      ],
+      "intro_title": "About the Project",
+      "intro_description": "<p>In Kampala, Snow Holdings delivered construction works on a multi-storey building, taking the structure up floor by floor.</p>",
+      "image": {
+        "url": "/media/projects/kampala-building-project-2.jpg",
+        "alt": "Kampala Building Project — photo 2",
+        "width": 1040,
+        "height": 780
+      },
+      "approach_title": "Our Approach",
+      "approach_description": "<p>We built the reinforced concrete frame and walling floor by floor, with scaffolding and supervision on site to keep the work safe and on track at height.</p>",
+      "delivered_title": "What We Delivered",
+      "delivered_items": [
+        {
+          "title": "Reinforced concrete frame",
+          "description": "built floor by floor."
+        },
+        {
+          "title": "Walling",
+          "description": "across the building."
+        },
+        {
+          "title": "Scaffolding and supervision",
+          "description": "for safe work at height."
+        }
+      ],
+      "goals_title": "Project Priorities",
+      "goals_items": [
+        {
+          "title": "Structural quality",
+          "description": "— a strong frame for a multi-storey building."
+        },
+        {
+          "title": "Safety",
+          "description": "— organised, supervised work at every level."
+        }
+      ],
+      "conclusion_description": "<p>The Kampala project is part of our portfolio of multi-storey construction in and around the city.</p>"
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "relatedProjects": [
+    {
+      "slug": "bombo-development"
+    },
+    {
+      "slug": "triple-j-agro-farm-development"
+    },
+    {
+      "slug": "ministry-of-lands-zonal-offices"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "social": [
+    {
+      "icon": "fab fa-linkedin-in",
+      "link": "https://www.linkedin.com/company/snow-holdings-ltd/"
+    },
+    {
+      "icon": "fab fa-whatsapp",
+      "link": "https://wa.me/4915679137020"
+    },
+    {
+      "icon": "fal fa-envelope",
+      "link": "mailto:info@snowgroup.ltd"
+    }
+  ],
+  "copyright": "© 2026. All rights reserved. Snow Group.",
+  "backgroundImage": {
+    "url": "/media/img-7.jpg",
+    "alt": "",
+    "width": 1728,
+    "height": 1042,
+    "sizes": {
+      "og": {
+        "url": "/media/img-7-1200x630.jpg",
+        "width": 1200,
+        "height": 630
+      }
+    }
+  },
+  "createdBy": "Developed by: <a href=\"https://snowgroup.ltd\" class=\"mil-text-link\">Snow Group</a>",
+  "footerLinks": [
+    {
+      "label": "License",
+      "link": "/license"
+    },
+    {
+      "label": "Legal information",
+      "link": "/legal-information"
+    },
+    {
+      "label": "Sitemap",
+      "link": "/sitemap"
+    }
+  ],
+  "layoutType": "default",
+  "locations": [
+    {
+      "title": "Acacia Mall",
+      "address": "Acacia Mall on the 4th Floor, 14-18 Cooper Road in Kisimenti",
+      "phone": "WhatsApp Only: +49 15679 137020",
+      "phone_link": "https://wa.me/4915679137020",
+      "email": "info@snowgroup.ltd"
+    },
+    {
+      "title": "Notice",
+      "address": "All product and service names are trademarks of Snow Holdings Ltd. and may not be used without authorization."
+    }
+  ],
+  "logo": {
+    "url": "/media/snow-logo-black.png",
+    "alt": "Snow Holdings Limited",
+    "width": 600,
+    "height": 548
+  },
+  "mainMenu": [
+    {
+      "label": "Home",
+      "link": "/"
+    },
+    {
+      "label": "Services",
+      "link": "/services"
+    },
+    {
+      "label": "Contact",
+      "link": "/contact"
+    }
+  ],
+  "policyLinks": [
+    {
+      "label": "Privacy Policy",
+      "link": "/privacy-policy"
+    },
+    {
+      "label": "Terms and conditions",
+      "link": "/terms-and-conditions"
+    },
+    {
+      "label": "Cookie Policy",
+      "link": "/cookie-policy"
+    }
+  ],
+  "logoLight": {
+    "url": "/media/snow-logo-white.png",
+    "alt": "Snow Holdings Limited",
+    "width": 600,
+    "height": 548
+  },
+  "logo_text": "Snow Holdings Ltd",
+  "cta": {
+    "text": "Ready to build? Tell us about your project and we will get back to you.",
+    "button_text": "Let’s Talk",
+    "button_url": "/contact"
+  }
+}

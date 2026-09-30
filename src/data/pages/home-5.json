@@ -1,0 +1,383 @@
+{
+  "title": "Home 5",
+  "slug": "home-5",
+  "meta": {
+    "title": "Snow Holdings Limited"
+  },
+  "publishedAt": "2025-11-11T19:43:38.827Z",
+  "layout": [
+    {
+      "blockType": "hero_five",
+      "slides": [
+        {
+          "bgImage": {
+            "url": "/media/img-5.jpg",
+            "alt": "",
+            "width": 1728,
+            "height": 1043,
+            "sizes": {
+              "og": {
+                "url": "/media/img-5-1200x630.jpg",
+                "width": 1200,
+                "height": 630
+              }
+            }
+          },
+          "title": "Shaping Spaces a<br class=\"mil-lg-hidden\"> Creating <span class=\"mil-opacity-text\">Possibilities</span>"
+        },
+        {
+          "bgImage": {
+            "url": "/media/img-6.jpg",
+            "alt": "",
+            "width": 1728,
+            "height": 1043,
+            "sizes": {
+              "og": {
+                "url": "/media/img-6-1200x630.jpg",
+                "width": 1200,
+                "height": 630
+              }
+            }
+          },
+          "title": "Pure Clarity For<br class=\"mil-lg-hidden\"> Competitive <span class=\"mil-opacity-text\">Advantage</span>"
+        },
+        {
+          "bgImage": {
+            "url": "/media/img-7.jpg",
+            "alt": "",
+            "width": 1728,
+            "height": 1042,
+            "sizes": {
+              "og": {
+                "url": "/media/img-7-1200x630.jpg",
+                "width": 1200,
+                "height": 630
+              }
+            }
+          },
+          "title": "Building Today<br class=\"mil-lg-hidden\"> Shaping <span class=\"mil-opacity-text\">Tomorrow</span>"
+        }
+      ],
+      "description": "Quality construction, reliable materials <br class=\"mil-sm-hidden\">and expert project delivery built around your vision.",
+      "button1_text": "Services",
+      "button1_url": "/services",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    },
+    {
+      "blockType": "about_us_four",
+      "icon": {
+        "url": "/media/icons-6.png",
+        "alt": "",
+        "width": 120,
+        "height": 120
+      },
+      "title": "Where <span class=\"mil-opacity-text\">Vision</span> Meets <br>Relentless Execution",
+      "description": "<p>Our expertise, proven approach, and local understanding help turn ambitious ideas into quality projects built to perform and endure.</p><p>At Snow Holdings, we combine construction expertise with practical experience to deliver lasting value. From residential and commercial construction to civil works, project management, and materials supply, we support our clients from concept to completion with a focus on quality, transparency, and dependable delivery.</p>",
+      "users": [
+        {
+          "image": {
+            "url": "/media/users-1.jpg",
+            "alt": "",
+            "width": 100,
+            "height": 100
+          }
+        },
+        {
+          "image": {
+            "url": "/media/users-2.jpg",
+            "alt": "",
+            "width": 100,
+            "height": 100
+          }
+        },
+        {
+          "image": {
+            "url": "/media/users-3.jpg",
+            "alt": "",
+            "width": 100,
+            "height": 100
+          }
+        },
+        {
+          "image": {
+            "url": "/media/users-4.jpg",
+            "alt": "",
+            "width": 100,
+            "height": 100
+          }
+        }
+      ],
+      "button1_text": "Services",
+      "button1_url": "/services",
+      "button2_text": "Contact us",
+      "button2_url": "/contact",
+      "image": {
+        "url": "/media/img-12.jpg",
+        "alt": "",
+        "width": 864,
+        "height": 1296,
+        "sizes": {
+          "og": {
+            "url": "/media/img-12-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "counters": [
+        {
+          "upper": "Projects",
+          "lower": "completed",
+          "value": "173",
+          "suffix": "+",
+          "suffix_class": "mil-sub-text-2"
+        },
+        {
+          "upper": "Client",
+          "lower": "Satisfaction",
+          "value": "99",
+          "suffix": "%",
+          "suffix_class": "mil-sub-text-1"
+        }
+      ],
+      "partners": [
+        {
+          "image": {
+            "url": "/media/partner-pexy-farm.png",
+            "alt": "Pexy Farm",
+            "width": 122,
+            "height": 35
+          }
+        },
+        {
+          "image": {
+            "url": "/media/partner-triplej-agro.png",
+            "alt": "TripleJ Agro",
+            "width": 85,
+            "height": 31
+          }
+        },
+        {
+          "image": {
+            "url": "/media/partner-kaam-city-farm.png",
+            "alt": "Kaam City Farm",
+            "width": 126,
+            "height": 24
+          }
+        },
+        {
+          "image": {
+            "url": "/media/brand-4.png",
+            "alt": "",
+            "width": 198,
+            "height": 47
+          }
+        },
+        {
+          "image": {
+            "url": "/media/brand-5.png",
+            "alt": "",
+            "width": 189,
+            "height": 40
+          }
+        }
+      ]
+    },
+    {
+      "blockType": "features_two",
+      "badge": "Features",
+      "title": "What makes <span class=\"mil-opacity-text\">collaboration</span><br class=\"mil-sm-hidden\"> with us truly work",
+      "description": "We mix clarity, speed, and experience.",
+      "button_text": "Let's Talk",
+      "button_url": "/contact",
+      "features": [
+        {
+          "icon": {
+            "url": "/media/icons-1.png",
+            "alt": "",
+            "width": 120,
+            "height": 120
+          },
+          "title": "Cooperation",
+          "description": "Great projects are built together. We work closely with clients, partners, and our teams to turn shared goals into successful outcomes."
+        },
+        {
+          "icon": {
+            "url": "/media/icons-2.png",
+            "alt": "",
+            "width": 120,
+            "height": 120
+          },
+          "title": "Creativity",
+          "description": "Every project deserves thoughtful solutions. We combine fresh thinking with practical expertise to solve challenges and create better ways to build."
+        },
+        {
+          "icon": {
+            "url": "/media/icons-3.png",
+            "alt": "",
+            "width": 120,
+            "height": 120
+          },
+          "title": "Transparency",
+          "description": "Trust starts with clarity. We communicate openly about costs, timelines, progress, and challenges so our clients always know where their project stands."
+        }
+      ]
+    },
+    {
+      "blockType": "services_three",
+      "badge": "Services",
+      "title": "Solutions That <br class=\"mil-sm-hidden\">Build <span class=\"mil-opacity-text\">Lasting</span> Value",
+      "description": "From concept to completion. Built with purpose.",
+      "button_text": "View all",
+      "button_url": "/services",
+      "services": [
+        {
+          "image": {
+            "url": "/media/service-1.jpg",
+            "alt": "",
+            "width": 500,
+            "height": 691,
+            "sizes": {
+              "og": {
+                "url": "/media/service-1-1200x630.jpg",
+                "width": 1200,
+                "height": 630
+              }
+            }
+          },
+          "title": "Building <br> Construction",
+          "description": "Residential, commercial, industrial, institutional & public developments",
+          "url": "/services/building-construction"
+        },
+        {
+          "image": {
+            "url": "/media/service-2.jpg",
+            "alt": "",
+            "width": 500,
+            "height": 691,
+            "sizes": {
+              "og": {
+                "url": "/media/service-2-1200x630.jpg",
+                "width": 1200,
+                "height": 630
+              }
+            }
+          },
+          "title": "Civil <br>& Infrastructure Works",
+          "description": "Roads, drainage, earthworks, paving, utilities & structural works",
+          "url": "/services/civil-infrastructure"
+        },
+        {
+          "image": {
+            "url": "/media/service-3.jpg",
+            "alt": "",
+            "width": 500,
+            "height": 691,
+            "sizes": {
+              "og": {
+                "url": "/media/service-3-1200x630.jpg",
+                "width": 1200,
+                "height": 630
+              }
+            }
+          },
+          "title": "Design  <br>& Project Management",
+          "description": "Architecture, engineering, quantity surveying, cost planning, supervision & procurement.",
+          "url": "/services/project-management"
+        },
+        {
+          "image": {
+            "url": "/media/service-4.jpg",
+            "alt": "",
+            "width": 500,
+            "height": 691,
+            "sizes": {
+              "og": {
+                "url": "/media/service-4-1200x630.jpg",
+                "width": 1200,
+                "height": 630
+              }
+            }
+          },
+          "title": "Construction <br>& Materials",
+          "description": "Concrete blocks, pavers, curbstones, precast products, aggregates & building materials",
+          "url": "/products/concrete-products"
+        }
+      ]
+    },
+    {
+      "blockType": "process",
+      "badge": "How We Work",
+      "title": "From Your <span class=\"mil-opacity-text\">Idea</span> <br class=\"mil-sm-hidden\">to the Final Build",
+      "description": "Three clear stages, one team, and full visibility from the first conversation to the day we hand over.",
+      "button_text": "Let's Talk",
+      "button_url": "/contact",
+      "steps": [
+        {
+          "number": "01",
+          "icon": "fal fa-lightbulb",
+          "title": "Plan & Define",
+          "subtitle": "Tell us what you want to build",
+          "description": "Share your idea, plans, budget and project location. We assess your needs, discuss the right approach and establish a clear scope for your project."
+        },
+        {
+          "number": "02",
+          "icon": "fal fa-drafting-compass",
+          "title": "Design & Prepare",
+          "subtitle": "Turn the vision into a clear plan",
+          "description": "We coordinate design, costing, materials, schedules and site preparation so you understand what will be built, what it will take and how we will deliver it."
+        },
+        {
+          "number": "03",
+          "icon": "fal fa-hard-hat",
+          "title": "Build & Deliver",
+          "subtitle": "Watch your project take shape",
+          "description": "Construction begins with ongoing supervision, quality control and transparent progress updates through every stage until completion and handover."
+        }
+      ]
+    },
+    {
+      "blockType": "testimonials",
+      "badge": "Testimonials",
+      "title": "What Our <span class=\"mil-opacity-text\">Clients</span> <br class=\"mil-sm-hidden\">Say About Us",
+      "description": "Hear from the people and organisations we have built with.",
+      "button_text": "Let's Talk",
+      "button_url": "/contact",
+      "testimonials": [
+        {
+          "quote": "Snow Holdings brought a practical and professional approach to the project. Communication was clear, the team was responsive, and we always had a good understanding of the work and progress on site.",
+          "name": "Eng. Ntale Wilson",
+          "role": "Triple J Farm"
+        },
+        {
+          "quote": "What stood out was the team’s commitment to doing things properly. They approached the work with professionalism, attention to detail, and a clear focus on delivering a dependable result.",
+          "name": "Prof. Moses Twumwine",
+          "role": "Ministry of Works"
+        }
+      ]
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Do you have any questions?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ],
+  "updatedAt": "2025-11-18T23:58:18.448Z"
+}

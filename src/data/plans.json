@@ -1,0 +1,55 @@
+{
+  "plans": [
+    {
+      "name": "Plan & Save",
+      "tier": "Essential Start",
+      "tagline": "Build for Tomorrow",
+      "description": "For clients preparing for a future project and wanting a structured path toward it.",
+      "features": [
+        { "item": "Start with an idea or existing plan" },
+        { "item": "Initial project consultation" },
+        { "item": "House planning & design support" },
+        { "item": "Preliminary cost estimation" },
+        { "item": "Set your construction target" },
+        { "item": "Save toward construction or materials" },
+        { "item": "Track progress toward your goal" }
+      ],
+      "button_text": "Coming soon",
+      "button_disabled": true
+    },
+    {
+      "name": "Build in Phases",
+      "tier": "Growth Focus",
+      "tagline": "Build at Your Pace",
+      "description": "For clients who prefer to complete their project step by step.",
+      "features": [
+        { "item": "Use your own plans or design with us" },
+        { "item": "Project budget & phase planning" },
+        { "item": "Foundation & substructure" },
+        { "item": "Walling & structural works" },
+        { "item": "Roofing" },
+        { "item": "Finishing & installations" },
+        { "item": "Pay and build by agreed milestones" }
+      ],
+      "button_text": "Coming soon",
+      "button_disabled": true
+    },
+    {
+      "name": "Start & Build Now",
+      "tier": "Core",
+      "tagline": "Ready to Build",
+      "description": "For clients who are ready to move from plans to construction.",
+      "features": [
+        { "item": "Start with your own approved plans" },
+        { "item": "Planning & project consultation" },
+        { "item": "Site assessment & preparation" },
+        { "item": "Budgeting & cost estimation" },
+        { "item": "Materials planning & procurement" },
+        { "item": "Full construction execution" },
+        { "item": "Project supervision & coordination" }
+      ],
+      "button_text": "Coming soon",
+      "button_disabled": true
+    }
+  ]
+}
