@@ -102,31 +102,15 @@ export const AboutUsFourBlock: React.FC<AboutUsFourBlockProps> = ({
         </div>
       </div>
       <div className="container">
-        <div className="mil-partners">
-          <div className="row">
-            {partners && partners.length > 0 && (
-              <>
-                {partners.slice(0, 3).map((partner, index) => (
-                  <div key={index} className="col-6 col-md-4 col-lg mil-tac mil-mb-2">
-                    <div className="mil-partner">
-                      <Media resource={partner.image} />
-                    </div>
-                  </div>
-                ))}
-                {partners.slice(3, 5).map((partner, index) => {
-                  const colIndex = index + 3
-                  return (
-                    <div key={colIndex} className={`col-6 col-md-6 col-lg mil-tac mil-mb-2`}>
-                      <div className="mil-partner">
-                        <Media resource={partner.image} />
-                      </div>
-                    </div>
-                  )
-                })}
-              </>
-            )}
+        {partners && partners.length > 0 && (
+          <div className="mil-partners">
+            {partners.map((partner, index) => (
+              <div key={index} className="mil-partner">
+                <Media resource={partner.image} />
+              </div>
+            ))}
           </div>
-        </div>
+        )}
       </div>
     </div>
   )

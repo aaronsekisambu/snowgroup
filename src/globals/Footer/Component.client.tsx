@@ -109,7 +109,7 @@ export const FooterClient: React.FC<FooterProps> = ({ data }) => {
       <div className="container">
         <div className="mil-footer-content mil-p-10-10">
           <div className="row mil-jcb">
-            <div className="col-md-5 col-lg-7 mil-flex-column mil-sm-mb-5">
+            <div className="col-md-6 col-lg-7 mil-flex-column mil-sm-mb-5">
               <div className="row">
                 <div className="col-lg-7 mil-flex-column mil-sm-aic">
                   {logo && typeof logo === 'object' && logo.url && (
@@ -132,7 +132,7 @@ export const FooterClient: React.FC<FooterProps> = ({ data }) => {
                 </div>
               </div>
             </div>
-            <div className="col-md-2 mil-sm-mb-5">
+            <div className="col-lg-2 mil-footer-spacer">
               {/* {mainMenu && mainMenu.length > 0 && (
                 <ul className="mil-footer-menu-2 mil-flex-column mil-sm-aic">
                   {mainMenu.map((item, idx) => (
@@ -143,7 +143,7 @@ export const FooterClient: React.FC<FooterProps> = ({ data }) => {
                 </ul>
               )} */}
             </div>
-            <div className="col-md-2">
+            <div className="col-md-6 col-lg-2">
               {policyLinks && policyLinks.length > 0 && (
                 <ul className="mil-footer-links mil-hover-dark mil-flex-column mil-c-m-2 mil-ais mil-sm-aic">
                   {policyLinks.map((item, idx) => (
@@ -160,7 +160,7 @@ export const FooterClient: React.FC<FooterProps> = ({ data }) => {
       <div className="mil-footer-adress mil-gray-section mil-p-10-5 mil-angle mil-angle-lg">
         <div className="container">
           <div className="row mil-jcb">
-            <div className="col-md-5 col-lg-7 mil-flex-column mil-jcb mil-sm-aic">
+            <div className="col-md-12 col-lg-7 mil-flex-column mil-jcb mil-sm-aic">
               {social && social.length > 0 && (
                 <ul className="mil-social mil-c-m-1 mil-mb-5">
                   {social.map((item, idx) => (
@@ -183,7 +183,7 @@ export const FooterClient: React.FC<FooterProps> = ({ data }) => {
               )}
             </div>
             {locations && locations.map((location, idx) => (
-              <div key={idx} className="col-md-2">
+              <div key={idx} className="col-6 col-lg-2">
                 <div className="mil-w-80 mil-mb-5 mil-sm-tac">
                   <h6 className="mil-mb-2">{location.title}</h6>
                   <p className="mil-t-14 mil-c-m-2 mil-mb-2">{location.address}</p>

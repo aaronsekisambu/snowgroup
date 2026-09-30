@@ -24,7 +24,7 @@
               }
             }
           },
-          "title": "Shaping Spaces a<br class=\"mil-lg-hidden\"> Creating <span class=\"mil-opacity-text\">Possibilities</span>"
+          "title": "Shaping Spaces a<br> Creating <span class=\"mil-opacity-text\">Possibilities</span>"
         },
         {
           "bgImage": {
@@ -40,7 +40,7 @@
               }
             }
           },
-          "title": "Pure Clarity For<br class=\"mil-lg-hidden\"> Competitive <span class=\"mil-opacity-text\">Advantage</span>"
+          "title": "Pure Clarity For<br> Competitive <span class=\"mil-opacity-text\">Advantage</span>"
         },
         {
           "bgImage": {
@@ -56,7 +56,7 @@
               }
             }
           },
-          "title": "Building Today<br class=\"mil-lg-hidden\"> Shaping <span class=\"mil-opacity-text\">Tomorrow</span>"
+          "title": "Building Today<br> Shaping <span class=\"mil-opacity-text\">Tomorrow</span>"
         }
       ],
       "description": "Quality construction, reliable materials <br class=\"mil-sm-hidden\">and expert project delivery built around your vision.",
@@ -147,40 +147,24 @@
           "image": {
             "url": "/media/partner-pexy-farm.png",
             "alt": "Pexy Farm",
-            "width": 122,
-            "height": 35
+            "width": 484,
+            "height": 140
           }
         },
         {
           "image": {
             "url": "/media/partner-triplej-agro.png",
             "alt": "TripleJ Agro",
-            "width": 85,
-            "height": 31
+            "width": 340,
+            "height": 124
           }
         },
         {
           "image": {
             "url": "/media/partner-kaam-city-farm.png",
             "alt": "Kaam City Farm",
-            "width": 126,
-            "height": 24
-          }
-        },
-        {
-          "image": {
-            "url": "/media/brand-4.png",
-            "alt": "",
-            "width": 198,
-            "height": 47
-          }
-        },
-        {
-          "image": {
-            "url": "/media/brand-5.png",
-            "alt": "",
-            "width": 189,
-            "height": 40
+            "width": 504,
+            "height": 92
           }
         }
       ]

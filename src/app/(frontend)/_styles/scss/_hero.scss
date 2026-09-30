@@ -629,3 +629,25 @@ text on photos
         }
     }
 }
+
+/* -------------------------------------------
+
+hero height on tall screens
+
+------------------------------------------- */
+
+// on portrait tablets the full-screen slider becomes a very tall crop of a landscape photo;
+// cap it at a widescreen shape so the photo and headline stay in proportion
+@media (min-width: 993px) {
+    .mil-hero-5 {
+        height: min(calc(var(--vh, 1vh) * 100), 80vw);
+    }
+}
+
+// phones: headline sized to fit "Building Today / Shaping Tomorrow" on two lines
+@media (max-width: 576px) {
+    .mil-hero-5 .mil-hero-content .mil-slider-title h1 {
+        font-size: clamp(3.4rem, 10.5vw, 5.2rem);
+        line-height: 105%;
+    }
+}

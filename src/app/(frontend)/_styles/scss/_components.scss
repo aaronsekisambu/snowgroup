@@ -2844,3 +2844,269 @@ plan tabs
         align-self: center;
     }
 }
+
+/* -------------------------------------------
+
+medium screens and phones
+
+------------------------------------------- */
+
+// tall portrait photos (e.g. "Where Vision Meets") become landscape once they go full width
+@media (max-width: 991px) {
+    .mil-image-frame.mil-port-ori {
+        padding-bottom: 70%;
+    }
+}
+
+@media (max-width: 575px) {
+    .mil-image-frame.mil-port-ori {
+        padding-bottom: 100%;
+    }
+}
+
+// service photo cards: shorter when two sit side by side on tablets
+@media (min-width: 576px) and (max-width: 991px) {
+    .mil-services-frame .mil-service-card.mil-type-2 {
+        padding-bottom: 85%;
+    }
+}
+
+// feature cards stack on tablets: icon beside the text instead of three narrow columns
+@media (min-width: 576px) and (max-width: 991px) {
+    .mil-gray-section .mil-card.mil-flex-column.mil-aic {
+        display: grid;
+        grid-template-columns: 8rem 1fr;
+        column-gap: 3rem;
+        align-items: start;
+        text-align: left;
+
+        & .mil-icon {
+            grid-row: span 2;
+            margin-bottom: 0;
+        }
+    }
+}
+
+// partner logos: equal boxes on every screen, logos sized to fit the box
+.mil-partners {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+
+    & .mil-partner {
+        height: 12rem;
+        padding: 2rem 3rem;
+        border-radius: 1rem;
+        background-color: $m-4;
+
+        & img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 5.5rem;
+            object-fit: contain;
+        }
+    }
+
+    @media (max-width: 575px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        & .mil-partner {
+            height: 8rem;
+            padding: 1.2rem;
+
+            & img {
+                max-height: 3.6rem;
+            }
+        }
+    }
+}
+
+/* -------------------------------------------
+
+mobile dropdown panels (services, products)
+
+------------------------------------------- */
+
+@media (max-width: 992px) {
+    .mil-top-panel nav .mil-main-menu {
+        // arrow on items with a dropdown, flipped when open
+        & > li.mil-has-children > a {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+
+            &:after {
+                content: "\f078";
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 300;
+                font-size: 1.2rem;
+                transition: $t-sm;
+            }
+        }
+
+        & > li.mil-has-children.mil-active > a:after {
+            transform: rotate(180deg);
+        }
+
+        // the open panel
+        & > li.mil-has-mega > ul.mil-mega-menu {
+            width: 100%;
+            padding: 0 2.4rem;
+            text-align: left;
+            border-radius: 1.2rem;
+            background-color: rgba($m-5, .05);
+            border: 1px solid transparent;
+        }
+
+        & > li.mil-has-mega.mil-active > ul.mil-mega-menu {
+            margin-top: 2rem;
+            padding: 2.4rem 2.4rem 1rem;
+            max-height: 200rem;
+            border-color: rgba($m-5, .1);
+        }
+
+        & ul.mil-mega-menu li.mil-submenu-group {
+            align-items: stretch;
+            width: 100%;
+            margin: 0 0 2.4rem;
+
+            & .mil-submenu-title {
+                margin-bottom: .6rem;
+                text-align: left;
+            }
+
+            & ul.mil-submenu-links li {
+                width: 100%;
+                margin: 0;
+
+                & a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 2rem;
+                    padding: 1.3rem 0;
+                    font-size: 1.6rem;
+                    color: $m-4;
+                    border-bottom: 1px solid rgba($m-5, .08);
+
+                    &:after {
+                        content: "\f105";
+                        font-family: "Font Awesome 5 Pro";
+                        font-weight: 300;
+                        color: $a-1;
+                    }
+                }
+
+                &:last-child a {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        // products: category link with its items underneath
+        & ul.mil-mega-menu li.mil-submenu-category {
+            text-align: left;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba($m-5, .08);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            & > a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:after {
+                    content: "\f105";
+                    font-family: "Font Awesome 5 Pro";
+                    font-weight: 300;
+                    font-size: 1.6rem;
+                    letter-spacing: 0;
+                }
+            }
+
+            & .mil-submenu-text {
+                margin-top: .8rem;
+            }
+        }
+    }
+
+    // light header pages
+    .mil-top-panel.mil-invert nav .mil-main-menu {
+        & > li.mil-has-mega > ul.mil-mega-menu {
+            background-color: rgba($m-1, .04);
+        }
+
+        & > li.mil-has-mega.mil-active > ul.mil-mega-menu {
+            border-color: rgba($m-1, .1);
+        }
+
+        & ul.mil-mega-menu li.mil-submenu-group ul.mil-submenu-links li a {
+            color: $m-1;
+            border-bottom-color: rgba($m-1, .08);
+        }
+
+        & ul.mil-mega-menu li.mil-submenu-category {
+            border-bottom-color: rgba($m-1, .08);
+        }
+    }
+}
+
+// footer: the empty spacer column only matters on wide screens
+@media (max-width: 991px) {
+    .mil-footer-spacer {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .mil-top-panel nav .mil-main-menu {
+        // links span the whole panel, aligned left
+        & ul.mil-mega-menu li.mil-submenu-group ul.mil-submenu-links {
+            width: 100%;
+            display: block;
+
+            & li {
+                display: block;
+
+                & a {
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+        }
+
+        // no stray border or spacing while a panel is closed
+        & > li.mil-has-mega:not(.mil-active) > ul.mil-mega-menu {
+            margin-top: 0 !important;
+            padding-top: 0;
+            padding-bottom: 0;
+            border-color: transparent !important;
+        }
+
+        // even spacing at the bottom of an open panel
+        & > li.mil-has-mega.mil-active > ul.mil-mega-menu {
+            padding-bottom: 2.4rem;
+        }
+
+        & ul.mil-mega-menu li.mil-submenu-group:last-child {
+            margin-bottom: 0;
+        }
+
+        & ul.mil-mega-menu li.mil-submenu-category:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    // a closed panel takes no space and shows nothing
+    .mil-top-panel nav .mil-main-menu > li.mil-has-mega:not(.mil-active) > ul.mil-mega-menu {
+        border-width: 0;
+        background-color: transparent !important;
+    }
+}

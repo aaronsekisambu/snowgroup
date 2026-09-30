@@ -44,7 +44,7 @@ export const ServicesThreeBlock: React.FC<ServicesThreeBlockProps> = ({
         <div className="container-fluid g-0">
           <div className="row g-0">
             {services?.map((service, index) => (
-              <div key={index} className="col-sm-6 col-xl-3">
+              <div key={index} className="col-sm-6 col-lg-3">
                 {service.url && (
                   <Link href={service.url} className="mil-service-card mil-type-2 mil-angle">
                     {service.image && (

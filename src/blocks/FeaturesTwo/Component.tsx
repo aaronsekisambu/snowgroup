@@ -41,7 +41,7 @@ export const FeaturesTwoBlock: React.FC<FeaturesTwoBlockProps> = ({
         </div>
         <div className="row">
           {features?.map((feature, index) => (
-            <div key={index} className="col-md-4">
+            <div key={index} className="col-lg-4">
               <div className="mil-card mil-angle mil-angle-gray mil-flex-column mil-aic mil-md-ais mil-w-100 mil-tac mil-md-tal mil-mb-2">
                 {feature.icon && (
                   <div className="mil-icon mil-mb-2">
