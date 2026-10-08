@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { breadcrumbList, JsonLd } from '@/components/StructuredData/JsonLd'
 import { notFound } from 'next/navigation'
 import React, { Fragment } from 'react'
 import type { Page } from '@/types/content'
@@ -23,6 +24,9 @@ export default async function Page({ params: paramsPromise }: Args): Promise<Rea
   return (
     <Fragment>
       <PageClient page={page} />
+      {!TEMPLATE_PAGE_SLUGS.includes(decodedSlug) && decodedSlug !== HOME_PAGE_SLUG && (
+        <JsonLd data={breadcrumbList([{ name: page.title, path: `/${decodedSlug}` }])} />
+      )}
       <RenderBlocks blocks={page.layout || []} />
     </Fragment>
   )

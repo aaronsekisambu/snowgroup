@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { breadcrumbList, JsonLd } from '@/components/StructuredData/JsonLd'
 import { notFound } from 'next/navigation'
 import React, { Fragment } from 'react'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
@@ -19,6 +20,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
 
   return (
     <Fragment>
+      <JsonLd data={breadcrumbList([{ name: product.title, path: `/products/${product.slug}` }])} />
       <PageClient />
       <RenderBlocks blocks={product.layout || []} />
     </Fragment>

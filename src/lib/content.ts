@@ -407,7 +407,8 @@ export function getProductPages(): ProductPage[] {
         features: category.items.map((item) => ({ title: item.title, description: item.description, image: item.image })),
       }
     })
-    return { slug: category.slug, title: category.title, meta: fillTemplate(template.meta, vars), layout }
+    const meta = fillTemplate(template.meta, vars)
+    return { slug: category.slug, title: category.title, meta: { ...meta, ...(category.image && { image: category.image }) }, layout }
   })
 }
 

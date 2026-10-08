@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { breadcrumbList, JsonLd, serviceSchema } from '@/components/StructuredData/JsonLd'
 import { notFound } from 'next/navigation'
 import React, { Fragment } from 'react'
 import type { Service } from '@/types/content'
@@ -21,6 +22,15 @@ export default async function ServicePage({ params: paramsPromise }: Args) {
 
   return (
     <Fragment>
+      <JsonLd data={breadcrumbList([{ name: 'Services', path: '/services' }, { name: service.title, path: `/services/${service.slug}` }])} />
+      <JsonLd
+        data={serviceSchema({
+          name: service.title,
+          description: service.meta?.description || service.short,
+          path: `/services/${service.slug}`,
+          image: typeof service.meta?.image === 'object' ? service.meta?.image?.url : null,
+        })}
+      />
       <PageClient />
       <RenderBlocks blocks={service.layout || []} />
       {service.relatedServices && service.relatedServices.length > 0 && (

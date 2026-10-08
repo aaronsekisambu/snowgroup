@@ -1,19 +1,27 @@
+import fs from 'fs'
+import { join } from 'path'
 import type { Metadata } from 'next'
 import type { Media, Page, Post, Project, Service, Team } from '@/types/content'
 import { mergeOpenGraph, SITE_DESCRIPTION, SITE_NAME, SITE_OG_IMAGE } from './mergeOpenGraph'
 import { getServerSideURL } from './getURL'
 
-const getImageURL = (image?: Media | string | number | null) => {
+// The 1200x630 copy made by scripts/og-images.mjs, e.g. /media/projects/a.jpg -> /media/og/projects/a.jpg
+const getPreviewCopy = (url: string) => {
+  const copy = url.replace(/^\/media\//, '/media/og/').replace(/\.\w+$/, '.jpg')
+  return copy !== url && fs.existsSync(join(process.cwd(), 'public', copy)) ? copy : null
+}
+
+const getImage = (image: Media | string | number | null | undefined, alt: string) => {
   const serverUrl = getServerSideURL()
-  let url = serverUrl + SITE_OG_IMAGE
+  const absolute = (url: string) => (url.startsWith('http') ? url : serverUrl + url)
 
   if (image && typeof image === 'object' && 'url' in image && image.url) {
-    const ogUrl = image.sizes?.og?.url
-    const imageUrl = ogUrl || image.url
-    url = imageUrl.startsWith('http') ? imageUrl : serverUrl + imageUrl
+    const og = image.sizes?.og?.url || getPreviewCopy(image.url)
+    if (og) return { url: absolute(og), width: 1200, height: 630, alt: image.alt || alt }
+    return { url: absolute(image.url), width: image.width ?? undefined, height: image.height ?? undefined, alt: image.alt || alt }
   }
 
-  return url
+  return { url: serverUrl + SITE_OG_IMAGE, width: 1200, height: 630, alt: `${SITE_NAME} — From Vision to Value` }
 }
 
 export const generateMeta = async (args: {
@@ -24,8 +32,8 @@ export const generateMeta = async (args: {
   noindex?: boolean
 }): Promise<Metadata> => {
   const { doc, path, noindex } = args
-  const ogImage = getImageURL(doc?.meta?.image)
   const title = doc?.meta?.title ? doc.meta.title : SITE_NAME
+  const image = getImage(doc?.meta?.image, title)
   const description = doc?.meta?.description || SITE_DESCRIPTION
 
   return {
@@ -34,7 +42,7 @@ export const generateMeta = async (args: {
     ...(noindex && { robots: { index: false, follow: true } }),
     openGraph: mergeOpenGraph({
       description,
-      images: ogImage ? [{ url: ogImage }] : undefined,
+      images: [image],
       title,
       url: path,
     }),
@@ -43,7 +51,7 @@ export const generateMeta = async (args: {
       card: 'summary_large_image',
       title,
       description,
-      images: ogImage ? [ogImage] : undefined,
+      images: [image.url],
     },
   }
 }

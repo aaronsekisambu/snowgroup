@@ -1,4 +1,5 @@
 import type { Metadata } from 'next/types'
+import { breadcrumbList, JsonLd } from '@/components/StructuredData/JsonLd'
 import { CollectionServices } from '@/components/CollectionServices'
 import PageClient from './page.client'
 import { getCategoryServices, getServiceCategories, getServicesPage } from '@/lib/content'
@@ -14,6 +15,7 @@ export default async function Page() {
 
   return (
     <>
+      <JsonLd data={breadcrumbList([{ name: 'Services', path: '/services' }])} />
       <PageClient />
       {servicesData.layout_before && <RenderBlocks blocks={servicesData.layout_before} />}
       <div className="mil-section mil-gray-section mil-p-10-8">

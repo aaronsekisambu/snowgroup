@@ -1,4 +1,5 @@
 import type { Metadata } from 'next/types'
+import { generateMeta } from '@/utilities/generateMeta'
 import { CollectionServices } from '@/components/CollectionServices'
 import { Pagination } from '@/components/Pagination'
 import PageClient from '../../page.client'
@@ -56,10 +57,10 @@ export default async function Page({ params: paramsPromise }: Args) {
 export async function generateMetadata({ params: paramsPromise }: Args): Promise<Metadata> {
   const { pageNumber } = await paramsPromise
   const servicesData: ServicesPage = getServicesPage()
-  return {
-    title: `${servicesData.meta?.title} | Page ${pageNumber || ''}`,
-    alternates: { canonical: `/services/page/${pageNumber}` },
-  }
+  return generateMeta({
+    doc: { meta: { ...servicesData.meta, title: `${servicesData.meta?.title} | Page ${pageNumber}` } },
+    path: `/services/page/${pageNumber}`,
+  })
 }
 
 export async function generateStaticParams() {

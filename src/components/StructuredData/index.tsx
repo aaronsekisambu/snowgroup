@@ -3,6 +3,7 @@ import React from 'react'
 import { getFooter, getProductCategories } from '@/lib/content'
 import { getServerSideURL } from '@/utilities/getURL'
 import { SITE_DESCRIPTION, SITE_NAME } from '@/utilities/mergeOpenGraph'
+import { JsonLd, ORGANIZATION_ID } from './JsonLd'
 
 // Schema.org data Google reads to understand who runs the site and which pages are its main sections
 export const StructuredData: React.FC = () => {
@@ -24,8 +25,9 @@ export const StructuredData: React.FC = () => {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Organization',
-        '@id': `${url}/#organization`,
+        // a GeneralContractor is a local business, so Google can also show it in Maps and local results
+        '@type': 'GeneralContractor',
+        '@id': `${url}${ORGANIZATION_ID}`,
         name: SITE_NAME,
         alternateName: ['Snow Holdings', 'Snow Group'],
         url,
@@ -33,6 +35,8 @@ export const StructuredData: React.FC = () => {
         image: `${url}/snow-og.jpg`,
         description: SITE_DESCRIPTION,
         email: office?.email,
+        telephone: '+49 15679 137020',
+        areaServed: { '@type': 'Country', name: 'Uganda' },
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Acacia Mall, 4th Floor, 14-18 Cooper Road, Kisimenti',
@@ -57,7 +61,7 @@ export const StructuredData: React.FC = () => {
         name: SITE_NAME,
         url,
         inLanguage: 'en-UG',
-        publisher: { '@id': `${url}/#organization` },
+        publisher: { '@id': `${url}${ORGANIZATION_ID}` },
       },
       {
         '@type': 'ItemList',
@@ -73,11 +77,5 @@ export const StructuredData: React.FC = () => {
     ],
   }
 
-  return (
-    <script
-      type="application/ld+json"
-      // "<" is escaped so content can never close the script tag early
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(graph).replace(/</g, '\\u003c') }}
-    />
-  )
+  return <JsonLd data={graph} />
 }

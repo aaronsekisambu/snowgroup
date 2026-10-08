@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { breadcrumbList, JsonLd } from '@/components/StructuredData/JsonLd'
 import { notFound } from 'next/navigation'
 import { Fragment } from 'react'
 import type { Project } from '@/types/content'
@@ -21,6 +22,7 @@ export default async function ProjectPage({ params: paramsPromise }: Args) {
 
   return (
     <Fragment>
+      <JsonLd data={breadcrumbList([{ name: 'Projects', path: '/projects' }, { name: project.title, path: `/projects/${project.slug}` }])} />
       <PageClient />
       <RenderBlocks blocks={project.layout || []} />
       {project.relatedProjects && project.relatedProjects.length > 0 && (
