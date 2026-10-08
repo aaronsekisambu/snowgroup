@@ -9,6 +9,9 @@ import { InitTheme } from '@/providers/Theme/InitTheme'
 import { mergeOpenGraph, SITE_DESCRIPTION, SITE_NAME, SITE_OG_IMAGE } from '@/utilities/mergeOpenGraph'
 import { getServerSideURL } from '@/utilities/getURL'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
+import { StructuredData } from '@/components/StructuredData'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 // Google Fonts
 import { Montserrat, Reenie_Beanie } from 'next/font/google'
@@ -52,6 +55,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link href="/favicon.ico" rel="icon" sizes="any" />
         <link href="/icon-32.png" rel="icon" type="image/png" sizes="32x32" />
         <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+        <StructuredData />
       </head>
       <body>
         <ErrorBoundary>
@@ -84,6 +88,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             {/* wrapper end */}
           </Providers>
         </ErrorBoundary>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )

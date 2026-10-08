@@ -28,7 +28,7 @@ export default async function ProductPage({ params: paramsPromise }: Args) {
 export async function generateMetadata({ params: paramsPromise }: Args): Promise<Metadata> {
   const { slug = '' } = await paramsPromise
   const product = getProductPageBySlug(decodeURIComponent(slug))
-  return generateMeta({ doc: product })
+  return generateMeta({ doc: product, path: `/products/${slug}` })
 }
 
 export async function generateStaticParams() {

@@ -52,5 +52,5 @@ export async function generateMetadata(): Promise<Metadata> {
     meta: blogData.meta,
     slug: 'posts',
   }
-  return generateMeta({ doc: pageBlogData })
+  return generateMeta({ doc: pageBlogData, path: '/posts', noindex: true })
 }

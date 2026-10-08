@@ -59,6 +59,7 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
   const blogData: Blog = getBlog()
   return {
     title: `${blogData.meta?.title} | Page ${pageNumber || ''}`,
+    robots: { index: false, follow: true },
   }
 }
 

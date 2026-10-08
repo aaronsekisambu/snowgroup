@@ -56,5 +56,5 @@ export async function generateMetadata(): Promise<Metadata> {
     meta: servicesData.meta,
     slug: 'services',
   }
-  return generateMeta({ doc: pageServicesData })
+  return generateMeta({ doc: pageServicesData, path: '/services' })
 }

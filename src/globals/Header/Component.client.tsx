@@ -71,7 +71,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
         {renderLogo()}
 
         <div className={`mil-mobile-menu ${open ? 'mil-active' : ''}`}>
-          <nav>
+          <nav aria-label="Main">
             <HeaderNav data={data} />
           </nav>
 

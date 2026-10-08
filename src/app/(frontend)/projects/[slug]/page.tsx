@@ -41,5 +41,5 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params: paramsPromise }: Args): Promise<Metadata> {
   const { slug = '' } = await paramsPromise
   const project = getProjectBySlug(decodeURIComponent(slug))
-  return generateMeta({ doc: project })
+  return generateMeta({ doc: project, path: `/projects/${slug}` })
 }

@@ -451,7 +451,7 @@ hero 5
         width: 100%;
         padding-bottom: 5rem;
 
-        & h1 {
+        & h1, & .mil-hero-title {
             font-size: 10rem;
             line-height: 95%;
             letter-spacing: -.02em;
@@ -467,7 +467,7 @@ hero 5
 
     @media (max-width: 1200px) {
         & .mil-hero-content {
-            & h1 {
+            & h1, & .mil-hero-title {
                 font-size: 8.2rem;
             }
         }
@@ -493,7 +493,7 @@ hero 5
         & .mil-hero-content {
             padding-bottom: 15rem;
 
-            & h1 {
+            & h1, & .mil-hero-title {
                 font-size: 7.2rem;
                 line-height: 100%;
             }
@@ -502,7 +502,7 @@ hero 5
 
     @media (max-width: 768px) {
         & .mil-hero-content {
-            & h1 {
+            & h1, & .mil-hero-title {
                 font-size: 5.2rem;
             }
         }
@@ -646,7 +646,7 @@ hero height on tall screens
 
 // phones: headline sized to fit "Building Today / Shaping Tomorrow" on two lines
 @media (max-width: 576px) {
-    .mil-hero-5 .mil-hero-content .mil-slider-title h1 {
+    .mil-hero-5 .mil-hero-content .mil-slider-title :is(h1, .mil-hero-title) {
         font-size: clamp(3.4rem, 10.5vw, 5.2rem);
         line-height: 105%;
     }

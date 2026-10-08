@@ -62,6 +62,7 @@ export const FooterClient: React.FC<FooterProps> = ({ data }) => {
                   </Link>
                 ) : null}
                 {mainMenu && mainMenu.length > 0 && (
+                  <nav aria-label="Footer" style={{ display: 'contents' }}>
                   <ul className="mil-footer-menu-1 mil-sm-mb-4">
                     {mainMenu.map((item, idx) => (
                       <li key={idx} className={idx === 0 ? 'mil-current' : ''}>
@@ -69,6 +70,7 @@ export const FooterClient: React.FC<FooterProps> = ({ data }) => {
                       </li>
                     ))}
                   </ul>
+                  </nav>
                 )}
               </div>
               <div className="col-md-6 mil-flex-column mil-aie mil-sm-aic">
@@ -173,6 +175,7 @@ export const FooterClient: React.FC<FooterProps> = ({ data }) => {
                 </ul>
               )}
               {footerLinks && footerLinks.length > 0 && (
+                <nav aria-label="Legal" style={{ display: 'contents' }}>
                 <ul className="mil-footer-links mil-hover-dark mil-c-m-2 mil-mb-5 mil-ais mil-sm-aic">
                   {footerLinks.map((item, idx) => (
                     <li key={idx}>
@@ -180,6 +183,7 @@ export const FooterClient: React.FC<FooterProps> = ({ data }) => {
                     </li>
                   ))}
                 </ul>
+                </nav>
               )}
             </div>
             {locations && locations.map((location, idx) => (

@@ -37,7 +37,7 @@ export default async function TeamPage({ params: paramsPromise }: Args) {
 export async function generateMetadata({ params: paramsPromise }: Args): Promise<Metadata> {
   const { slug = '' } = await paramsPromise
   const team = getTeamBySlug(decodeURIComponent(slug))
-  return generateMeta({ doc: team })
+  return generateMeta({ doc: team, path: `/team/${slug}`, noindex: true })
 }
 
 export async function generateStaticParams() {

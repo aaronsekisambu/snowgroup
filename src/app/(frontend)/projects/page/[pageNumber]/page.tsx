@@ -58,6 +58,7 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
   const projectsData: ProjectsPage = getProjectsPage()
   return {
     title: `${projectsData.meta?.title} | Page ${pageNumber || ''}`,
+    alternates: { canonical: `/projects/page/${pageNumber}` },
   }
 }
 

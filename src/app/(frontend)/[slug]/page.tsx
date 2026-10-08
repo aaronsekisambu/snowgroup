@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import React, { Fragment } from 'react'
 import type { Page } from '@/types/content'
-import { getPageBySlug, getAllPageSlugs } from '@/lib/content'
+import { getPageBySlug, getAllPageSlugs, HOME_PAGE_SLUG, TEMPLATE_PAGE_SLUGS } from '@/lib/content'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
 import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './page.client'
@@ -36,5 +36,9 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
   const { slug = 'home' } = await paramsPromise
   const decodedSlug = decodeURIComponent(slug)
   const page = getPageBySlug(decodedSlug)
-  return generateMeta({ doc: page })
+  return generateMeta({
+    doc: page,
+    path: decodedSlug === HOME_PAGE_SLUG ? '/' : `/${decodedSlug}`,
+    noindex: TEMPLATE_PAGE_SLUGS.includes(decodedSlug),
+  })
 }

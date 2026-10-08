@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import React, { Fragment } from 'react'
 import { notFound } from 'next/navigation'
 import type { Page } from '@/types/content'
-import { getPageBySlug } from '@/lib/content'
+import { getPageBySlug, HOME_PAGE_SLUG } from '@/lib/content'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
 import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './[slug]/page.client'
 
 export default async function HomePage(): Promise<React.ReactElement> {
-	const page: Page | null = getPageBySlug('home-5')
+	const page: Page | null = getPageBySlug(HOME_PAGE_SLUG)
 
 	if (!page) notFound()
 
@@ -21,5 +21,5 @@ export default async function HomePage(): Promise<React.ReactElement> {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-	return generateMeta({ doc: getPageBySlug('home-5') })
+	return generateMeta({ doc: getPageBySlug(HOME_PAGE_SLUG), path: '/' })
 }

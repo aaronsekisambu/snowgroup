@@ -103,7 +103,7 @@ export default async function PostPage({ params: paramsPromise }: Args) {
 export async function generateMetadata({ params: paramsPromise }: Args): Promise<Metadata> {
   const { slug = '' } = await paramsPromise
   const post = await getPostBySlug(decodeURIComponent(slug))
-  return generateMeta({ doc: post })
+  return generateMeta({ doc: post, path: `/posts/${slug}`, noindex: true })
 }
 
 export async function generateStaticParams() {

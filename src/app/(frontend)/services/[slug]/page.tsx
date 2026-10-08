@@ -37,7 +37,7 @@ export default async function ServicePage({ params: paramsPromise }: Args) {
 export async function generateMetadata({ params: paramsPromise }: Args): Promise<Metadata> {
   const { slug = '' } = await paramsPromise
   const service = getServiceBySlug(decodeURIComponent(slug))
-  return generateMeta({ doc: service })
+  return generateMeta({ doc: service, path: `/services/${slug}` })
 }
 
 export async function generateStaticParams() {

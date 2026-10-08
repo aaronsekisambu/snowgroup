@@ -170,6 +170,12 @@ export function getCategories(): Category[] {
   })
 }
 
+// The page served at "/"; it is also reachable at its own slug, which points search engines back to "/"
+export const HOME_PAGE_SLUG = 'home-5'
+
+// Pages left over from the site template; they still render but stay out of the sitemap and search results
+export const TEMPLATE_PAGE_SLUGS = ['home', 'home-2', 'home-3', 'home-4']
+
 export function getAllPages(): Page[] {
   return listJsonFiles(path.join(dataDir, 'pages')).map((file) => {
     const data = readJsonFile<Page>(file)

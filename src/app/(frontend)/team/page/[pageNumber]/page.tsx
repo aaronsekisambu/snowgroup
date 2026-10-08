@@ -58,6 +58,7 @@ export async function generateMetadata({ params: paramsPromise }: Args): Promise
   const teamData: TeamPage = getTeamPage()
   return {
     title: `${teamData.meta?.title} | Page ${pageNumber || ''}`,
+    robots: { index: false, follow: true },
   }
 }
 

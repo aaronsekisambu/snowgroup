@@ -23,15 +23,18 @@ export const HeroCarouselTwoSwiper: React.FC<{ items: HeroFiveBlock['slides']; o
           onSwiper?.(swiper);
         }}
     >
-            {items?.map((item: HeroFiveSlide, key: number) => (
+            {items?.map((item: HeroFiveSlide, key: number) => {
+            // a page gets one h1: the first slide; the rest are h2s styled the same
+            const Heading = key === 0 ? 'h1' : 'h2'
+            return (
             <SwiperSlide className="swiper-slide" key={`hero-titles-carousel-swiper-item-${key}`}>
                 {item.title && (
                 <div data-swiper-parallax="-50%" data-swiper-parallax-opacity="0" data-swiper-parallax-scale="0.4">
-                    <h1 className="mil-fs-xxxl mil-c-m-4 mil-tac" dangerouslySetInnerHTML={{ __html: sanitizeHTML(item.title) }} />
+                    <Heading className="mil-h1 mil-hero-title mil-fs-xxxl mil-c-m-4 mil-tac" dangerouslySetInnerHTML={{ __html: sanitizeHTML(item.title) }} />
                 </div>
                 )}
             </SwiperSlide>
-            ))}
+            )})}
     </Swiper>
   )
 }
