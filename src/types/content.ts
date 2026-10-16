@@ -187,6 +187,8 @@ export type ProductCategory = {
   slug: string
   short?: string | null
   image?: Media | null
+  // ids of the price-list tables shown on this category's page
+  priceTables?: string[]
   items: { title: string; description?: string | null; image?: Media | null }[]
 }
 
@@ -380,6 +382,30 @@ export type Faq = {
 export type TestimonialsBlock = Block
 export type LegalBlock = Block
 export type PlanTabsBlock = Block
+
+// Prices shared by the Price List page and the product pages (src/data/price-list.json)
+export type PriceTable = {
+  id: string
+  label: string
+  title?: string
+  description?: string
+  columns: string[]
+  rows: string[][]
+  rules_title?: string
+  rules?: string[]
+}
+
+export type PriceList = {
+  currency?: string
+  updated?: string
+  tables: PriceTable[]
+  notes?: string[]
+  samples?: { title?: string; description?: string; image?: Media }
+  contacts_title?: string
+  contacts?: { label: string; phone: string }[]
+}
+
+export type PriceListBlock = Block & { price_list?: PriceList }
 
 export type TextField = FormField
 export type EmailField = FormField

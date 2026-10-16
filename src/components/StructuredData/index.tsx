@@ -15,6 +15,7 @@ export const StructuredData: React.FC = () => {
   const sections = [
     { name: 'Services', path: '/services' },
     ...getProductCategories().map((category) => ({ name: category.title, path: `/products/${category.slug}` })),
+    { name: 'Price List', path: '/price-list' },
     { name: 'Projects', path: '/projects' },
     { name: 'Plans', path: '/plans' },
     { name: 'About', path: '/about' },

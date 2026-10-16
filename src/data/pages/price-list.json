@@ -1,0 +1,57 @@
+{
+  "title": "Price List",
+  "slug": "price-list",
+  "meta": {
+    "title": "Price List: Concrete Blocks, Pavers & Machinery Hire | Snow Holdings Limited",
+    "description": "Current prices in UGX for concrete blocks, paving blocks and machinery hire from Snow Holdings Limited in Uganda: hollow and solid blocks, pavers per m², road roller and generator hire.",
+    "image": {
+      "url": "/media/products/cat-concrete-products.jpg",
+      "alt": "Concrete blocks from Snow Holdings Limited",
+      "width": 1200,
+      "height": 900
+    }
+  },
+  "publishedAt": "2026-10-16T12:00:00.000Z",
+  "layout": [
+    {
+      "blockType": "intro",
+      "bgImage": {
+        "url": "/media/products/cat-concrete-products.jpg",
+        "alt": "",
+        "width": 1200,
+        "height": 900
+      },
+      "short_title": "Price List",
+      "title": "Our <span class=\"mil-opacity-text\">Prices</span>"
+    },
+    {
+      "blockType": "price_list",
+      "priceListSource": "price_list",
+      "badge": "Price List",
+      "title": "Blocks, Pavers <br class=\"mil-sm-hidden\">&amp; <span class=\"mil-opacity-text\">Machinery</span>",
+      "description": "Prices for our concrete blocks, paving blocks and machinery hire. Pick a category to see sizes and prices, then call or message us to order.",
+      "show_extras": true
+    },
+    {
+      "blockType": "call_to_action_2",
+      "bgImage": {
+        "url": "/media/img-5.jpg",
+        "alt": "",
+        "width": 1728,
+        "height": 1043,
+        "sizes": {
+          "og": {
+            "url": "/media/img-5-1200x630.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        }
+      },
+      "title": "Need a quote for your project?",
+      "button1_text": "FAQ",
+      "button1_url": "/faq",
+      "button2_text": "Let's Talk",
+      "button2_url": "/contact"
+    }
+  ]
+}

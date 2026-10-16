@@ -4,6 +4,9 @@
       "title": "Concrete Products",
       "slug": "concrete-products",
       "short": "Quality concrete products for strong, lasting structures, from everyday blocks to precast and structural elements.",
+      "priceTables": [
+        "blocks"
+      ],
       "items": [
         {
           "title": "Blocks",
@@ -47,6 +50,9 @@
       "title": "Paving & External Works",
       "slug": "paving-external-works",
       "short": "Everything you need to finish the outside of your property, from paved driveways and walkways to drainage and landscaping.",
+      "priceTables": [
+        "pavers"
+      ],
       "items": [
         {
           "title": "Pavers",
@@ -100,6 +106,9 @@
       "title": "Building Materials & Equipment",
       "slug": "building-materials-equipment",
       "short": "The core materials for your build, together with the heavy machinery and equipment to get the job done.",
+      "priceTables": [
+        "machinery"
+      ],
       "items": [
         {
           "title": "Aggregates",

@@ -49,6 +49,13 @@
       ]
     },
     {
+      "blockType": "price_list",
+      "priceListSource": "price_list",
+      "badge": "Prices",
+      "button_text": "See full price list",
+      "button_url": "/price-list"
+    },
+    {
       "blockType": "call_to_action_2",
       "bgImage": {
         "url": "/media/img-5.jpg",

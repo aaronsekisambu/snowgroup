@@ -14,6 +14,7 @@ import type {
   Page,
   Plan,
   Post,
+  PriceList,
   ProductCategory,
   ProductPage,
   Project,
@@ -71,7 +72,13 @@ function getSitemapGroups() {
       title: `Services: ${category.title}`,
       links: category.items.map((item) => ({ label: item.title, url: `/services/${item.slug}` })),
     })),
-    { title: 'Products', links: getProductCategories().map((category) => ({ label: category.title, url: `/products/${category.slug}` })) },
+    {
+      title: 'Products',
+      links: [
+        ...getProductCategories().map((category) => ({ label: category.title, url: `/products/${category.slug}` })),
+        { label: 'Price List', url: '/price-list' },
+      ],
+    },
     { title: 'Projects', links: getAllProjects().map((project) => ({ label: project.title || project.slug, url: `/projects/${project.slug}` })) },
     { title: 'Legal', links: pages([['Legal Information', '/legal-information'], ['Privacy Policy', '/privacy-policy'], ['Terms and Conditions', '/terms-and-conditions'], ['Cookie Policy', '/cookie-policy'], ['License', '/license'], ['Sitemap', '/sitemap']]) },
   ]
@@ -102,6 +109,9 @@ function withSharedContent<T extends BlockLayouts>(doc: T): T {
       }
       if (block.linksSource === 'sitemap') {
         return { ...block, link_groups: getSitemapGroups() }
+      }
+      if (block.priceListSource === 'price_list') {
+        return { ...block, price_list: getPriceList(block.tables) }
       }
       return block
     })
@@ -388,6 +398,12 @@ export function getAllServiceSlugs() {
   return [...getAllServices(), ...getCategoryServices()].map((item) => ({ slug: item.slug }))
 }
 
+// Single source for prices; "tables" picks which ones to show (all when left out)
+export function getPriceList(tables?: string[]): PriceList {
+  const list = readJsonFile<PriceList>(path.join(dataDir, 'price-list.json')) || { tables: [] }
+  return tables ? { ...list, tables: list.tables.filter((table) => tables.includes(table.id)) } : list
+}
+
 // Single source for the product categories; swap this for a CRM/API call to make it dynamic
 export function getProductCategories(): ProductCategory[] {
   return readJsonFile<{ categories?: ProductCategory[] }>(path.join(dataDir, 'product-categories.json'))?.categories || []
@@ -400,6 +416,7 @@ export function getProductPages(): ProductPage[] {
     const vars = { title: category.title, short: category.short || '' }
     const layout = fillTemplate(template.layout, vars)?.map((block) => {
       if (block.blockType === 'intro' && category.image) return { ...block, bgImage: category.image }
+      if (block.priceListSource === 'price_list') return { ...block, price_list: getPriceList(category.priceTables || []) }
       if (block.featuresSource !== 'items') return block
       return {
         ...block,
@@ -422,12 +439,15 @@ export function getAllProductSlugs() {
 
 // Only the categories are links; their items show as text underneath
 function getProductCategoriesSubmenu(): SubMenuItem[] {
-  return getProductCategories().map((category) => ({
-    sub_type: 'custom',
-    sub_url: `/products/${category.slug}`,
-    label: category.title,
-    description: category.items.map((item) => item.title).join(' · '),
-  }))
+  return [
+    ...getProductCategories().map((category) => ({
+      sub_type: 'custom' as const,
+      sub_url: `/products/${category.slug}`,
+      label: category.title,
+      description: category.items.map((item) => item.title).join(' · '),
+    })),
+    { sub_type: 'custom', sub_url: '/price-list', label: 'Price List', description: 'Blocks · Pavers · Machinery hire' },
+  ]
 }
 
 // Header dropdowns that are built from data, by their "submenuSource" name

@@ -3110,3 +3110,290 @@ mobile dropdown panels (services, products)
         background-color: transparent !important;
     }
 }
+
+/* -------------------------------------------
+
+price list
+
+------------------------------------------- */
+
+.mil-price-meta {
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: $a-1;
+}
+
+.mil-price-card {
+    padding: 4rem;
+    border-radius: 1rem;
+    background-color: $m-5;
+
+    @media (max-width: 768px) {
+        padding: 2rem;
+    }
+}
+
+.mil-price-caption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.mil-price-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.5rem;
+
+    & thead th {
+        padding: 1.6rem 2rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: .1rem;
+        text-align: left;
+        text-transform: uppercase;
+        background-color: $m-1;
+        color: $m-5;
+
+        &:first-child {
+            border-radius: .6rem 0 0 .6rem;
+        }
+
+        &:last-child {
+            border-radius: 0 .6rem .6rem 0;
+            text-align: right;
+        }
+    }
+
+    & tbody {
+        & tr {
+            border-bottom: 1px solid $m-4;
+            transition: $t-sm;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:hover {
+                background-color: rgba($a-1, .08);
+            }
+        }
+
+        & th,
+        & td {
+            padding: 1.8rem 2rem;
+            text-align: left;
+            color: $m-2;
+        }
+
+        & th {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0;
+            color: $m-1;
+        }
+
+        & td:last-child {
+            text-align: right;
+            font-weight: 700;
+            white-space: nowrap;
+            color: $m-1;
+        }
+    }
+
+    // phones: each row becomes a small card with labelled values
+    @media (max-width: 768px) {
+        & thead {
+            display: none;
+        }
+
+        & tbody {
+            & tr {
+                display: block;
+                padding: 1.6rem 0;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+
+            & th,
+            & td {
+                display: flex;
+                justify-content: space-between;
+                gap: 2rem;
+                padding: .4rem 0;
+            }
+
+            & th {
+                margin-bottom: .6rem;
+                font-size: 1.7rem;
+            }
+
+            & td:before {
+                content: attr(data-label);
+                font-weight: 400;
+                color: $m-2;
+            }
+
+            & td,
+            & td:last-child {
+                text-align: right;
+                white-space: normal;
+            }
+        }
+    }
+}
+
+.mil-price-rules {
+    margin-top: 3rem;
+    padding: 2.4rem 2.4rem 1.2rem;
+    border-left: 2px solid $a-1;
+    border-radius: 0 .6rem .6rem 0;
+    background-color: $m-4;
+
+    & li {
+        list-style: none;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.mil-price-extras {
+    margin-top: 3rem;
+}
+
+.mil-price-panel {
+    height: 100%;
+    padding: 4rem;
+    border-radius: 1rem;
+    background-color: $m-5;
+
+    @media (max-width: 768px) {
+        padding: 3rem;
+    }
+}
+
+.mil-price-panel-dark {
+    background-color: $m-1;
+    color: $m-4;
+
+    & h6 {
+        color: $m-5;
+    }
+}
+
+.mil-price-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & .mil-link-type {
+        color: $m-5;
+    }
+}
+
+.mil-price-notes li {
+    list-style: none;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.2rem;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: .8rem;
+        width: .7rem;
+        height: .7rem;
+        border-radius: 50%;
+        background-color: $a-1;
+    }
+}
+
+.mil-price-contacts li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba($m-5, .12);
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    & span {
+        color: $m-3;
+    }
+
+    & a {
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: $m-5;
+        transition: $t-sm;
+
+        &:hover {
+            color: $a-1;
+        }
+    }
+}
+
+.mil-price-samples {
+    display: block;
+    overflow: hidden;
+    border-radius: .6rem;
+    background-color: #fff;
+
+    & img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    & span {
+        display: block;
+        padding: 1rem 1.4rem;
+        font-weight: 600;
+        color: $m-1;
+        background-color: $m-4;
+        transition: $t-sm;
+    }
+
+    &:hover span {
+        color: $a-1;
+    }
+}
+
+.mil-price-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+
+    & .mil-price-panel {
+        height: auto;
+    }
+
+    // contacts side by side when there is room
+    & .mil-price-contacts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+
+        & li:nth-last-child(2):nth-child(odd) {
+            border-bottom: none;
+        }
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+
+            & li:nth-last-child(2):nth-child(odd) {
+                border-bottom: 1px solid rgba($m-5, .12);
+            }
+        }
+    }
+}

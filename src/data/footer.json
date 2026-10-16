@@ -72,6 +72,10 @@
       "link": "/services"
     },
     {
+      "label": "Price List",
+      "link": "/price-list"
+    },
+    {
       "label": "Contact",
       "link": "/contact"
     }
