@@ -70,9 +70,13 @@
   },
   "contacts_title": "Orders & enquiries",
   "contacts": [
-    { "label": "Marketing & Sales", "phone": "+256 393 256 265" },
-    { "label": "Accounts & Finance", "phone": "+256 705 137 601" },
-    { "label": "Engineering Manager", "phone": "+256 787 761 017" },
-    { "label": "Site Engineer", "phone": "+256 771 322 166" }
+    {
+      "name": "Morris Tumwine",
+      "label": "Marketing & Sales",
+      "phone": "+256 787 648181",
+      "image": { "url": "/media/team/morris-tumwine.jpg", "alt": "Morris Tumwine", "width": 480, "height": 480 }
+    },
+    { "name": "Resty Kayanja", "label": "Admin", "phone": "+256 705 137 601" },
+    { "name": "Ntale Wilson", "label": "Site Engineer", "phone": "+256 754 292100" }
   ]
 }

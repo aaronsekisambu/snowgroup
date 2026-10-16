@@ -151,9 +151,22 @@ export const PriceListBlock: React.FC<PriceListBlockProps> = ({
                         {price_list.contacts_title && <h6 className="mil-mb-3">{price_list.contacts_title}</h6>}
                         <ul className="mil-price-contacts">
                           {price_list.contacts.map((contact) => (
-                            <li key={contact.phone}>
-                              <span className="mil-t-14">{contact.label}</span>
-                              <a href={`tel:${contact.phone.replace(/\s/g, '')}`}>{contact.phone}</a>
+                            <li key={contact.name || contact.label}>
+                              <div className="mil-price-avatar">
+                                {contact.image?.url ? (
+                                  <Media resource={contact.image} size="64px" />
+                                ) : (
+                                  // placeholder until a photo is added in price-list.json
+                                  <span aria-hidden="true">
+                                    <i className="fal fa-user"></i>
+                                  </span>
+                                )}
+                              </div>
+                              <div>
+                                {contact.name && <strong>{contact.name}</strong>}
+                                <span className="mil-t-14">{contact.label}</span>
+                                {contact.phone && <a href={`tel:${contact.phone.replace(/\s/g, '')}`}>{contact.phone}</a>}
+                              </div>
                             </li>
                           ))}
                         </ul>

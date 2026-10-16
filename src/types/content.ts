@@ -402,7 +402,7 @@ export type PriceList = {
   notes?: string[]
   samples?: { title?: string; description?: string; image?: Media }
   contacts_title?: string
-  contacts?: { label: string; phone: string }[]
+  contacts?: { name?: string; label: string; phone?: string; image?: Media }[]
 }
 
 export type PriceListBlock = Block & { price_list?: PriceList }

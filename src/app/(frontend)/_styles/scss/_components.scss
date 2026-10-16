@@ -3317,13 +3317,25 @@ price list
 .mil-price-contacts li {
     list-style: none;
     display: flex;
-    flex-direction: column;
-    gap: .2rem;
-    padding: 1.2rem 0;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 1.4rem 0;
     border-bottom: 1px solid rgba($m-5, .12);
 
     &:last-child {
         border-bottom: none;
+    }
+
+    & > div:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: .2rem;
+    }
+
+    & strong {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $m-5;
     }
 
     & span {
@@ -3331,14 +3343,40 @@ price list
     }
 
     & a {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         font-weight: 600;
-        color: $m-5;
+        color: $a-1;
         transition: $t-sm;
 
         &:hover {
-            color: $a-1;
+            color: $m-5;
         }
+    }
+}
+
+.mil-price-avatar {
+    flex-shrink: 0;
+    width: 5.6rem;
+    height: 5.6rem;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: rgba($m-5, .12);
+
+    & img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    & span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 2.2rem;
+        color: $m-5;
     }
 }
 
@@ -3376,24 +3414,5 @@ price list
 
     & .mil-price-panel {
         height: auto;
-    }
-
-    // contacts side by side when there is room
-    & .mil-price-contacts {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 3rem;
-
-        & li:nth-last-child(2):nth-child(odd) {
-            border-bottom: none;
-        }
-
-        @media (max-width: 576px) {
-            grid-template-columns: 1fr;
-
-            & li:nth-last-child(2):nth-child(odd) {
-                border-bottom: 1px solid rgba($m-5, .12);
-            }
-        }
     }
 }
