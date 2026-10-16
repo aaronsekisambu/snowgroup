@@ -1,6 +1,7 @@
 {
   "title": "Ministry of Lands Zonal Offices",
   "slug": "ministry-of-lands-zonal-offices",
+  "model": "office",
   "category": "Public / Commercial Construction",
   "filters": [
     "Commercial & Public"

@@ -3,6 +3,11 @@
     {
       "title": "Concrete Products",
       "slug": "concrete-products",
+      "model": "hollow-block",
+      "projects": [
+        "concrete-block-supply-project",
+        "kampala-building-project"
+      ],
       "short": "Quality concrete products for strong, lasting structures, from everyday blocks to precast and structural elements.",
       "priceTables": [
         "blocks"
@@ -49,6 +54,11 @@
     {
       "title": "Paving & External Works",
       "slug": "paving-external-works",
+      "model": "interlocking-paver",
+      "projects": [
+        "paver-supply-installation-project",
+        "muyenga-residential-project"
+      ],
       "short": "Everything you need to finish the outside of your property, from paved driveways and walkways to drainage and landscaping.",
       "priceTables": [
         "pavers"
@@ -105,6 +115,11 @@
     {
       "title": "Building Materials & Equipment",
       "slug": "building-materials-equipment",
+      "model": "pallet",
+      "projects": [
+        "concrete-block-supply-project",
+        "triple-j-agro-farm-development"
+      ],
       "short": "The core materials for your build, together with the heavy machinery and equipment to get the job done.",
       "priceTables": [
         "machinery"

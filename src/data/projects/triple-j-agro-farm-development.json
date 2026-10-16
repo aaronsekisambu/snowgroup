@@ -1,6 +1,7 @@
 {
   "title": "Triple J Agro Farm Development",
   "slug": "triple-j-agro-farm-development",
+  "model": "farm",
   "category": "Agricultural Construction",
   "filters": [
     "Agricultural"

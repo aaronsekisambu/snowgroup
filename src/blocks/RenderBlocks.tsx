@@ -42,6 +42,7 @@ import { TestimonialsBlock } from '@/blocks/Testimonials/Component'
 import { LegalBlock } from '@/blocks/Legal/Component'
 import { PlanTabsBlock } from '@/blocks/PlanTabs/Component'
 import { PriceListBlock } from '@/blocks/PriceList/Component'
+import { FeaturedProductsBlock } from '@/blocks/FeaturedProducts/Component'
 import { FaqBlock } from '@/blocks/FaqBlock/Component'
 import { ReusableBlock } from './ReusableContent/Component'
 
@@ -85,6 +86,7 @@ const blockComponents = {
   legal: LegalBlock,
   plan_tabs: PlanTabsBlock,
   price_list: PriceListBlock,
+  featured_products: FeaturedProductsBlock,
   faq: FaqBlock,
   reusable_block: ReusableBlock,
 }

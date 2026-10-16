@@ -1,6 +1,7 @@
 {
   "title": "Mukono Residential Project",
   "slug": "mukono-residential-project",
+  "model": "bungalow",
   "category": "Residential Construction",
   "filters": [
     "Residential"

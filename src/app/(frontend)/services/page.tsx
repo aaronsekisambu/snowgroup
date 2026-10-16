@@ -1,8 +1,9 @@
 import type { Metadata } from 'next/types'
 import { breadcrumbList, JsonLd } from '@/components/StructuredData/JsonLd'
-import { CollectionServices } from '@/components/CollectionServices'
+import { SnowCard } from '@/components/SnowCard'
+import { serviceCards } from '@/lib/overview'
 import PageClient from './page.client'
-import { getCategoryServices, getServiceCategories, getServicesPage } from '@/lib/content'
+import { getServiceCategories, getServicesPage } from '@/lib/content'
 import type { ServicesPage, Page } from '@/types/content'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
 import { sanitizeHTML } from '@/utilities/sanitizeHtml'
@@ -10,7 +11,7 @@ import { generateMeta } from '@/utilities/generateMeta'
 
 export default async function Page() {
   const servicesData: ServicesPage = getServicesPage()
-  const services = getCategoryServices()
+  const cards = serviceCards()
   const categories = getServiceCategories()
 
   return (
@@ -37,10 +38,14 @@ export default async function Page() {
           </div>
           {categories.map((category) => (
             <div key={category.slug} className="mil-services-category">
-              <div className="mil-badge mil-mb-4">{category.title}</div>
-              <CollectionServices
-                posts={services.filter((service) => category.items.some((item) => item.slug === service.slug))}
-              />
+              <h3 className="snow-group-title">{category.title}</h3>
+              <div className="snow-card-grid">
+                {cards
+                  .filter((card) => card.group === category.title)
+                  .map((card) => (
+                    <SnowCard key={card.slug} card={card} />
+                  ))}
+              </div>
             </div>
           ))}
         </div>

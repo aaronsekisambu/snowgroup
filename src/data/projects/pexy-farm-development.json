@@ -1,6 +1,7 @@
 {
   "title": "Pexy Farm Development",
   "slug": "pexy-farm-development",
+  "model": "farm",
   "category": "Agricultural Construction",
   "filters": [
     "Agricultural"

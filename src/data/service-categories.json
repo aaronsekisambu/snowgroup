@@ -7,6 +7,12 @@
         {
           "title": "Building Construction",
           "slug": "building-construction",
+          "model": "construction",
+          "projects": [
+            "kampala-building-project",
+            "bunga-residential-development",
+            "bombo-development"
+          ],
           "short": "End-to-end construction of new buildings, delivered safely, on schedule and to specification.",
           "image": {
             "url": "/media/services/building-construction.jpg",
@@ -77,6 +83,12 @@
         {
           "title": "Residential & Commercial",
           "slug": "residential-commercial",
+          "model": "villa",
+          "projects": [
+            "muyenga-residential-project",
+            "mukono-residential-project",
+            "bunga-residential-development"
+          ],
           "short": "Homes, offices and retail spaces built to last, with quality finishes and clear communication throughout.",
           "image": {
             "url": "/media/services/residential-commercial.jpg",
@@ -147,6 +159,12 @@
         {
           "title": "Civil & Infrastructure",
           "slug": "civil-infrastructure",
+          "model": "road",
+          "projects": [
+            "paver-supply-installation-project",
+            "triple-j-agro-farm-development",
+            "ministry-of-lands-zonal-offices"
+          ],
           "short": "Roads, drainage, foundations and site works that form the backbone of every successful development.",
           "image": {
             "url": "/media/services/civil-infrastructure.jpg",
@@ -217,6 +235,11 @@
         {
           "title": "Renovation & Fit-Out",
           "slug": "renovation-fit-out",
+          "model": "bungalow",
+          "projects": [
+            "muyenga-residential-project",
+            "mukono-residential-project"
+          ],
           "short": "Refurbishments and interior fit-outs that transform existing spaces with minimal disruption.",
           "image": {
             "url": "/media/services/renovation-fit-out.jpg",
@@ -293,6 +316,12 @@
         {
           "title": "Architectural Design",
           "slug": "architectural-design",
+          "model": "blueprint",
+          "projects": [
+            "muyenga-residential-project",
+            "mukono-residential-project",
+            "bunga-residential-development"
+          ],
           "short": "Functional, buildable designs that balance aesthetics, budget and planning requirements.",
           "image": {
             "url": "/media/services/architectural-design.jpg",
@@ -363,6 +392,12 @@
         {
           "title": "Structural Engineering",
           "slug": "structural-engineering",
+          "model": "frame",
+          "projects": [
+            "kampala-building-project",
+            "bunga-residential-development",
+            "bombo-development"
+          ],
           "short": "Safe, efficient structural solutions backed by detailed calculations and code compliance.",
           "image": {
             "url": "/media/services/structural-engineering.jpg",
@@ -433,6 +468,11 @@
         {
           "title": "Design & Build",
           "slug": "design-build",
+          "model": "office",
+          "projects": [
+            "ministry-of-lands-zonal-offices",
+            "muyenga-residential-project"
+          ],
           "short": "One team responsible for design and construction, for faster delivery and a single point of contact.",
           "image": {
             "url": "/media/services/design-build.jpg",
@@ -503,6 +543,11 @@
         {
           "title": "MEP Engineering",
           "slug": "mep-engineering",
+          "model": "mep",
+          "projects": [
+            "ministry-of-lands-zonal-offices",
+            "kampala-building-project"
+          ],
           "short": "Mechanical, electrical and plumbing systems designed and coordinated for performance and efficiency.",
           "image": {
             "url": "/media/services/mep-engineering.jpg",
@@ -579,6 +624,12 @@
         {
           "title": "Project Management",
           "slug": "project-management",
+          "model": "apartment",
+          "projects": [
+            "ministry-of-lands-zonal-offices",
+            "triple-j-agro-farm-development",
+            "kampala-building-project"
+          ],
           "short": "Planning, coordination and reporting that keep your project on time, on budget and on track.",
           "image": {
             "url": "/media/services/project-management.jpg",
@@ -649,6 +700,12 @@
         {
           "title": "Quantity Surveying",
           "slug": "quantity-surveying",
+          "model": "pallet",
+          "projects": [
+            "concrete-block-supply-project",
+            "kampala-building-project",
+            "ministry-of-lands-zonal-offices"
+          ],
           "short": "Accurate measurement, valuation and cost control from tender through to final account.",
           "image": {
             "url": "/media/services/quantity-surveying.jpg",
@@ -719,6 +776,12 @@
         {
           "title": "Cost Estimation",
           "slug": "cost-estimation",
+          "model": "pallet",
+          "projects": [
+            "bunga-residential-development",
+            "mukono-residential-project",
+            "concrete-block-supply-project"
+          ],
           "short": "Reliable early-stage and detailed estimates so you can budget and decide with confidence.",
           "image": {
             "url": "/media/services/cost-estimation.jpg",
@@ -789,6 +852,12 @@
         {
           "title": "Procurement & Supervision",
           "slug": "procurement-supervision",
+          "model": "pallet",
+          "projects": [
+            "concrete-block-supply-project",
+            "paver-supply-installation-project",
+            "triple-j-agro-farm-development"
+          ],
           "short": "Sourcing the right contractors and materials, and supervising work on site to the agreed standard.",
           "image": {
             "url": "/media/services/procurement-supervision.jpg",

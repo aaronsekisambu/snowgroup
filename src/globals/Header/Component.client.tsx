@@ -41,15 +41,17 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
     const href = logo.link ? logo.link : '/'
 
     if (logo.type === 'image' && typeof logo.logo === 'object') {
-      const logo_stable = ( isInvert ) ? (typeof data.logo?.logo_invert === 'object' ? data.logo?.logo_invert : '') : logo.logo
-      
+      // both logos ship; the light or dark theme shows the one that reads on the bar
+      const logo_on_light = typeof logo.logo_invert === 'object' && logo.logo_invert ? logo.logo_invert : logo.logo
+
       return (
         <Link href={href} className="mil-logo" data-no-swup>
-          {logo_stable && (
-            <Media
-              resource={logo_stable}
-            />
-          )}
+          <span className="mil-logo-on-light">
+            <Media resource={logo_on_light} />
+          </span>
+          <span className="mil-logo-on-dark">
+            <Media resource={logo.logo} />
+          </span>
           {/* shown once the header gets its solid background */}
           {logo.scroll_text && <span className="mil-logo-scroll-text">{logo.scroll_text}</span>}
         </Link>

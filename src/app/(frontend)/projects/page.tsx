@@ -2,7 +2,8 @@ import type { Metadata } from 'next/types'
 import { breadcrumbList, JsonLd } from '@/components/StructuredData/JsonLd'
 import { ProjectsFilter } from '@/components/ProjectsFilter'
 import PageClient from './page.client'
-import { getAllProjects, getProjectsPage } from '@/lib/content'
+import { getProjectsPage } from '@/lib/content'
+import { projectCards } from '@/lib/overview'
 import type { ProjectsPage, Page } from '@/types/content'
 import { RenderBlocks } from '@/blocks/RenderBlocks'
 import { sanitizeHTML } from '@/utilities/sanitizeHtml'
@@ -10,7 +11,7 @@ import { generateMeta } from '@/utilities/generateMeta'
 
 export default async function Page() {
   const projectsData: ProjectsPage = getProjectsPage()
-  const projects = getAllProjects()
+  const projects = projectCards()
 
   return (
     <>

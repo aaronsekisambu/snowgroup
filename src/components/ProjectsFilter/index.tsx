@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react'
 
-import { ProjectCard, ProjectCardPostData } from '@/components/ProjectCard'
+import type { SnowCardData } from '@/types/content'
+import { SnowCard } from '@/components/SnowCard'
 
 export type Props = {
-  projects: ProjectCardPostData[]
+  projects: (SnowCardData & { slug: string; filters?: string[] })[]
   filters: string[]
 }
 
@@ -33,11 +34,9 @@ export const ProjectsFilter: React.FC<Props> = ({ projects, filters }) => {
           </button>
         ))}
       </div>
-      <div className="row mil-equal-cards">
+      <div className="snow-card-grid">
         {shown.map((project) => (
-          <div key={project.slug} className="col-md-6 col-lg-4">
-            <ProjectCard doc={project} relationTo="projects" />
-          </div>
+          <SnowCard key={project.slug} card={project} />
         ))}
       </div>
     </>

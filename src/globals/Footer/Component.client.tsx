@@ -116,9 +116,13 @@ export const FooterClient: React.FC<FooterProps> = ({ data }) => {
                 <div className="col-lg-7 mil-flex-column mil-sm-aic">
                   {logo && typeof logo === 'object' && logo.url && (
                     <Link href="/" className="mil-logo mil-footer-logo mil-mb-4">
-                      <Media
-                        resource={logo}
-                      />
+                      {/* the light or dark theme shows the logo that reads on the footer */}
+                      <span className="mil-logo-on-light">
+                        <Media resource={logo} />
+                      </span>
+                      <span className="mil-logo-on-dark">
+                        <Media resource={typeof logoLight === 'object' && logoLight ? logoLight : logo} />
+                      </span>
                       {logoText && <span>{logoText}</span>}
                     </Link>
                   )}

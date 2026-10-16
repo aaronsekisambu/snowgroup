@@ -111,7 +111,7 @@ export const CMSLink: React.FC<CMSLinkType> = (props) => {
         {submenu.map((link, i) => {
           if (link.sub_items && link.sub_items.length > 0) {
             return (
-              <li key={i} className="mil-submenu-group">
+              <li key={i} className={`mil-submenu-group${link.large ? ' mil-submenu-large' : ''}`}>
                 {link.label && <span className="mil-submenu-title">{link.label}</span>}
                 <ul className="mil-submenu-links">
                   {link.sub_items.map((subLink, j) => {

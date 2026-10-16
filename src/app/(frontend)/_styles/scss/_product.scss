@@ -1,0 +1,1314 @@
+@use 'variables' as *;
+
+/* -------------------------------------------
+
+product overview pages (apple.com product page structure)
+and the featured products on the home page
+
+uses the design tokens from _apple.scss
+
+------------------------------------------- */
+
+$nav-h: 6.4rem;
+$localnav-h: 5.2rem;
+
+.snow-product {
+    background-color: var(--page);
+    padding-top: $nav-h;
+}
+
+.snow-eyebrow {
+    margin-bottom: 1.2rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--accent-text);
+}
+
+/* ---------- product bar: sticks under the main navigation ---------- */
+
+.snow-localnav {
+    position: sticky;
+    top: $nav-h;
+    z-index: 50;
+    height: $localnav-h;
+    background: rgba(255, 255, 255, .78);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--hairline);
+}
+
+.snow-localnav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 98rem;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2.2rem;
+}
+
+.snow-localnav-title {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -.02em;
+    color: var(--ink);
+}
+
+.snow-localnav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+
+    & a:not(.snow-pill) {
+        font-size: 1.2rem;
+        color: var(--text-2);
+        transition: color .2s ease;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                color: var(--ink);
+            }
+        }
+    }
+
+    // section links give way to the Order button on phones
+    @media (max-width: 734px) {
+        & a:not(.snow-pill) {
+            display: none;
+        }
+    }
+}
+
+.snow-pill {
+    display: inline-flex;
+    align-items: center;
+    height: 2.8rem;
+    padding: 0 1.4rem;
+    border-radius: 99rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: var(--btn-bg);
+    color: var(--btn-fg);
+    transition: transform .16s $ease-out, opacity .2s ease;
+
+    &:active {
+        transform: scale(.96);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            opacity: .85;
+            color: var(--btn-fg);
+        }
+    }
+}
+
+/* ---------- hero ---------- */
+
+.snow-product-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+    align-items: center;
+    gap: 4rem;
+    max-width: 128rem;
+    min-height: calc(100svh - #{$nav-h + $localnav-h});
+    margin: 0 auto;
+    padding: 8rem 4rem;
+
+    & h1 {
+        margin-bottom: 1.6rem;
+        font-size: clamp(4.8rem, 7vw, 9.6rem);
+        line-height: 1;
+        letter-spacing: -.045em;
+    }
+
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 6rem 2.4rem 4rem;
+
+        & .snow-product-actions {
+            justify-content: center;
+        }
+    }
+}
+
+// the opening entrance: text rises in, the block arrives a beat later
+.snow-product-hero-text > * {
+    animation: snow-rise 1s $ease-out both;
+
+    @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{$i * 80}ms;
+        }
+    }
+}
+
+.snow-product-hero-block {
+    animation: snow-arrive 1.4s $ease-out .3s both;
+}
+
+@keyframes snow-rise {
+    from {
+        opacity: 0;
+        transform: translateY(2.4rem);
+    }
+}
+
+@keyframes snow-arrive {
+    from {
+        opacity: 0;
+        transform: scale(.94);
+    }
+}
+
+.snow-product-sub {
+    margin-bottom: 3.2rem;
+    font-size: clamp(2.2rem, 2.4vw, 3.2rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: var(--text-3);
+}
+
+.snow-product-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.6rem 3.2rem;
+}
+
+.snow-product-price {
+    margin-top: 2.4rem;
+    font-size: 1.5rem;
+    color: var(--text-2);
+}
+
+/* ---------- the 3D block ---------- */
+
+.snow-block-canvas {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+
+    & canvas {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    &.is-interactive {
+        cursor: grab;
+        touch-action: pan-y; // vertical swipes still scroll the page; sideways turns the block
+
+        &:active {
+            cursor: grabbing;
+        }
+    }
+}
+
+.snow-block-label {
+    position: absolute;
+    z-index: 2; // above the canvas
+    top: 0;
+    left: 0;
+    padding: .6rem 1.2rem;
+    border-radius: 99rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, .78);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--ink);
+    box-shadow: var(--shadow-soft);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .4s ease;
+    will-change: transform;
+}
+
+/* ---------- sections ---------- */
+
+.snow-product-section {
+    padding: 12rem 0;
+
+    &:nth-of-type(even) {
+        background-color: var(--surface-2);
+    }
+
+    @media (max-width: 768px) {
+        padding: 8rem 0;
+    }
+}
+
+.snow-product-heading {
+    margin-bottom: 4.8rem;
+    font-size: clamp(3.2rem, 4.4vw, 5.6rem);
+}
+
+.snow-highlights {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.snow-highlight {
+    padding: 4rem 3.2rem;
+    border-radius: 2.8rem;
+    background-color: var(--card);
+    box-shadow: var(--shadow-soft);
+
+    & h3 {
+        margin-bottom: 1.2rem;
+        font-size: 2.4rem;
+        line-height: 1.15;
+    }
+
+    & p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: var(--text-2);
+    }
+}
+
+/* ---------- pinned story: turn over, then pull apart ---------- */
+
+.snow-story {
+    position: relative;
+    height: 340vh;
+    background-color: var(--page);
+}
+
+.snow-story-sticky {
+    position: sticky;
+    top: $nav-h + $localnav-h;
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.4fr);
+    align-items: center;
+    gap: 4rem;
+    max-width: 128rem;
+    height: calc(100svh - #{$nav-h + $localnav-h});
+    margin: 0 auto;
+    padding: 0 4rem;
+    overflow: hidden;
+
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        align-content: center;
+        padding: 2.4rem;
+        text-align: center;
+    }
+}
+
+.snow-story-text {
+    position: relative;
+    min-height: 22rem;
+
+    @media (max-width: 992px) {
+        min-height: 14rem;
+    }
+}
+
+// one headline at a time; it crossfades with a slight lift as the scroll moves on
+.snow-story-step {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(1.6rem);
+    filter: blur(4px);
+    transition: opacity .5s ease, transform .6s $ease-out, filter .5s ease;
+
+    &.is-active {
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+
+    & h2 {
+        margin-bottom: 1.6rem;
+        font-size: clamp(3.6rem, 4.8vw, 6.4rem);
+    }
+
+    & p {
+        max-width: 40rem;
+        font-size: 1.9rem;
+        line-height: 1.45;
+        color: var(--text-2);
+
+        @media (max-width: 992px) {
+            margin: 0 auto;
+        }
+    }
+}
+
+/* ---------- closer look ---------- */
+
+.snow-viewer-stage {
+    position: relative;
+    border-radius: 2.8rem;
+    background-color: var(--card);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+}
+
+.snow-viewer-block {
+    aspect-ratio: 16 / 9;
+
+    @media (max-width: 768px) {
+        aspect-ratio: 1 / 1;
+    }
+}
+
+.snow-viewer-controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    pointer-events: none;
+}
+
+.snow-viewer-hint {
+    font-size: 1.3rem;
+    color: var(--text-2);
+}
+
+// iOS-style segmented control
+.snow-segmented {
+    display: inline-flex;
+    padding: .4rem;
+    border-radius: 99rem;
+    background: rgba(255, 255, 255, .78);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: inset 0 0 0 1px var(--hairline);
+    pointer-events: auto;
+
+    & button {
+        height: 3.6rem;
+        padding: 0 1.8rem;
+        border: none;
+        border-radius: 99rem;
+        background: transparent;
+        font-family: inherit;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: var(--text-2);
+        cursor: pointer;
+        transition: background-color .25s $ease-out, color .2s ease, transform .16s $ease-out;
+        touch-action: manipulation;
+        user-select: none;
+
+        &:active {
+            transform: scale(.96);
+        }
+
+        &[aria-pressed="true"] {
+            background-color: var(--btn-bg);
+            color: var(--btn-fg);
+        }
+    }
+}
+
+/* ---------- specs ---------- */
+
+.snow-specs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid var(--hairline);
+
+    & > div {
+        padding: 3.2rem 3.2rem 3.2rem 0;
+        border-bottom: 1px solid var(--hairline);
+    }
+
+    & dt {
+        margin-bottom: .8rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--text-2);
+    }
+
+    & dd {
+        margin: 0;
+        font-size: 2.1rem;
+        font-weight: 600;
+        line-height: 1.25;
+        letter-spacing: -.015em;
+        color: var(--ink);
+
+        & span {
+            display: block;
+            margin-top: .6rem;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 0;
+            color: var(--text-2);
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- compare ---------- */
+
+.snow-compare {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 2rem;
+}
+
+.snow-compare-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4.8rem 3.2rem;
+    border-radius: 2.8rem;
+    text-align: center;
+    background-color: var(--card);
+    box-shadow: var(--shadow-soft);
+
+    &.is-current {
+        box-shadow: inset 0 0 0 2px $a-1, var(--shadow-soft);
+    }
+
+    & h3 {
+        margin-bottom: .8rem;
+        font-size: 2.8rem;
+    }
+
+    & .snow-compare-size {
+        margin-bottom: 2.4rem;
+        font-size: 1.5rem;
+        color: var(--text-2);
+    }
+
+    & .snow-compare-price {
+        font-size: 3.2rem;
+        font-weight: 600;
+        letter-spacing: -.02em;
+        color: var(--ink);
+    }
+
+    & .snow-compare-unit {
+        margin-bottom: 2.4rem;
+        font-size: 1.4rem;
+        color: var(--text-2);
+    }
+}
+
+.snow-compare-badge {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--accent-text);
+}
+
+/* ---------- closing call to action ---------- */
+
+.snow-product-cta {
+    padding: 14rem 0;
+    text-align: center;
+
+    & h2 {
+        margin-bottom: 1.6rem;
+        font-size: clamp(3.6rem, 5vw, 6.4rem);
+    }
+
+    & p {
+        max-width: 56rem;
+        margin: 0 auto 3.2rem;
+        font-size: 1.9rem;
+        color: var(--text-2);
+    }
+
+    & .snow-product-actions {
+        justify-content: center;
+    }
+}
+
+/* ---------- featured products on the home page ---------- */
+
+.snow-featured {
+    padding: 12rem 0 10rem;
+}
+
+.snow-featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+// apple.com home tiles: headline and links on top, the product below
+.snow-tile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 58rem;
+    padding: 5.6rem 3.2rem 0;
+    overflow: hidden;
+    border-radius: 2.8rem;
+    text-align: center;
+    background-color: var(--card);
+    box-shadow: var(--shadow-soft);
+    isolation: isolate;
+
+    &.is-wide {
+        grid-column: 1 / -1;
+        min-height: 68rem;
+    }
+
+    // phones: the tile is as tall as its content
+    @media (max-width: 768px) {
+        &,
+        &.is-wide {
+            min-height: 0;
+        }
+    }
+
+    & .snow-eyebrow {
+        margin-bottom: .6rem;
+        font-size: 1.4rem;
+    }
+
+    & h3 {
+        margin-bottom: .8rem;
+        font-size: clamp(3.2rem, 3.6vw, 4.8rem);
+        line-height: 1.05;
+        letter-spacing: -.03em;
+    }
+
+    & .snow-tile-sub {
+        max-width: 48rem;
+        margin-bottom: 2rem;
+        font-size: 1.9rem;
+        line-height: 1.35;
+        color: var(--text-2);
+    }
+
+    & .snow-product-actions {
+        justify-content: center;
+        margin-bottom: 3.2rem;
+    }
+
+    // photo tiles: the image fills the tile behind a soft fade
+    &.has-photo {
+        color: $m-5;
+        background-color: $b-1;
+
+        & h3,
+        & .snow-tile-sub,
+        & .snow-eyebrow {
+            color: $m-5;
+        }
+
+        & .snow-tile-sub {
+            opacity: .85;
+        }
+
+        & .mil-btn:not(.mil-link-type) {
+            background-color: $m-5;
+            color: $b-1;
+        }
+
+        & .mil-btn.mil-link-type {
+            color: $m-5;
+        }
+    }
+
+    & .snow-tile-photo {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+
+        // the image component wraps the img; every layer fills the tile
+        & div,
+        & picture {
+            width: 100%;
+            height: 100%;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.2s $ease-out;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba($b-1, .72) 0%, rgba($b-1, .2) 45%, rgba($b-1, 0) 100%);
+        }
+    }
+
+    & .snow-tile-block {
+        width: min(100%, 72rem);
+        margin-top: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover .snow-tile-photo img {
+            transform: scale(1.03);
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .snow-story {
+        height: auto;
+    }
+
+    .snow-story-sticky {
+        position: relative;
+        top: 0;
+    }
+}
+
+.snow-tile-note {
+    margin: -1.2rem 0 2.4rem;
+    font-size: 1.5rem;
+    color: var(--text-2);
+}
+
+/* ---------- service cards (apple.com "Get to know" cards) ---------- */
+
+// one row that scrolls sideways at every width; the first card lines up with the page content
+.snow-service-row {
+    --edge: max(2rem, calc((100vw - 128rem) / 2 + 1.5rem));
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: clamp(28rem, 26vw, 38rem);
+    gap: 2rem;
+    padding: 0 var(--edge) 2.4rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--edge);
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media (max-width: 576px) {
+        grid-auto-columns: 80vw;
+    }
+}
+
+// apple.com paddle buttons under the row
+.snow-paddles {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.2rem;
+    padding: 1.2rem max(2rem, calc((100vw - 128rem) / 2 + 1.5rem)) 12rem;
+
+    & button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4.4rem;
+        height: 4.4rem;
+        border: none;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        color: var(--ink);
+        background-color: var(--surface-2);
+        cursor: pointer;
+        transition: transform .16s $ease-out, opacity .2s ease, background-color .2s ease;
+        touch-action: manipulation;
+
+        &:active {
+            transform: scale(.94);
+        }
+
+        &:disabled {
+            opacity: .35;
+            cursor: default;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            &:not(:disabled):hover {
+                background-color: var(--hairline);
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding-bottom: 8rem;
+    }
+}
+
+.snow-service-card {
+    position: relative;
+    display: block;
+    aspect-ratio: 3 / 4.2;
+    overflow: hidden;
+    border-radius: 2.8rem;
+    isolation: isolate;
+    scroll-snap-align: start;
+    background-color: $b-1;
+    box-shadow: var(--shadow-soft);
+    transition: transform .3s $ease-out, box-shadow .3s $ease-out;
+
+    // the image component wraps the img; every layer of the photo fills the card
+    & > div:not(.snow-service-text),
+    & picture {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+    }
+
+    & .snow-service-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 1.2s $ease-out;
+    }
+
+    // a soft fade behind the headline only, so the photo stays bright below
+    &:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba($b-1, .72) 0%, rgba($b-1, .32) 38%, rgba($b-1, 0) 60%);
+    }
+
+    &:active {
+        transform: scale(.98);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: translateY(-.3rem);
+            box-shadow: var(--shadow-lift);
+
+            & .snow-service-img {
+                transform: scale(1.04);
+            }
+
+            & .snow-service-plus {
+                background: rgba(255, 255, 255, .34);
+            }
+        }
+    }
+}
+
+.snow-service-text {
+    position: relative;
+    padding: 3.2rem 3.2rem 0;
+
+    & h3 {
+        margin-bottom: 1rem;
+        font-size: clamp(2.4rem, 2vw, 2.8rem);
+        line-height: 1.12;
+        letter-spacing: -.02em;
+        color: $m-5;
+
+        & br {
+            display: none;
+        }
+    }
+
+    & p {
+        font-size: 1.5rem;
+        line-height: 1.45;
+        color: rgba($m-5, .82);
+    }
+}
+
+.snow-service-plus {
+    position: absolute;
+    right: 2.4rem;
+    bottom: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    color: $m-5;
+    background: rgba(255, 255, 255, .2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: background-color .2s ease;
+}
+
+/* ---------- products flyout: the first column in large type ---------- */
+
+// no "current page" dot inside the flyout
+.mil-top-panel nav ul.mil-main-menu ul li.mil-current:after {
+    display: none;
+}
+
+.mil-top-panel nav ul.mil-main-menu > li > ul.mil-mega-menu li.mil-submenu-large ul.mil-submenu-links li a {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+
+    @media (max-width: 992px) {
+        font-size: 2.2rem;
+    }
+}
+
+/* ---------- the one card (services, projects, products, related) ---------- */
+
+.snow-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 2.8rem;
+    background-color: var(--card);
+    box-shadow: var(--shadow-soft);
+    color: inherit;
+    transition: transform .3s $ease-out, box-shadow .3s $ease-out;
+
+    &:active {
+        transform: scale(.98);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: translateY(-.4rem);
+            box-shadow: var(--shadow-lift);
+
+            & .snow-card-img {
+                transform: scale(1.04);
+            }
+
+            & .snow-card-link i {
+                transform: translateX(.3rem);
+            }
+        }
+    }
+}
+
+.snow-card-media {
+    position: relative;
+    aspect-ratio: 16 / 11;
+    overflow: hidden;
+    background-color: var(--surface-2);
+
+    & > div,
+    & picture {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.snow-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s $ease-out;
+}
+
+.snow-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2.8rem 3.2rem 3.2rem;
+
+    & h3 {
+        margin-bottom: 1rem;
+        font-size: 2.4rem;
+        line-height: 1.15;
+        letter-spacing: -.02em;
+    }
+}
+
+.snow-card-eyebrow {
+    margin-bottom: .8rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent-text);
+}
+
+.snow-card-text {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--text-2);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.snow-card-link {
+    margin-top: auto;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $a-1;
+
+    & i {
+        margin-left: .4rem;
+        font-size: 1.2rem;
+        transition: transform .2s $ease-out;
+    }
+}
+
+// a grid that fills the width: three across on desktop, two on tablets, one on phones
+.snow-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 32rem), 1fr));
+    gap: 2rem;
+}
+
+.snow-group-title {
+    margin: 0 0 2.4rem;
+    font-size: 2.8rem;
+}
+
+.mil-services-category + .mil-services-category {
+    margin-top: 8rem;
+}
+
+/* ---------- rows that scroll sideways (gallery, related) ---------- */
+
+.snow-scroll-row {
+    --edge: max(2rem, calc((100vw - 128rem) / 2 + 1.5rem));
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2rem;
+    padding: .4rem var(--edge) 2.4rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--edge);
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    & > * {
+        scroll-snap-align: start;
+    }
+}
+
+.snow-scroll .snow-paddles {
+    padding-bottom: 0;
+}
+
+.snow-card-row {
+    grid-auto-columns: clamp(28rem, 30vw, 40rem);
+
+    @media (max-width: 576px) {
+        grid-auto-columns: 82vw;
+    }
+}
+
+.snow-gallery {
+    grid-auto-columns: clamp(30rem, 62vw, 92rem);
+
+    @media (max-width: 576px) {
+        grid-auto-columns: 86vw;
+    }
+}
+
+.snow-gallery-item {
+    margin: 0;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: 2.8rem;
+    background-color: var(--surface-2);
+
+    & > div,
+    & picture {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.snow-gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.snow-gallery-section,
+.snow-gallery-section:nth-of-type(even) {
+    background-color: var(--page);
+}
+
+/* ---------- story extras ---------- */
+
+.snow-story-count {
+    display: block;
+    margin-bottom: 1.6rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    color: var(--text-3);
+}
+
+/* ---------- what's included ---------- */
+
+.snow-deliverables {
+    margin-bottom: 8rem;
+}
+
+.snow-included ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 32rem), 1fr));
+    gap: 0 4rem;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--hairline);
+
+    & li {
+        display: flex;
+        align-items: baseline;
+        gap: 1.4rem;
+        padding: 2rem 0;
+        list-style: none;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: var(--ink);
+        border-bottom: 1px solid var(--hairline);
+
+        & i {
+            color: $a-1;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+/* ---------- price list on phones: compact rows, apple.com store style ---------- */
+
+#prices .mil-filter {
+    margin-bottom: 2.4rem;
+}
+
+@media (max-width: 768px) {
+    .mil-price-card {
+        padding: 1.2rem 2rem;
+        border-radius: 2rem;
+
+        & > p {
+            margin: 1.2rem 0 .4rem;
+        }
+    }
+
+    // name and size on the left, the price large on the right
+    .mil-price-table tbody tr {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        column-gap: 1.6rem;
+        row-gap: .2rem;
+        padding: 1.6rem 0;
+    }
+
+    .mil-price-table tbody th {
+        grid-column: 1;
+        margin: 0;
+        padding: 0;
+        font-size: 1.7rem;
+    }
+
+    .mil-price-table tbody td {
+        grid-column: 1;
+        display: block;
+        padding: 0;
+        font-size: 1.4rem;
+        text-align: left;
+        color: var(--text-2);
+
+        &:before {
+            content: attr(data-label) ' · ';
+        }
+    }
+
+    .mil-price-table tbody td:last-child {
+        grid-column: 2;
+        grid-row: 1 / span 3;
+        align-self: center;
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: right;
+        white-space: nowrap;
+        color: var(--ink);
+
+        &:before {
+            display: none;
+        }
+    }
+
+    // the price column says what the number is, once, above the list
+    .mil-price-table caption {
+        position: static;
+        width: auto;
+        height: auto;
+        clip: auto;
+        padding: .8rem 0 0;
+        font-size: 1.3rem;
+        text-align: right;
+        color: var(--text-2);
+        caption-side: top;
+    }
+
+    .mil-price-rules {
+        margin: 1.6rem 0 1.2rem;
+        padding: 2rem 2rem .8rem;
+    }
+
+    .mil-price-panel {
+        padding: 2.8rem 2.4rem;
+        border-radius: 2rem;
+    }
+}
+
+// service groups have four services each: four across on wide screens, two on tablets, one on phones
+.mil-services-category .snow-card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+}
+
+/* ---------- callouts with leader lines (exploded views) ---------- */
+
+.snow-callout-lines {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+
+    & line {
+        stroke: var(--ink);
+        stroke-width: 1;
+        stroke-opacity: .45;
+        opacity: 0;
+        transition: opacity .4s ease;
+    }
+
+    & circle {
+        fill: $a-1;
+        stroke: #fff;
+        stroke-width: 2;
+        opacity: 0;
+        transition: opacity .4s ease;
+    }
+}
+
+.snow-callout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    max-width: 23rem;
+    padding: 1.1rem 1.4rem 1.2rem;
+    border-radius: 1.4rem;
+    background: rgba(255, 255, 255, .86);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 .8rem 2.4rem rgba(0, 0, 0, .08);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .4s ease;
+    will-change: transform;
+
+    & strong {
+        font-size: 1.4rem;
+        font-weight: 600;
+        letter-spacing: -.01em;
+        color: var(--ink);
+    }
+
+    & span {
+        font-size: 1.25rem;
+        line-height: 1.4;
+        color: var(--text-2);
+    }
+}
+
+// small screens: names only, so the model stays visible
+.is-compact .snow-callout {
+    max-width: 14rem;
+    padding: .7rem 1rem;
+    border-radius: 1rem;
+
+    & strong {
+        font-size: 1.2rem;
+    }
+
+    & span {
+        display: none;
+    }
+}
+
+/* ---------- gallery: photos snap to the centre, the first and last included ---------- */
+
+.snow-scroll-row.snow-gallery {
+    --item: clamp(30rem, 70vw, 96rem);
+    grid-auto-columns: var(--item);
+    padding-inline: max(2rem, calc((100% - var(--item)) / 2));
+    scroll-padding-inline: 0;
+
+    & > * {
+        scroll-snap-align: center;
+    }
+
+    @media (max-width: 576px) {
+        --item: 86vw;
+    }
+}
+
+// where a borrowed photo comes from, on a frosted tag over its corner
+.snow-gallery-item {
+    position: relative;
+
+    & figcaption {
+        position: absolute;
+        left: 1.6rem;
+        bottom: 1.6rem;
+        padding: .6rem 1.2rem;
+        border-radius: 99rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: var(--ink);
+        background: rgba(255, 255, 255, .82);
+        backdrop-filter: saturate(180%) blur(12px);
+        -webkit-backdrop-filter: saturate(180%) blur(12px);
+    }
+}
+
+// the story model takes the full height of the pinned stage
+.snow-story-sticky .snow-story-block {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 0;
+}

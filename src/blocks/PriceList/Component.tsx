@@ -102,7 +102,7 @@ export const PriceListBlock: React.FC<PriceListBlockProps> = ({
             <div className="mil-price-card">
               {!single && table.description && <p className="mil-c-m-2 mil-t-14 mil-mb-4">{table.description}</p>}
               <table className="mil-price-table">
-                <caption className="mil-price-caption">{table.label} prices</caption>
+                <caption className="mil-price-caption">{table.label} · {table.columns[table.columns.length - 1]}</caption>
                 <thead>
                   <tr>
                     {table.columns.map((column) => (

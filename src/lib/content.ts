@@ -15,6 +15,8 @@ import type {
   Plan,
   Post,
   PriceList,
+  ProductOverview,
+  ProductSpec,
   ProductCategory,
   ProductPage,
   Project,
@@ -112,6 +114,10 @@ function withSharedContent<T extends BlockLayouts>(doc: T): T {
       }
       if (block.priceListSource === 'price_list') {
         return { ...block, price_list: getPriceList(block.tables) }
+      }
+      // featured tiles that name a product take everything else from the product and the price list
+      if (block.blockType === 'featured_products') {
+        return { ...block, tiles: (block.tiles || []).map(productTile) }
       }
       return block
     })
@@ -404,6 +410,77 @@ export function getPriceList(tables?: string[]): PriceList {
   return tables ? { ...list, tables: list.tables.filter((table) => tables.includes(table.id)) } : list
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function productTile(tile: any) {
+  // a project tile: its 3D model, category and story come from the project record
+  const project = tile?.project ? getAllProjects().find((item) => item.slug === tile.project) : null
+  if (project) {
+    return {
+      eyebrow: project.category,
+      title: project.title,
+      text: project.short_description,
+      model: project.model,
+      storeys: project.model_storeys,
+      note: project.location,
+      primary: { label: 'Learn more', url: `/projects/${project.slug}` },
+      secondary: { label: 'Start yours', url: '/contact' },
+      ...tile,
+    }
+  }
+  const product = tile?.product ? getProductOverview(tile.product) : null
+  if (!product) return tile
+  return {
+    eyebrow: product.eyebrow,
+    title: product.name,
+    text: product.tagline,
+    model: product.model,
+    note: `${product.priceText.includes('/') ? 'From ' : ''}UGX ${product.priceText.split('/')[0].trim()} ${product.price.unit}`,
+    primary: { label: 'Learn more', url: `/products/${product.slug}` },
+    secondary: { label: 'Order', url: '/contact' },
+    ...tile,
+  }
+}
+
+// Major products with their own overview pages
+export function getProductSpecs(): ProductSpec[] {
+  return readJsonFile<{ products?: ProductSpec[] }>(path.join(dataDir, 'products.json'))?.products || []
+}
+
+// A product joined with its price-list row, so sizes and prices are only ever written once
+export function getProductOverview(slug: string): ProductOverview | null {
+  const product = getProductSpecs().find((item) => item.slug === slug)
+  if (!product) return null
+  const table = getPriceList([product.price.table]).tables[0]
+  const column = (name: string) => table?.columns.findIndex((label) => label.toLowerCase().startsWith(name)) ?? -1
+  const [sizeAt, priceAt, codeAt] = [column('size'), column('price'), column('code')]
+  const row = table?.rows.find(([type]) => type === product.price.row)
+  const pick = (cells: string[] | undefined, at: number) => (cells && at >= 0 ? cells[at] : '')
+  const size = pick(row, sizeAt)
+  const priceText = pick(row, priceAt)
+  const code = pick(row, codeAt) || undefined
+  const vars: Record<string, string> = { size, price: priceText, code: code || '' }
+  const fill = (text: string) => text.replace(/\{\{(\w+)\}\}/g, (match, key: string) => vars[key] ?? match)
+  const pages = getProductSpecs()
+
+  return {
+    ...product,
+    size,
+    code,
+    priceText,
+    highlights: product.highlights.map((item) => ({ ...item, title: fill(item.title), text: fill(item.text) })),
+    specs: product.specs.map((item) => ({ ...item, value: fill(item.value) })),
+    compareRows: (table?.rows || [])
+      .filter(([type]) => !product.compare.match || type.includes(product.compare.match))
+      .map((cells) => ({
+        type: cells[0],
+        size: pick(cells, sizeAt),
+        price: pick(cells, priceAt),
+        current: cells[0] === product.price.row,
+        url: pages.find((page) => page.price.table === product.price.table && page.price.row === cells[0])?.slug,
+      })),
+  }
+}
+
 // Single source for the product categories; swap this for a CRM/API call to make it dynamic
 export function getProductCategories(): ProductCategory[] {
   return readJsonFile<{ categories?: ProductCategory[] }>(path.join(dataDir, 'product-categories.json'))?.categories || []
@@ -438,15 +515,23 @@ export function getAllProductSlugs() {
 }
 
 // Only the categories are links; their items show as text underneath
+// apple.com-style flyout: the major products in large type, then categories, then everything else
 function getProductCategoriesSubmenu(): SubMenuItem[] {
+  const link = (label: string, url: string): SubMenuItem => ({ sub_type: 'custom', sub_url: url, label })
   return [
-    ...getProductCategories().map((category) => ({
-      sub_type: 'custom' as const,
-      sub_url: `/products/${category.slug}`,
-      label: category.title,
-      description: category.items.map((item) => item.title).join(' · '),
-    })),
-    { sub_type: 'custom', sub_url: '/price-list', label: 'Price List', description: 'Blocks · Pavers · Machinery hire' },
+    {
+      label: 'Explore Products',
+      large: true,
+      sub_items: getProductSpecs().map((product) => link(product.name, `/products/${product.slug}`)),
+    },
+    {
+      label: 'Shop by Category',
+      sub_items: getProductCategories().map((category) => link(category.title, `/products/${category.slug}`)),
+    },
+    {
+      label: 'More',
+      sub_items: [link('Price List', '/price-list'), link('Machinery Hire', '/price-list#machinery'), link('Order', '/contact')],
+    },
   ]
 }
 

@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect, useRef, useState } from 'react'
 import { Media } from '@/components/Media'
 import Link from "next/link"
 import type { ServicesThreeBlock as ServicesThreeBlockProps } from '@/types/content'
@@ -12,6 +14,32 @@ export const ServicesThreeBlock: React.FC<ServicesThreeBlockProps> = ({
   button_url,
   services,
 }) => {
+  const rowRef = useRef<HTMLDivElement>(null)
+  const [edge, setEdge] = useState({ start: true, end: false })
+
+  // the arrows know when the row is at either end
+  useEffect(() => {
+    const row = rowRef.current
+    if (!row) return
+    const update = () =>
+      setEdge({ start: row.scrollLeft < 8, end: row.scrollLeft + row.clientWidth > row.scrollWidth - 8 })
+    update()
+    row.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    return () => {
+      row.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
+    }
+  }, [])
+
+  // one card per press, landing on the snap point
+  const page = (direction: number) => {
+    const row = rowRef.current
+    const card = row?.querySelector<HTMLElement>('.snow-service-card')
+    if (!row || !card) return
+    row.scrollBy({ left: direction * (card.offsetWidth + 20), behavior: 'smooth' })
+  }
+
   return (
     <div className="mil-section mil-p-10-0">
       <div className="container">
@@ -40,43 +68,30 @@ export const ServicesThreeBlock: React.FC<ServicesThreeBlockProps> = ({
           </div>
         </div>
       </div>
-      <div className="mil-services-frame">
-        <div className="container-fluid g-0">
-          <div className="row g-0">
-            {services?.map((service, index) => (
-              <div key={index} className="col-sm-6 col-lg-3">
-                {service.url && (
-                  <Link href={service.url} className="mil-service-card mil-type-2 mil-angle">
-                    {service.image && (
-                      <Media
-                        resource={service.image}
-                        imgClassName="mil-bg-img"
-                      />
-                    )}
-                    <div className="mil-overlay"></div>
-                    <div className="mil-card-text">
-                      <div className="mil-plus mil-mb-3">
-                        <i className="fal fa-plus"></i>
-                      </div>
-                      {service.title && (
-                        <h5
-                          className="mil-mb-2 mil-c-m-4"
-                          dangerouslySetInnerHTML={{ __html: sanitizeHTML(service.title) }}
-                        />
-                      )}
-                      {service.description && (
-                        <p
-                          className="mil-t-16 mil-c-m-3"
-                          dangerouslySetInnerHTML={{ __html: sanitizeHTML(service.description) }}
-                        />
-                      )}
-                    </div>
-                  </Link>
-                )}
+      {/* apple.com "Get to know" cards: headline on top, photo behind, a + to open, in a row that scrolls sideways */}
+      <div className="snow-service-row" ref={rowRef} data-lenis-prevent-horizontal>
+        {services?.map((service, index) =>
+          service.url ? (
+            <Link key={index} href={service.url} className="snow-service-card">
+              {service.image && <Media resource={service.image} imgClassName="snow-service-img" />}
+              <div className="snow-service-text">
+                {service.title && <h3 dangerouslySetInnerHTML={{ __html: sanitizeHTML(service.title) }} />}
+                {service.description && <p dangerouslySetInnerHTML={{ __html: sanitizeHTML(service.description) }} />}
               </div>
-            ))}
-          </div>
-        </div>
+              <span className="snow-service-plus" aria-hidden="true">
+                <i className="fal fa-plus"></i>
+              </span>
+            </Link>
+          ) : null,
+        )}
+      </div>
+      <div className="snow-paddles">
+        <button type="button" aria-label="Previous" disabled={edge.start} onClick={() => page(-1)}>
+          <i className="far fa-arrow-left"></i>
+        </button>
+        <button type="button" aria-label="Next" disabled={edge.end} onClick={() => page(1)}>
+          <i className="far fa-arrow-right"></i>
+        </button>
       </div>
     </div>
   )

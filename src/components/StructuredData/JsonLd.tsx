@@ -29,6 +29,31 @@ export const breadcrumbList = (trail: { name?: string | null; path: string }[]) 
   }
 }
 
+// A product with its price from the price list; "28,000 / 35,000" (standard / custom) becomes a price range
+export const productSchema = (product: { name: string; description?: string; path: string; price: string; sku?: string }) => {
+  const url = getServerSideURL()
+  const prices = product.price
+    .split('/')
+    .map((part) => Number(part.replace(/[^\d]/g, '')))
+    .filter((value) => value > 0)
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.name,
+    description: product.description,
+    url: `${url}${product.path}`,
+    ...(product.sku && { sku: product.sku }),
+    brand: { '@id': `${url}${ORGANIZATION_ID}` },
+    ...(prices.length > 0 && {
+      offers:
+        prices.length > 1
+          ? { '@type': 'AggregateOffer', priceCurrency: 'UGX', lowPrice: Math.min(...prices), highPrice: Math.max(...prices), offerCount: prices.length }
+          : { '@type': 'Offer', priceCurrency: 'UGX', price: prices[0], url: `${url}${product.path}` },
+    }),
+  }
+}
+
 // One Snow Holdings service, linked to the organisation that provides it
 export const serviceSchema = (service: { name?: string | null; description?: string | null; path: string; image?: string | null }) => {
   const url = getServerSideURL()

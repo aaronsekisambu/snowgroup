@@ -1,6 +1,7 @@
 {
   "title": "Paver Supply & Installation Project",
   "slug": "paver-supply-installation-project",
+  "model": "interlocking-paver",
   "category": "Materials & Paving",
   "filters": [
     "Materials Supply",

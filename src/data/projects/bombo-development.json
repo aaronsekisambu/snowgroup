@@ -1,6 +1,7 @@
 {
   "title": "Bombo Development",
   "slug": "bombo-development",
+  "model": "construction",
   "category": "Building Construction",
   "filters": [],
   "client": "Private client",

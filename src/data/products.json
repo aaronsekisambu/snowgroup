@@ -1,0 +1,200 @@
+{
+  "products": [
+    {
+      "slug": "h6-hollow-block",
+      "name": "H6 Hollow Block",
+      "category": "concrete-products",
+      "eyebrow": "Concrete Blocks",
+      "model": "hollow-block",
+      "images": [
+        "/media/products/blocks.jpg",
+        "/media/products/cat-concrete-products.jpg"
+      ],
+      "projects": [
+        "concrete-block-supply-project",
+        "kampala-building-project",
+        "bunga-residential-development"
+      ],
+      "price": {
+        "table": "blocks",
+        "row": "H6 Hollow",
+        "unit": "per block"
+      },
+      "tagline": "Hollow on one side. Closed on the other.",
+      "description": "The H6 hollow concrete block from Snow Holdings: 400 × 150 × 200 mm, hollow on one side and closed on the other, for walling on homes, commercial and farm buildings in Uganda.",
+      "highlights": [
+        {
+          "title": "{{size}} mm",
+          "text": "A six-inch block for walling on homes, commercial and farm buildings."
+        },
+        {
+          "title": "Closed on one side",
+          "text": "One solid face gives a full, even surface to build on."
+        },
+        {
+          "title": "Hollow on the other",
+          "text": "Open cores keep the block lighter to carry and lay."
+        },
+        {
+          "title": "Made by Snow Holdings",
+          "text": "Cast in our own production, so quality is controlled from the start."
+        }
+      ],
+      "story": [
+        {
+          "title": "Closed on one side.",
+          "text": "A solid face that sits square and gives mortar a full, even surface to build on."
+        },
+        {
+          "title": "Hollow on the other.",
+          "text": "Open cores take weight out of every block, so it is easier to carry and lay."
+        },
+        {
+          "title": "Every part has a job.",
+          "text": "Face shells, webs and a closed side, cast together as one solid block."
+        }
+      ],
+      "views": [
+        {
+          "label": "Hollow side",
+          "view": "hollow"
+        },
+        {
+          "label": "Closed side",
+          "view": "closed"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Type",
+          "value": "Hollow concrete block (H6)"
+        },
+        {
+          "label": "Size",
+          "value": "{{size}} mm",
+          "note": "Length × width × height"
+        },
+        {
+          "label": "Faces",
+          "value": "One hollow, one closed"
+        },
+        {
+          "label": "Uses",
+          "value": "Walling on homes, commercial and farm buildings"
+        },
+        {
+          "label": "Price",
+          "value": "UGX {{price}} per block",
+          "note": "Prices may vary with bulk orders"
+        },
+        {
+          "label": "Delivery",
+          "value": "To your site",
+          "note": "Fees depend on location and order size"
+        }
+      ],
+      "compare": {
+        "title": "Which hollow block is right for you?",
+        "match": "Hollow"
+      }
+    },
+    {
+      "slug": "interlocking-paver",
+      "name": "Interlocking Paver",
+      "category": "paving-external-works",
+      "eyebrow": "Paving Blocks",
+      "model": "interlocking-paver",
+      "images": [
+        "/media/products/pavers.jpg",
+        "/media/products/cat-paving-external-works.jpg",
+        "/media/products/curbstones.jpg"
+      ],
+      "projects": [
+        "paver-supply-installation-project",
+        "muyenga-residential-project"
+      ],
+      "price": {
+        "table": "pavers",
+        "row": "Interlocking",
+        "unit": "per m²"
+      },
+      "tagline": "Shaped to lock together.",
+      "description": "The Interlocking Paver (P20) from Snow Holdings: 200 × 160 × 60 mm, in our standard design or made to yours, for driveways, compounds and walkways in Uganda.",
+      "highlights": [
+        {
+          "title": "{{size}} mm",
+          "text": "A 60 mm paver for driveways, compounds and walkways."
+        },
+        {
+          "title": "Locks into its neighbours",
+          "text": "Each paver's shape keys into the ones around it, so the surface works as one."
+        },
+        {
+          "title": "Standard or custom",
+          "text": "P20 in our standard design, or CP20 made in the size you ask for."
+        },
+        {
+          "title": "Made by Snow Holdings",
+          "text": "Cast in our own production, so quality is controlled from the start."
+        }
+      ],
+      "story": [
+        {
+          "title": "One paver.",
+          "text": "A wide end, a narrow waist and a wide end again: the shape does the work."
+        },
+        {
+          "title": "Shaped to interlock.",
+          "text": "Each wide end slides into the waist of the pavers beside it."
+        },
+        {
+          "title": "Laid as one surface.",
+          "text": "Row after row, the pavers hold each other in place across the whole area."
+        }
+      ],
+      "views": [
+        {
+          "label": "Laid surface",
+          "view": "surface"
+        },
+        {
+          "label": "One paver",
+          "view": "single"
+        }
+      ],
+      "specs": [
+        {
+          "label": "Type",
+          "value": "Interlocking paver"
+        },
+        {
+          "label": "Code",
+          "value": "{{code}}",
+          "note": "Standard / custom design"
+        },
+        {
+          "label": "Size",
+          "value": "{{size}} mm",
+          "note": "Length × width × thickness"
+        },
+        {
+          "label": "Uses",
+          "value": "Driveways, compounds and walkways"
+        },
+        {
+          "label": "Price",
+          "value": "UGX {{price}} per m²",
+          "note": "Standard / custom design"
+        },
+        {
+          "label": "Delivery",
+          "value": "To your site",
+          "note": "Fees depend on location and order size"
+        }
+      ],
+      "compare": {
+        "title": "Which paver is right for you?"
+      }
+    }
+  ]
+}

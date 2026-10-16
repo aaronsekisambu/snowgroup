@@ -1,6 +1,7 @@
 {
   "title": "Muyenga Residential Project",
   "slug": "muyenga-residential-project",
+  "model": "villa",
   "category": "Residential Construction",
   "filters": [
     "Residential"

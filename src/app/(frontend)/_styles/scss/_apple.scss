@@ -1,0 +1,1214 @@
+@use 'variables' as *;
+
+/* -------------------------------------------
+
+Apple-style design layer
+
+Loaded last, so it refines the theme without rewriting it:
+big tightly-tracked type, rounded surfaces with soft depth, a frosted
+navigation bar with apple.com-style flyouts, instant press feedback and
+short ease-out motion.
+Delete this file (and its @use in style.scss) to return to the original look.
+
+------------------------------------------- */
+
+$radius-lg: 2.8rem; // large cards and images
+$radius-md: 1.8rem; // cards and panels
+$radius-sm: 1.2rem; // small surfaces
+$nav-h: 6.4rem;
+
+/* ---------- design tokens (one theme) ---------- */
+
+:root {
+    --page: #{$m-5}; // white
+    --surface-2: #{$m-4}; // light gray sections
+    --card: #ffffff;
+    --ink: #{$m-1};
+    --text-2: #{$m-2};
+    --text-3: #{$m-3}; // the quieter half of a two-tone headline
+    --hairline: rgba(0, 0, 0, .1);
+    --accent: #{$a-1};
+    --accent-text: #{$a-1};
+    --btn-bg: #{$a-1};
+    --btn-fg: #ffffff;
+    --input-border: rgba(0, 0, 0, .16);
+    --nav-bg: rgba(22, 22, 23, .72); // dark frosted bar
+    --nav-fg: #ffffff;
+    --nav-fg-2: #{$m-3};
+    --nav-border: rgba(255, 255, 255, .08);
+    --flyout-bg: rgba(22, 22, 23, 1);
+    --scrim: rgba(0, 0, 0, .4);
+    --shadow-soft: 0 1px 2px rgba(0, 0, 0, .04), 0 1rem 3rem rgba(0, 0, 0, .06);
+    --shadow-lift: 0 2px 4px rgba(0, 0, 0, .05), 0 2rem 5rem rgba(0, 0, 0, .1);
+}
+
+/* ---------- page scale & type ---------- */
+
+html {
+    font-size: 10px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    letter-spacing: -.01em;
+    background-color: var(--page);
+    color: var(--ink);
+    -webkit-tap-highlight-color: transparent;
+}
+
+// Headings follow the theme; the colour utility classes (white on photos) still win
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--ink);
+}
+
+// Tracking tightens as type grows; weight does the emphasis
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.mil-h1,
+.mil-h2,
+.mil-h3,
+.mil-h4,
+.mil-h5,
+.mil-h6 {
+    font-weight: 600;
+}
+
+h1,
+.mil-h1 {
+    font-size: clamp(4.4rem, 6vw, 8rem);
+    line-height: 1.05;
+    letter-spacing: -.035em;
+}
+
+h2,
+.mil-h2 {
+    font-size: clamp(3.2rem, 4.2vw, 5.6rem);
+    line-height: 1.07;
+    letter-spacing: -.03em;
+}
+
+h3,
+.mil-h3 {
+    font-size: clamp(2.6rem, 2.8vw, 3.6rem);
+    line-height: 1.1;
+    letter-spacing: -.025em;
+}
+
+h4,
+.mil-h4 {
+    font-size: 2.6rem;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+}
+
+h5,
+.mil-h5 {
+    font-size: 2.1rem;
+    line-height: 1.2;
+    letter-spacing: -.015em;
+}
+
+h6,
+.mil-h6 {
+    font-size: 1.8rem;
+    line-height: 1.25;
+    letter-spacing: -.01em;
+}
+
+.mil-t-14 {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    letter-spacing: -.005em;
+}
+
+.mil-t-16 {
+    font-size: 1.8rem;
+    line-height: 1.55;
+    letter-spacing: -.01em;
+}
+
+.mil-c-m-1 {
+    color: var(--ink);
+}
+
+// rich text paragraphs take their colour from the section they sit in
+.payload-richtext p {
+    color: inherit;
+}
+
+// transparent logos: no blurred loading placeholder behind them
+.mil-logo img {
+    background-image: none !important;
+}
+
+.mil-c-m-2 {
+    color: var(--text-2);
+}
+
+// Two-tone headlines: the second phrase steps back instead of switching colour
+.mil-opacity-text {
+    opacity: 1;
+    color: var(--text-3);
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+// Eyebrow label above a headline, not a pill
+.mil-badge {
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--accent-text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -.005em;
+}
+
+// On photos: translucent white second phrase, readable eyebrow
+.mil-overlay ~ .container .mil-opacity-text,
+.mil-hero-content .mil-opacity-text {
+    color: rgba($m-5, .56);
+}
+
+.mil-overlay ~ .container .mil-badge,
+.mil-hero-content .mil-badge {
+    color: rgba($m-5, .85);
+}
+
+::selection {
+    background-color: rgba($a-1, .3);
+}
+
+/* ---------- surfaces ---------- */
+
+// Hard diagonal cut corners give way to rounded, softly lit surfaces
+.mil-angle:after {
+    display: none;
+}
+
+.mil-gray-section,
+.mil-bg-out-left-gray:before,
+.mil-fake-container-left,
+.mil-sticky-part {
+    background-color: var(--surface-2);
+}
+
+.mil-card,
+.mil-gray-section .mil-card,
+.mil-large-card,
+.mil-feature-card,
+.mil-plan-included,
+.mil-plan-steps,
+.mil-price-card,
+.mil-price-panel:not(.mil-price-panel-dark),
+.mil-accordion-group,
+.mil-testimonial {
+    background-color: var(--card);
+}
+
+.mil-card {
+    border-radius: $radius-lg;
+    padding: 4.8rem;
+    box-shadow: var(--shadow-soft);
+    transition: transform $t-md, box-shadow $t-md;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: translateY(-.3rem);
+            box-shadow: var(--shadow-lift);
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 3.2rem;
+    }
+}
+
+.mil-image-frame,
+.mil-side-image,
+.mil-feature-card,
+.mil-feature-image,
+.mil-plan-focus,
+.mil-plan-included,
+.mil-plan-steps,
+.mil-price-card,
+.mil-price-panel,
+.mil-sticky-part.mil-angle {
+    border-radius: $radius-lg;
+}
+
+.mil-image-frame,
+.mil-side-image {
+    overflow: hidden;
+}
+
+.mil-plan-included,
+.mil-plan-steps,
+.mil-price-card,
+.mil-price-panel:not(.mil-price-panel-dark),
+.mil-feature-card {
+    box-shadow: var(--shadow-soft);
+}
+
+.mil-feature-card {
+    overflow: hidden;
+}
+
+// Service photo tiles: rounded, with clear air between them and a gentle zoom on hover
+.mil-services-frame {
+    padding: 0 2rem;
+
+    & .container-fluid {
+        padding: 0;
+    }
+
+    & .row.g-0 {
+        --bs-gutter-x: 2rem;
+        --bs-gutter-y: 2rem;
+    }
+}
+
+.mil-service-card {
+    overflow: hidden;
+    border-radius: $radius-lg;
+    isolation: isolate;
+
+    & img {
+        transition: transform $t-lg;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover img {
+            transform: scale(1.04);
+        }
+    }
+}
+
+// Service cards: photo and text form one rounded card
+.mil-large-card {
+    overflow: hidden;
+    border-radius: $radius-lg;
+    box-shadow: var(--shadow-soft);
+    transition: transform $t-md, box-shadow $t-md;
+
+    & .mil-card {
+        border-radius: 0;
+        box-shadow: none;
+        transform: none;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: translateY(-.3rem);
+            box-shadow: var(--shadow-lift);
+
+            & .mil-card {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+// Project and post tiles
+.mil-item-card {
+    overflow: hidden;
+    border-radius: $radius-lg;
+}
+
+// Partner logos sit on calm tiles
+.mil-partner {
+    border-radius: $radius-md;
+    background-color: var(--surface-2);
+}
+
+/* ---------- buttons ---------- */
+
+// Pill buttons in the accent blue, with instant press feedback; icons are plain glyphs
+.mil-btn {
+    height: 4.8rem;
+    padding: 0 2.4rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: -.01em;
+    border-radius: 99rem;
+    background-color: var(--btn-bg);
+    color: var(--btn-fg);
+    transition: transform .16s $ease-out, background-color .2s ease, color .2s ease;
+
+    & i {
+        width: auto !important;
+        height: auto !important;
+        margin-left: .8rem;
+        background-color: transparent !important;
+        color: currentColor !important;
+        font-size: 1.3rem;
+        transition: transform .2s $ease-out;
+
+        &.fa-arrow-right {
+            transform: none;
+        }
+    }
+
+    &.mil-accent,
+    &.mil-soft {
+        background-color: var(--btn-bg);
+        color: var(--btn-fg);
+    }
+
+    &.mil-light {
+        background-color: $m-5;
+        color: $m-1;
+    }
+
+    &:active {
+        transform: scale(.97);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: var(--btn-fg);
+            background-color: rgba(0, 119, 237, 1);
+
+            & i.fa-arrow-right {
+                transform: translateX(.2rem);
+            }
+        }
+
+        &.mil-light:hover {
+            color: $m-1;
+            background-color: rgba($m-5, .88);
+        }
+    }
+
+    &.mil-disabled {
+        background-color: var(--surface-2);
+        color: var(--text-3);
+    }
+
+    // Text links: blue, with an arrow that nudges forward
+    &.mil-link-type,
+    &.mil-link-type.mil-dark {
+        height: auto;
+        padding: 0;
+        background-color: transparent;
+        color: $a-1;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background-color: transparent;
+                color: $a-1;
+                text-decoration: underline;
+                text-underline-offset: .3rem;
+            }
+        }
+    }
+}
+
+// On photos: white pills and white text links
+.mil-overlay ~ .container,
+.mil-hero-content {
+    & .mil-btn:not(.mil-link-type) {
+        background-color: $m-5;
+        color: $m-1;
+    }
+
+    & .mil-btn.mil-link-type,
+    & .mil-btn.mil-link-type:hover {
+        color: $m-5;
+    }
+}
+
+.mil-filter button {
+    height: 4.4rem;
+    padding: 0 2rem;
+    background-color: var(--card);
+    color: var(--ink);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .08);
+    transition: transform .16s $ease-out, background-color .2s ease, color .2s ease;
+
+    &:active {
+        transform: scale(.97);
+    }
+
+    &.mil-active {
+        background-color: $m-1;
+        color: $m-5;
+        box-shadow: none;
+    }
+}
+
+/* ---------- navigation: a slim frosted bar, light or dark with the theme ---------- */
+
+.mil-top-panel {
+    &,
+    &.mil-static,
+    &.mil-scroll,
+    &.mil-active,
+    &.mil-invert,
+    &.mil-invert.mil-static {
+        height: $nav-h;
+        background: var(--nav-bg);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 1px solid var(--nav-border);
+    }
+
+    transition: background-color $t-md;
+
+    // two logos ship; the theme shows the one that reads on the bar
+    // the logo keeps its proportions at every size (the theme fixed the width on phones)
+    & .mil-container .mil-logo img,
+    & .mil-logo img {
+        width: auto;
+        height: 4.4rem;
+        max-height: none;
+        object-fit: contain;
+
+        @media (max-width: 992px) {
+            height: 3.8rem;
+        }
+    }
+
+    // the bar is always dark, so it shows the white logo
+    & .mil-logo .mil-logo-on-light {
+        display: none;
+    }
+
+    & .mil-logo .mil-logo-on-dark {
+        display: block;
+    }
+
+    & .mil-logo .mil-logo-scroll-text {
+        color: var(--nav-fg);
+    }
+
+    // a white pill on the dark bar
+    & .mil-container .mil-mobile-menu .mil-btn {
+        height: 4rem;
+        padding: 0 1.8rem;
+        font-size: 1.4rem;
+        background-color: $m-5;
+        color: $m-1;
+    }
+
+    & nav ul.mil-main-menu > li > a {
+        color: var(--nav-fg);
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: -.01em;
+        opacity: .86;
+        transition: opacity .2s ease;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    & nav ul.mil-main-menu > li.mil-has-children > a:after {
+        color: var(--nav-fg-2);
+    }
+}
+
+/* ---------- apple.com-style flyout menu (desktop) ---------- */
+
+// Hovering a menu item drops a full-width panel out of the bar; its links cascade in
+// and the page behind dims. Closing is quicker than opening.
+@media (min-width: 993px) {
+    .mil-top-panel {
+        & .mil-container,
+        & .mil-container .mil-mobile-menu,
+        & nav,
+        & nav ul.mil-main-menu,
+        & nav ul.mil-main-menu > li {
+            position: static;
+        }
+
+        & nav ul.mil-main-menu > li {
+            margin-right: 4.4rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            // a bridge from the link down to the panel, so the pointer can travel between them
+            &:before {
+                height: $nav-h;
+                bottom: auto;
+                top: 0;
+                pointer-events: none;
+            }
+
+            &.mil-has-children:hover:before {
+                pointer-events: auto;
+            }
+
+            &.mil-current:after {
+                display: none;
+            }
+        }
+
+        & nav ul.mil-main-menu > li > ul,
+        & nav ul.mil-main-menu > li > ul.mil-mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: auto;
+            min-width: 0;
+            translate: none;
+            transform: none;
+            opacity: 1;
+            visibility: hidden;
+            pointer-events: none;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 4rem 8rem;
+            margin: 0;
+            padding: 4rem max(4rem, calc((100% - 98rem) / 2)) 8rem;
+            background: var(--flyout-bg);
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+            clip-path: inset(0 0 100% 0);
+            transition: clip-path .24s $ease-out, visibility 0s linear .24s;
+
+            &:before {
+                display: none;
+            }
+
+            & > li {
+                margin: 0;
+                opacity: 0;
+                transform: translateY(-.8rem);
+                transition: opacity .16s ease, transform .16s ease;
+            }
+
+            // a column of big links (products) or a titled group of small links (services)
+            & li.mil-submenu-category {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: .6rem;
+                max-width: 22rem;
+                white-space: normal;
+
+                & > a {
+                    font-size: 2.2rem;
+                    font-weight: 600;
+                    line-height: 1.15;
+                    letter-spacing: -.02em;
+                    color: var(--nav-fg);
+                }
+
+                & .mil-submenu-text {
+                    font-size: 1.2rem;
+                    line-height: 1.45;
+                    color: var(--nav-fg-2);
+                }
+            }
+
+            & li.mil-submenu-group .mil-submenu-title {
+                margin-bottom: 1.4rem;
+                font-size: 1.2rem;
+                font-weight: 400;
+                letter-spacing: 0;
+                text-transform: none;
+                color: var(--nav-fg-2);
+            }
+
+            & ul.mil-submenu-links li {
+                margin: 0 0 1rem;
+                opacity: 1;
+                transform: none;
+
+                & a {
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    letter-spacing: -.01em;
+                    color: var(--nav-fg);
+                }
+            }
+
+            & a {
+                transition: opacity .2s ease;
+
+                @media (hover: hover) and (pointer: fine) {
+                    &:hover {
+                        opacity: .7;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        & nav ul.mil-main-menu > li:hover > ul,
+        & nav ul.mil-main-menu > li:focus-within > ul {
+            visibility: visible;
+            pointer-events: auto;
+            clip-path: inset(0 0 -1px 0);
+            transition: clip-path .4s $ease-out, visibility 0s;
+
+            & > li {
+                opacity: 1;
+                transform: none;
+                transition: opacity .32s ease, transform .4s $ease-out;
+
+                @for $i from 1 through 6 {
+                    &:nth-child(#{$i}) {
+                        transition-delay: #{40 + $i * 30}ms;
+                    }
+                }
+            }
+        }
+
+        // the bar turns solid to join the panel, and the page dims behind it
+        &:after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            background: var(--scrim);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .24s ease;
+            z-index: -1;
+        }
+
+        &:has(nav ul.mil-main-menu > li.mil-has-children:hover) {
+            background: var(--flyout-bg);
+
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* ---------- mobile navigation (apple.com-style sheet) ---------- */
+
+@media (max-width: 992px) {
+    .mil-top-panel .mil-container .mil-mobile-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: calc(100dvh - #{$nav-h});
+        max-height: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 2.4rem max(3.2rem, env(safe-area-inset-right)) calc(4rem + env(safe-area-inset-bottom)) max(3.2rem, env(safe-area-inset-left));
+        background: var(--flyout-bg);
+        border: none;
+        backdrop-filter: none;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .2s ease, visibility 0s linear .2s;
+
+        &.mil-active {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .3s ease, visibility 0s;
+        }
+
+        & nav {
+            width: 100%;
+            margin-bottom: 3.2rem;
+        }
+
+        & nav ul.mil-main-menu {
+            align-items: stretch;
+        }
+
+        // big left-aligned links that cascade in when the sheet opens
+        & nav ul.mil-main-menu > li {
+            align-items: flex-start;
+            margin: 0;
+            opacity: 0;
+            transform: translateY(-.8rem);
+            transition: opacity .2s ease, transform .2s ease;
+
+            & > a {
+                display: block;
+                width: 100%;
+                padding: .8rem 0;
+                font-size: 2.8rem;
+                font-weight: 600;
+                letter-spacing: -.02em;
+                color: var(--nav-fg);
+                opacity: 1;
+            }
+        }
+
+        &.mil-active nav ul.mil-main-menu > li {
+            opacity: 1;
+            transform: none;
+            transition: opacity .32s ease, transform .4s $ease-out;
+
+            @for $i from 1 through 8 {
+                &:nth-child(#{$i}) {
+                    transition-delay: #{40 + $i * 35}ms;
+                }
+            }
+        }
+
+        // submenus open in place under their item
+        & nav ul.mil-main-menu > li > ul,
+        & nav ul.mil-main-menu > li > ul.mil-mega-menu {
+            align-items: flex-start;
+            background: none;
+            border: none;
+            backdrop-filter: none;
+
+            & li,
+            & li.mil-submenu-group {
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            & .mil-submenu-title {
+                font-size: 1.2rem;
+                font-weight: 400;
+                letter-spacing: 0;
+                text-transform: none;
+                color: var(--nav-fg-2);
+            }
+
+            & a {
+                font-size: 1.7rem;
+                font-weight: 600;
+                color: var(--nav-fg);
+            }
+
+            & .mil-submenu-text {
+                font-size: 1.3rem;
+                color: var(--nav-fg-2);
+            }
+        }
+
+        & .mil-btn {
+            align-self: flex-start;
+        }
+    }
+
+    // a bare icon, not a coloured circle
+    .mil-open-mobile-menu,
+    .mil-top-panel .mil-open-mobile-menu {
+        background-color: transparent;
+    }
+
+    .mil-menu-btn span,
+    .mil-menu-btn span:after,
+    .mil-menu-btn span:before {
+        background: var(--nav-fg);
+    }
+
+    // the contact button joins the sheet, under the links
+    .mil-top-panel .mil-container .mil-mobile-menu .mil-btn.mil-open-info {
+        display: inline-flex;
+        height: 4.8rem;
+        padding: 0 2.4rem;
+        font-size: 1.6rem;
+    }
+}
+
+/* ---------- hero & intro ---------- */
+
+.mil-hero-content h1,
+.mil-hero-content .mil-hero-title {
+    font-weight: 600;
+    letter-spacing: -.04em;
+    line-height: 1.02;
+}
+
+.mil-hero-5 .mil-divider {
+    display: none;
+}
+
+.mil-hero-5 .mil-hero-content h1,
+.mil-hero-5 .mil-hero-content .mil-hero-title {
+    font-size: clamp(4.8rem, 8vw, 11rem);
+}
+
+// Slider arrows: small frosted circles
+.mil-slider-nav .mil-slider-btn {
+    width: 4.8rem;
+    height: 4.8rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .16);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: none;
+    color: $m-5;
+    transition: transform .16s $ease-out, background-color .2s ease;
+
+    &:before,
+    &:after {
+        display: none;
+    }
+
+    & i,
+    &.mil-prev i,
+    &:hover i {
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        color: $m-5;
+        transform: none;
+    }
+
+    &.swiper-button-disabled {
+        opacity: .4;
+    }
+
+    &:active {
+        transform: scale(.94);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            background: rgba(255, 255, 255, .28);
+        }
+    }
+}
+
+.mil-breadcrumbs {
+    font-size: 1.4rem;
+    letter-spacing: -.01em;
+}
+
+/* ---------- details ---------- */
+
+// The theme's decorative cursor and spinning asterisk are not part of this look
+.mil-cursor-follower,
+.mil-asterisk:after {
+    display: none;
+}
+
+.mil-price-table thead th {
+    background-color: var(--surface-2);
+    color: var(--text-2);
+    font-weight: 600;
+}
+
+.mil-price-table tbody {
+    & tr {
+        border-color: var(--hairline);
+    }
+
+    & th,
+    & td:last-child {
+        color: var(--ink);
+    }
+
+    & td {
+        color: var(--text-2);
+    }
+}
+
+.mil-price-rules {
+    background-color: var(--surface-2);
+}
+
+.mil-price-meta {
+    color: var(--accent-text);
+}
+
+.mil-price-panel-dark,
+.mil-plan-focus {
+    background-color: $m-1;
+}
+
+.mil-testimonial-quote {
+    color: $a-1;
+}
+
+/* ---------- colour on dark surfaces ---------- */
+
+// The accent blue brightens on dark backgrounds so it stays legible (as on apple.com)
+$a-dark: rgba(41, 151, 255, 1);
+
+.mil-image-content .mil-c-a-1,
+.mil-overlay ~ .container .mil-c-a-1,
+.mil-plan-focus .mil-plan-tagline,
+.mil-price-panel-dark a,
+.mil-price-contacts a {
+    color: $a-dark;
+}
+
+.mil-plan-focus .mil-plan-benefits li:before {
+    background-color: $a-dark;
+}
+
+/* ---------- mobile baseline (emil-skills: mobile-native) ---------- */
+
+// 16px inputs: smaller text makes iPhones zoom the page on focus
+input,
+textarea,
+select {
+    font-size: max(1.6rem, 16px);
+    border-radius: $radius-sm;
+}
+
+a,
+button,
+[role="button"],
+.mil-btn,
+.mil-menu-btn {
+    touch-action: manipulation;
+}
+
+.mil-btn,
+.mil-filter button,
+.mil-menu-btn {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* ---------- scroll reveal (components/AppleMotion) ---------- */
+
+.apple-reveal {
+    opacity: 0;
+    transform: translate3d(0, 4rem, 0);
+    transition: opacity .8s ease var(--reveal-delay, 0ms), transform 1s $ease-out var(--reveal-delay, 0ms);
+
+    &.is-visible {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ---------- card grids: apple.com spacing ---------- */
+
+// Tiles sit close together so a row reads as one set; generous padding inside each
+.row:has(> [class*="col-"] > .mil-card),
+.row:has(> [class*="col-"] > .mil-large-card),
+.row:has(> [class*="col-"] > .mil-item-card) {
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2rem;
+}
+
+.mil-card .mil-icon {
+    width: 5.6rem;
+}
+
+.mil-card h5,
+.mil-card h4 {
+    font-size: 2.4rem;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+}
+
+/* ---------- forms ---------- */
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+textarea,
+select,
+.mil-input-frame input,
+.mil-input-frame textarea {
+    border: 1px solid var(--input-border);
+    background-color: var(--card);
+    color: var(--ink);
+    transition: border-color .2s ease, box-shadow .2s ease;
+
+    &:focus {
+        outline: none;
+        border-color: $a-1;
+        box-shadow: 0 0 0 .4rem rgba($a-1, .25);
+    }
+}
+
+// Theme fields: hairline border, icon sitting quietly inside the field
+.mil-input-frame {
+    & input,
+    & textarea {
+        height: 5.6rem;
+        padding: 0 5.6rem 0 1.8rem;
+        border-radius: $radius-sm;
+
+        &::placeholder {
+            font-size: 1.6rem;
+            color: var(--text-2);
+            opacity: .7;
+        }
+    }
+
+    & textarea {
+        height: 16rem;
+        padding-top: 1.6rem;
+    }
+
+    & i {
+        width: 5.6rem;
+        height: 5.6rem;
+        background-color: transparent;
+        color: var(--text-2);
+        pointer-events: none;
+    }
+}
+
+/* ---------- dividers & detail lists ---------- */
+
+// Hairlines instead of dashed and dotted rules
+.mil-divider {
+    border-bottom: 1px solid var(--hairline);
+}
+
+.mil-overlay ~ .container .mil-divider,
+.mil-hero-content .mil-divider {
+    display: none;
+}
+
+// "Client ........ Private client" becomes a label, a value and a hairline
+.mil-half-list li {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--hairline);
+
+    & .mil-dots {
+        border-bottom: none;
+    }
+}
+
+.mil-process .mil-process-line,
+.mil-timeline,
+.mil-item-card .mil-info {
+    border-style: solid;
+    border-width: 0;
+    border-color: var(--hairline);
+}
+
+.mil-process .mil-process-line {
+    border-top-width: 1px;
+
+    @media (max-width: 992px) {
+        border-top-width: 0;
+        border-left-width: 1px;
+    }
+}
+
+.mil-timeline {
+    border-left-width: 1px;
+}
+
+/* ---------- footer (apple.com: small and quiet) ---------- */
+
+// the light footer; the photo footer (.mil-footer-1) keeps its own look
+.mil-footer-2 {
+    background-color: var(--surface-2);
+
+    & .mil-footer-content,
+    & .mil-footer-content > .container,
+    & .mil-footer-adress,
+    & .mil-footer-bottom {
+        background-color: transparent;
+    }
+
+    & .mil-footer-adress,
+    & .mil-footer-bottom {
+        border-top: 1px solid var(--hairline);
+    }
+
+    // the light footer shows the dark logo
+    & .mil-footer-logo .mil-logo-on-dark {
+        display: none;
+    }
+}
+
+.mil-footer-2 .mil-footer-content,
+.mil-footer-2 .mil-footer-adress,
+.mil-footer-2 .mil-footer-bottom {
+    font-size: 1.3rem;
+    color: var(--text-2);
+
+    & p,
+    & .mil-t-14,
+    & .mil-t-16 {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+
+    & h6,
+    & .mil-h6,
+    & .mil-footer-logo > span:not([class*="mil-logo-on"]) {
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: -.01em;
+        color: var(--ink);
+    }
+
+    & .mil-footer-logo > span:not([class*="mil-logo-on"]) {
+        font-size: 2rem;
+    }
+
+    & a:not(.mil-btn),
+    & .mil-social a,
+    & .mil-footer-links a,
+    & .mil-footer-menu-1 a,
+    & .mil-footer-menu-2 a {
+        font-size: 1.3rem;
+        color: var(--text-2);
+        transition: color .2s ease;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                color: var(--ink);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    & .mil-social a {
+        color: var(--ink);
+    }
+}
+
+/* ---------- accessibility ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+    .mil-top-panel,
+    .mil-top-panel .mil-main-menu > li > ul {
+        background: var(--flyout-bg) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+}

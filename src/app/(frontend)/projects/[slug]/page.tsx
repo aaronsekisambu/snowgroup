@@ -2,12 +2,10 @@ import type { Metadata } from 'next'
 import { breadcrumbList, JsonLd } from '@/components/StructuredData/JsonLd'
 import { notFound } from 'next/navigation'
 import { Fragment } from 'react'
-import type { Project } from '@/types/content'
-import { RelatedPosts } from '@/components/RelatedProjects/Component'
-import { RenderBlocks } from '@/blocks/RenderBlocks'
+import { Overview } from '@/components/Overview'
 import { generateMeta } from '@/utilities/generateMeta'
-import PageClient from './page.client'
 import { getAllProjectSlugs, getProjectBySlug } from '@/lib/content'
+import { projectOverview } from '@/lib/overview'
 
 type Args = {
   params: Promise<{
@@ -18,20 +16,13 @@ type Args = {
 export default async function ProjectPage({ params: paramsPromise }: Args) {
   const { slug = '' } = await paramsPromise
   const project = getProjectBySlug(decodeURIComponent(slug))
-  if (!project) notFound()
+  const data = projectOverview(decodeURIComponent(slug))
+  if (!project || !data) notFound()
 
   return (
     <Fragment>
       <JsonLd data={breadcrumbList([{ name: 'Projects', path: '/projects' }, { name: project.title, path: `/projects/${project.slug}` }])} />
-      <PageClient />
-      <RenderBlocks blocks={project.layout || []} />
-      {project.relatedProjects && project.relatedProjects.length > 0 && (
-        <RelatedPosts
-          limit={3}
-          docs={project.relatedProjects.filter((item: Project) => typeof item === 'object')}
-          postId={project.slug}
-        />
-      )}
+      <Overview data={data} />
     </Fragment>
   )
 }

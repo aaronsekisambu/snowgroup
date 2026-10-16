@@ -4,6 +4,7 @@ import {
   getAllProductSlugs,
   getAllProjectSlugs,
   getAllServiceSlugs,
+  getProductSpecs,
   HOME_PAGE_SLUG,
   TEMPLATE_PAGE_SLUGS,
 } from '@/lib/content'
@@ -25,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...pages,
     ...getAllServiceSlugs().map(({ slug }) => `/services/${slug}`),
     ...getAllProductSlugs().map(({ slug }) => `/products/${slug}`),
+    ...getProductSpecs().map(({ slug }) => `/products/${slug}`),
     ...getAllProjectSlugs().map(({ slug }) => `/projects/${slug}`),
   ]
 

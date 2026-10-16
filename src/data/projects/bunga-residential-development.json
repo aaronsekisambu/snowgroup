@@ -1,6 +1,8 @@
 {
   "title": "Bunga Residential Development",
   "slug": "bunga-residential-development",
+  "model": "apartment",
+  "model_storeys": 4,
   "category": "Residential Construction",
   "filters": [
     "Residential"

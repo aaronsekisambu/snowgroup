@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import React from 'react'
 
 import { Footer } from '@/globals/Footer/Component'
@@ -10,20 +10,18 @@ import { mergeOpenGraph, SITE_DESCRIPTION, SITE_NAME, SITE_OG_IMAGE } from '@/ut
 import { getServerSideURL } from '@/utilities/getURL'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { StructuredData } from '@/components/StructuredData'
+import { AppleMotion } from '@/components/AppleMotion'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 // Google Fonts
-import { Montserrat, Reenie_Beanie } from 'next/font/google'
+import { Inter, Reenie_Beanie } from 'next/font/google'
 
-// Brand typeface (Snow Holdings brand guidelines)
-const primary_font = Montserrat({
-  weight: ['200', '300', '400', '500', '600', '700', '800'],
-  style: ['normal', 'italic'],
+// Apple devices use their system font (SF Pro); Inter is the closest match everywhere else
+const primary_font = Inter({
   subsets: ['latin'],
   variable: '--font-primary',
   display: 'swap',
-  adjustFontFallback: false,
 })
 
 const secondary_font = Reenie_Beanie({
@@ -61,6 +59,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <ErrorBoundary>
           <Providers>
             <Preloader />
+            <AppleMotion />
             {/* wrapper */}
             <div id="smooth-wrapper" className="mil-page-wrapper">
               <div className="mil-cursor-follower"></div>
@@ -107,4 +106,14 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [SITE_OG_IMAGE],
   },
+}
+
+// Edge-to-edge on notched phones; the keyboard resizes the page instead of covering it.
+// The browser bar matches the dark navigation.
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  interactiveWidget: 'resizes-content',
+  themeColor: '#161617',
 }

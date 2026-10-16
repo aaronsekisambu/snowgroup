@@ -1,6 +1,8 @@
 {
   "title": "Kampala Building Project",
   "slug": "kampala-building-project",
+  "model": "apartment",
+  "model_storeys": 5,
   "category": "Building Construction",
   "filters": [],
   "client": "Private client",

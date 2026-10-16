@@ -1,6 +1,7 @@
 {
   "title": "Concrete Block Supply Project",
   "slug": "concrete-block-supply-project",
+  "model": "pallet",
   "category": "Materials Supply",
   "filters": [
     "Materials Supply"

@@ -2,12 +2,10 @@ import type { Metadata } from 'next'
 import { breadcrumbList, JsonLd, serviceSchema } from '@/components/StructuredData/JsonLd'
 import { notFound } from 'next/navigation'
 import React, { Fragment } from 'react'
-import type { Service } from '@/types/content'
-import { RelatedPosts } from '@/components/RelatedServices/Component'
-import { RenderBlocks } from '@/blocks/RenderBlocks'
+import { Overview } from '@/components/Overview'
 import { generateMeta } from '@/utilities/generateMeta'
-import PageClient from './page.client'
 import { getAllServiceSlugs, getServiceBySlug } from '@/lib/content'
+import { serviceOverview } from '@/lib/overview'
 
 type Args = {
   params: Promise<{
@@ -18,7 +16,8 @@ type Args = {
 export default async function ServicePage({ params: paramsPromise }: Args) {
   const { slug = '' } = await paramsPromise
   const service = getServiceBySlug(decodeURIComponent(slug))
-  if (!service) notFound()
+  const data = serviceOverview(decodeURIComponent(slug))
+  if (!service || !data) notFound()
 
   return (
     <Fragment>
@@ -31,15 +30,7 @@ export default async function ServicePage({ params: paramsPromise }: Args) {
           image: typeof service.meta?.image === 'object' ? service.meta?.image?.url : null,
         })}
       />
-      <PageClient />
-      <RenderBlocks blocks={service.layout || []} />
-      {service.relatedServices && service.relatedServices.length > 0 && (
-        <RelatedPosts
-          limit={3}
-          docs={service.relatedServices.filter((item: Service) => typeof item === 'object')}
-          postId={service.slug}
-        />
-      )}
+      <Overview data={data} />
     </Fragment>
   )
 }

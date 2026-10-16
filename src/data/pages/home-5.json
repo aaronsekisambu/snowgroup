@@ -66,6 +66,36 @@
       "button2_url": "/contact"
     },
     {
+      "blockType": "featured_products",
+      "badge": "Products",
+      "title": "Made by Snow. <br class=\"mil-sm-hidden\"><span class=\"mil-opacity-text\">Ready for your site.</span>",
+      "tiles": [
+        {
+          "product": "h6-hollow-block"
+        },
+        {
+          "product": "interlocking-paver"
+        }
+      ]
+    },
+    {
+      "blockType": "featured_products",
+      "badge": "House Construction",
+      "title": "Homes and buildings. <br class=\"mil-sm-hidden\"><span class=\"mil-opacity-text\">From the ground up.</span>",
+      "tiles": [
+        {
+          "project": "kampala-building-project",
+          "wide": true
+        },
+        {
+          "project": "muyenga-residential-project"
+        },
+        {
+          "project": "bunga-residential-development"
+        }
+      ]
+    },
+    {
       "blockType": "about_us_four",
       "icon": {
         "url": "/media/icons-6.png",

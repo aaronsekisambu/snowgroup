@@ -51,6 +51,8 @@ export type SubMenuItem = {
   sub_items?: SubMenuItem[] | null
   // When set, the item renders as a clickable category with this text underneath
   description?: string | null
+  // A heading with large links (apple.com's first flyout column)
+  large?: boolean | null
 }
 
 export type Block = {
@@ -107,6 +109,8 @@ export type Project = {
   filters?: string[] | null
   client?: string | null
   location?: string | null
+  model?: ModelType
+  model_storeys?: number
   layout?: Block[] | null
   categories?: Category[] | null
   relatedProjects?: Project[] | null
@@ -165,6 +169,8 @@ type TitledText = { title?: string | null; description?: string | null }
 export type ServiceCategoryItem = {
   title: string
   slug: string
+  model?: ModelType // the 3D model its overview page opens with
+  projects?: string[] // projects whose photos and cards illustrate the service
   short?: string | null
   // Page content; anything left out falls back to the service template
   image?: Media | null
@@ -185,6 +191,8 @@ export type ServiceCategory = {
 export type ProductCategory = {
   title: string
   slug: string
+  model?: ModelType
+  projects?: string[]
   short?: string | null
   image?: Media | null
   // ids of the price-list tables shown on this category's page
@@ -414,3 +422,80 @@ export type SelectField = FormField
 export type StateField = FormField
 export type CountryField = FormField
 export type FormFieldBlock = FormField
+
+// The 3D models a product, service or project page can open with (components/ProductModel)
+export type ModelType =
+  | 'hollow-block'
+  | 'interlocking-paver'
+  | 'villa'
+  | 'bungalow'
+  | 'apartment'
+  | 'office'
+  | 'construction'
+  | 'frame'
+  | 'blueprint'
+  | 'mep'
+  | 'farm'
+  | 'road'
+  | 'pallet'
+export type ProductModelType = ModelType
+
+// A major product with its own overview page (src/data/products.json)
+
+export type ProductSpec = {
+  slug: string
+  name: string
+  category: string
+  eyebrow?: string
+  model: ProductModelType
+  images?: string[] // product photos for the gallery
+  projects?: string[] // projects where the product was used
+  price: { table: string; row: string; unit: string }
+  tagline: string
+  description: string
+  highlights: { title: string; text: string }[]
+  story: { title: string; text: string }[]
+  views: { label: string; view: string }[]
+  specs: { label: string; value: string; note?: string }[]
+  compare: { title: string; match?: string }
+}
+
+// The same product with its size, code and price filled in from the price list
+export type ProductOverview = ProductSpec & {
+  size: string
+  code?: string
+  priceText: string
+  compareRows: { type: string; size: string; price: string; current: boolean; url?: string }[]
+}
+
+// A card in apple.com style: photo, eyebrow, title, a line of text, and a link when it opens a page
+export type SnowCardData = {
+  title: string
+  text?: string | null
+  eyebrow?: string | null
+  url?: string | null
+  image?: Media | null
+}
+
+// Everything an overview page needs, whatever it describes: a product, a service or a project
+export type OverviewData = {
+  name: string
+  eyebrow?: string
+  tagline: string
+  model: ModelType
+  storeys?: number
+  priceLine?: string
+  primary: { label: string; url: string }
+  secondary?: { label: string; url: string }
+  highlights: { title: string; text: string }[]
+  story: { title: string; text: string }[]
+  gallery?: { title: string; images: { image: Media; caption?: string }[] }
+  details?: { title: string; items: { label: string; value: string; note?: string }[] }
+  included?: { title: string; items: string[] }
+  cards?: { title: string; items: SnowCardData[] }
+  compare?: { title: string; unit: string; rows: ProductOverview['compareRows'] }
+  priceList?: PriceList
+  related?: { title: string; items: SnowCardData[] }
+  work?: { title: string; items: SnowCardData[] } // projects that show it, or the services a project used
+  cta: { title: string; text: string; secondary?: { label: string; url: string } }
+}
