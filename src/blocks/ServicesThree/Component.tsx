@@ -32,12 +32,18 @@ export const ServicesThreeBlock: React.FC<ServicesThreeBlockProps> = ({
     }
   }, [])
 
-  // one card per press, landing on the snap point
+  // one card per press: go to the start of the next (or previous) card, which is a snap point
   const page = (direction: number) => {
     const row = rowRef.current
-    const card = row?.querySelector<HTMLElement>('.snow-service-card')
-    if (!row || !card) return
-    row.scrollBy({ left: direction * (card.offsetWidth + 20), behavior: 'smooth' })
+    if (!row) return
+    const items = Array.from(row.querySelectorAll<HTMLElement>('.snow-service-card'))
+    const start = row.scrollLeft
+    const offset = items[0] ? items[0].offsetLeft : 0
+    const target =
+      direction > 0
+        ? items.find((item) => item.offsetLeft - offset > start + 4)
+        : [...items].reverse().find((item) => item.offsetLeft - offset < start - 4)
+    row.scrollTo({ left: target ? target.offsetLeft - offset : direction > 0 ? row.scrollWidth : 0, behavior: 'smooth' })
   }
 
   return (

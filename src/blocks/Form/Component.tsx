@@ -1,4 +1,5 @@
 import React from 'react'
+import { ContactLabel } from '@/components/ContactLabel'
 import RichText from '@/components/RichText'
 import { FormBuilder } from '@/components/FormBuilder'
 import { sanitizeHTML } from '@/utilities/sanitizeHtml'
@@ -30,7 +31,7 @@ export const FormBlock: React.FC<FormBlockProps> = (props) => {
                 <ul className="mil-half-list mil-mb-5">
                     {contact_items.map((item, index) => (
                       <li key={index} className="mil-mb-3">
-                        <p className="mil-c-m-2">{item.label}:</p>
+                        <p className="mil-c-m-2"><ContactLabel label={item.label} colon /></p>
                         <div className="mil-dots"></div>
                         <p>{item.link ? <a href={item.link} target={item.link.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">{item.value}</a> : item.value}</p>
                       </li>

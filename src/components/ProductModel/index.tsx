@@ -45,8 +45,10 @@ export const ProductModel: React.FC<Props> = ({ model, variant, framing, control
     if (!mount) return
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    // phones and tablets get a lighter setup, so scrolling stays smooth
+    const touch = window.matchMedia('(pointer: coarse)').matches
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' })
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, touch ? 1.5 : 2))
     renderer.shadowMap.enabled = true
     renderer.shadowMap.type = THREE.PCFSoftShadowMap
     renderer.toneMapping = THREE.ACESFilmicToneMapping
@@ -68,7 +70,7 @@ export const ProductModel: React.FC<Props> = ({ model, variant, framing, control
     const key = new THREE.DirectionalLight(0xffffff, 3)
     key.position.set(3 * scale, 6 * scale, 5 * scale)
     key.castShadow = true
-    key.shadow.mapSize.set(2048, 2048)
+    key.shadow.mapSize.set(touch ? 1024 : 2048, touch ? 1024 : 2048)
     const reach = 7 * scale
     key.shadow.camera.left = key.shadow.camera.bottom = -reach
     key.shadow.camera.right = key.shadow.camera.top = reach
@@ -112,13 +114,17 @@ export const ProductModel: React.FC<Props> = ({ model, variant, framing, control
     floor.renderOrder = -1
     scene.add(floor)
 
-    let viewW = 1
-    let viewH = 1
+    let viewW = 0
+    let viewH = 0
+    let dirty = true
     const resize = () => {
       const { clientWidth: w, clientHeight: h } = mount
       if (!w || !h) return
+      // ignore the tiny height changes when a mobile browser bar slides in or out
+      if (Math.abs(w - viewW) < 1 && Math.abs(h - viewH) < 2) return
       viewW = w
       viewH = h
+      dirty = true
       renderer.setSize(w, h, false)
       camera.aspect = w / h
       camera.updateProjectionMatrix()
@@ -187,7 +193,10 @@ export const ProductModel: React.FC<Props> = ({ model, variant, framing, control
 
     // only draw while on screen
     let visible = false
-    const io = new IntersectionObserver(([entry]) => (visible = entry.isIntersecting))
+    const io = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting
+      dirty = true
+    })
     io.observe(mount)
 
     let frame = 0
@@ -198,6 +207,7 @@ export const ProductModel: React.FC<Props> = ({ model, variant, framing, control
     const callouts = MODEL_CALLOUTS[model]
     const anchors = callouts.map(() => ({ x: 0, y: 0 }))
 
+    let lastSignature = ''
     const tick = () => {
       frame = requestAnimationFrame(tick)
       if (!visible) return
@@ -234,6 +244,11 @@ export const ProductModel: React.FC<Props> = ({ model, variant, framing, control
         built.parts.forEach((part) => part.object.position.copy(part.home).addScaledVector(part.dir, e))
       }
 
+      // draw only when something moved: an idle model costs nothing while the page scrolls
+      const signature = `${current.x.toFixed(4)} ${current.y.toFixed(4)} ${current.explode.toFixed(4)}`
+      if (!dirty && signature === lastSignature) return
+      lastSignature = signature
+      dirty = false
       frameCamera(current.explode)
       renderer.render(scene, camera)
 

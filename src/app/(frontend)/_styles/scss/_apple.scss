@@ -1212,3 +1212,51 @@ select,
         -webkit-backdrop-filter: none !important;
     }
 }
+
+/* ---------- form messages ---------- */
+
+.form-honey {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+}
+
+.form-error {
+    margin-bottom: 1.6rem;
+    padding: 1.2rem 1.6rem;
+    border-radius: 1.2rem;
+    font-size: 1.5rem;
+    color: #b42318;
+    background-color: #fef3f2;
+}
+
+.form-loading {
+    margin-bottom: 1.6rem;
+    font-size: 1.5rem;
+    color: var(--text-2);
+}
+
+/* ---------- contact icons (WhatsApp, email, visit) ---------- */
+
+.snow-contact-label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: var(--ink);
+
+    & .fa-whatsapp {
+        color: #25d366;
+    }
+}
+
+.snow-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}

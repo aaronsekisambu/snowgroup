@@ -75,7 +75,7 @@ export function motionFor(model: ModelType): Motion {
       c.explode = lerp(0, 1, (p - 0.3) / 0.45)
     },
     // callouts for buildings sit on the right, so the model moves left to make room
-    framing: { zoom: 1.3, shift: 0.24 },
+    framing: { zoom: 1.3, shift: 0.1 },
     views: [
       { label: 'Assembled', controls: { explode: 0 } },
       { label: 'Exploded', controls: { explode: 1 } },

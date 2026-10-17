@@ -10,13 +10,13 @@ const TARGETS = [
   '.mil-section .mil-process-step',
   '.mil-section .mil-feature-card',
   '.mil-price-card',
-  '.snow-service-card',
   '.snow-tile',
   '.snow-highlight',
   '.snow-compare-card',
 ].join(', ')
 
-const SKIP = '.swiper, .swiper-container, .mil-hero-5, .mil-top-panel, footer'
+// heroes, sliders and anything inside a sideways row (revealing while swiping makes cards jump)
+const SKIP = '.swiper, .swiper-container, .mil-hero-5, .mil-top-panel, footer, .snow-scroll-row, .snow-service-row'
 
 // Apple-style scroll reveal: content rises a little and fades in once, with cards in a row arriving one after another
 export const AppleMotion: React.FC = () => {

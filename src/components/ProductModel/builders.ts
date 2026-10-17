@@ -58,39 +58,52 @@ export const MODEL_CALLOUTS: Record<ModelType, Callout[]> = {
     { title: 'First floor', detail: 'Upper rooms and balcony on a reinforced concrete slab.' },
     { title: 'Roof', detail: 'A hipped roof finished in tiles.' },
     { title: 'Columns', detail: 'A two-storey portico framing the entrance.' },
+    { title: 'Interior walls', detail: 'Partitions divide each floor into rooms, with doorways between them.' },
+    { title: 'Staircase', detail: 'A straight flight of stairs between the floors.' },
   ],
   bungalow: [
     { title: 'Foundation', detail: 'Concrete footing under every wall.' },
     { title: 'Walls', detail: 'Concrete block walling, plastered and finished.' },
     { title: 'Roof', detail: 'A pitched roof finished in tiles.' },
+    { title: 'Interior walls', detail: 'Partitions divide the house into rooms, with doorways between them.' },
   ],
   apartment: [
     { title: 'Foundation', detail: 'Footings sized for a multi-storey load.' },
     { title: 'Ground floor', detail: 'The entrance level, in block walling.' },
     { title: 'Upper floors', detail: 'Repeated floors on reinforced concrete slabs, with balconies.' },
     { title: 'Roof', detail: 'A flat concrete roof behind a parapet.' },
+    { title: 'Interior walls', detail: 'Each floor is divided into rooms around a corridor.' },
+    { title: 'Staircase', detail: 'Stairs rise floor by floor through the building.' },
   ],
   office: [
     { title: 'Foundation', detail: 'Footings along the full length of the building.' },
     { title: 'Ground floor', detail: 'Offices and the entrance behind tall windows.' },
     { title: 'First floor', detail: 'A second floor of offices on a concrete slab.' },
     { title: 'Roof', detail: 'A flat roof behind a parapet.' },
+    { title: 'Interior walls', detail: 'Partitions make offices along the back of each floor.' },
+    { title: 'Staircase', detail: 'Stairs between the two office floors.' },
   ],
   construction: [
     { title: 'Foundation', detail: 'Footings set out and cast first.' },
     { title: 'Frame', detail: 'Reinforced concrete columns and slabs, floor by floor.' },
     { title: 'Walls', detail: 'Block walling follows the frame as it rises.' },
+    { title: 'Edge beams', detail: 'Beams along the slab edges carry the walls above.' },
   ],
   frame: [
     { title: 'Foundation', detail: 'Footings carry every column load into the ground.' },
     { title: 'Columns', detail: 'Reinforced concrete columns on a regular grid.' },
     { title: 'Floor slabs', detail: 'Slabs and edge beams tie the columns together.' },
+    { title: 'Edge beams', detail: 'Beams along the slab edges carry the walls above.' },
   ],
   blueprint: [
-    { title: 'Foundation', detail: 'The footprint and foundation layout.' },
-    { title: 'Ground floor', detail: 'The ground floor plan, with every opening set out.' },
-    { title: 'First floor', detail: 'The upper floor plan.' },
-    { title: 'Roof', detail: 'The roof shape and pitch.' },
+    { title: 'Site plan', detail: 'The footprint, set out on its grid.' },
+    { title: 'Ground floor plan', detail: 'Walls, rooms and every opening, drawn to scale.' },
+    { title: 'First floor plan', detail: 'The upper floor, laid out over the one below.' },
+    { title: 'Roof plan', detail: 'The roof shape and its pitch.' },
+    { title: 'Dimensions', detail: 'Overall sizes, measured along each side.' },
+    { title: 'Grid lines', detail: 'The setting-out grid that columns and walls follow.' },
+    { title: 'Interior walls', detail: 'Room partitions, with a doorway in each.' },
+    { title: 'Staircase', detail: 'Stairs between the floors, with rise and run set out.' },
   ],
   mep: [
     { title: 'Building shell', detail: 'The structure the services run through.' },
@@ -377,11 +390,49 @@ function parapet(w: number, d: number, material: THREE.Material) {
   return group
 }
 
+/* ---------- interiors ---------- */
+
+// Room partitions: a wall along the building with a doorway, and two cross walls making back rooms
+function partitions(w: number, d: number, h: number, material: THREE.Material) {
+  const group = new THREE.Group()
+  const t = 0.12
+  const inner = w / 2 - 0.25
+  const zLine = -d * 0.1
+  group.add(box(inner - 0.6, h, t, material, -(inner + 0.6) / 2, h / 2, zLine))
+  group.add(box(inner - 0.6, h, t, material, (inner + 0.6) / 2, h / 2, zLine))
+  const back = d / 2 - 0.25 + zLine
+  for (const x of [-w / 4, w / 4]) group.add(box(t, h, back - 0.9, material, x, h / 2, zLine - (back - 0.9) / 2 - 0.9))
+  return group
+}
+
+// A straight flight of stairs climbing one storey, in the front corner
+function staircase(w: number, d: number, h: number, material: THREE.Material) {
+  const group = new THREE.Group()
+  const steps = 14
+  const run = Math.min(3.2, d * 0.4)
+  const width = 1.1
+  const x = w / 2 - 0.3 - width / 2
+  for (let i = 0; i < steps; i++) {
+    const rise = (h / steps) * (i + 1)
+    group.add(box(width, rise, run / steps, material, x, rise / 2, d / 2 - 0.4 - (run / steps) * (i + 0.5)))
+  }
+  return group
+}
+
 /* ---------- assembling parts ---------- */
 
 class Assembly {
   parts: Part[] = []
   labelAt: Record<string, number> = {}
+  anchors: Record<string, THREE.Vector3> = {}
+
+  // a callout that points at a spot inside a part (a staircase inside a floor, for example)
+  point(label: string, index: number, at: [number, number, number]) {
+    if (this.labelAt[label] !== undefined) return
+    this.labelAt[label] = index
+    this.anchors[label] = new THREE.Vector3(...at)
+  }
+
   constructor(private group: THREE.Group) {}
 
   add(object: THREE.Object3D, y: number, dir: [number, number, number], label?: string, anchor?: [number, number, number]) {
@@ -421,7 +472,7 @@ type BuildingOptions = {
   tall?: boolean
   columns?: number
   balconies?: boolean
-  labels: { ground: string; upper?: string; roof: string }
+  labels: { ground: string; upper?: string; roof: string; foundation?: string }
 }
 
 function buildBuilding(group: THREE.Group, o: BuildingOptions): Built {
@@ -432,14 +483,22 @@ function buildBuilding(group: THREE.Group, o: BuildingOptions): Built {
   const footH = 0.45
   const side = o.w / 2 + 1.2
 
-  a.add(box(o.w + 0.8, footH, o.d + 0.8, m.footing, 0, footH / 2, 0), 0, [0, 0, 0], 'Foundation', [side, 0.2, 0])
+  a.add(box(o.w + 0.8, footH, o.d + 0.8, m.footing, 0, footH / 2, 0), 0, [0, 0, 0], o.labels.foundation || 'Foundation', [side, 0.2, 0])
 
   let y = footH
   let level = 1
   for (let k = 0; k < o.storeys; k++) {
     const walls = storeyWalls(o.w, o.d, h, m, { front: o.front, side: o.side, door: k === 0, arch: o.arch, tall: o.tall })
+    // inside each floor: rooms, and stairs up to the next floor
+    walls.add(partitions(o.w, o.d, h, m.plaster))
+    const stairs = o.storeys > 1 && k < o.storeys - 1
+    if (stairs) walls.add(staircase(o.w, o.d, h, m.concrete))
     const label = k === 0 ? o.labels.ground : o.labels.upper
-    a.add(walls, y, [0, level++, 0], label, [side, h / 2, 0])
+    const index = a.add(walls, y, [0, level++, 0], label, [side, h / 2, 0])
+    if (k === 0) {
+      a.point('Interior walls', index, [-o.w / 4, h, -o.d * 0.3])
+      if (stairs) a.point('Staircase', index, [o.w / 2 - 0.85, h * 0.6, o.d / 2 - 1.6])
+    }
     y += h
     const top = k === o.storeys - 1
     if (!top || o.roof === 'flat') {
@@ -483,6 +542,7 @@ function buildBuilding(group: THREE.Group, o: BuildingOptions): Built {
   return {
     parts: a.parts,
     labelAt: a.labelAt,
+    labelAnchors: a.anchors,
     explodeDistance: 0.9,
     size: Math.max(o.w, o.d, y) + 2,
     floorY: -y / 2 - 0.01,
@@ -525,7 +585,8 @@ function buildFrame(group: THREE.Group, storeys: number, withWalls: boolean): Bu
     floor.add(box(w, slab, d, m.concrete, 0, slab / 2, 0))
     // beams along the slab edges
     floor.add(box(w, 0.45, 0.3, m.concrete, 0, -0.1, d / 2 - 0.15), box(w, 0.45, 0.3, m.concrete, 0, -0.1, -d / 2 + 0.15))
-    a.add(floor, y, [0, level++, 0], 'Floor slabs', [side, 0.2, 0])
+    const floorIndex = a.add(floor, y, [0, level++, 0], 'Floor slabs', [side, 0.2, 0])
+    a.point('Edge beams', floorIndex, [-w / 4, -0.2, d / 2])
     y += slab
   }
 
@@ -533,11 +594,68 @@ function buildFrame(group: THREE.Group, storeys: number, withWalls: boolean): Bu
   return {
     parts: a.parts,
     labelAt: a.labelAt,
+    labelAnchors: a.anchors,
     explodeDistance: 0.9,
     size: Math.max(w, y) + 2,
     floorY: -y / 2 - 0.01,
     dispose,
   }
+}
+
+// Drawing marks for the architectural model: dimension lines along two sides and a dashed setting-out grid
+function drawingMarks(built: Built, w: number, d: number) {
+  const site = built.parts[0].object
+  const y = 0.25 // on top of the footing (the site part is the footing box, centred on itself)
+  const ink = new THREE.LineBasicMaterial({ color: 0x0a66c2, transparent: true, opacity: 0.75 })
+  const dash = new THREE.LineDashedMaterial({ color: 0x0a66c2, transparent: true, opacity: 0.45, dashSize: 0.35, gapSize: 0.22 })
+  const V = (x: number, z: number) => new THREE.Vector3(x, y, z)
+  const segments = (points: THREE.Vector3[], material: THREE.LineBasicMaterial | THREE.LineDashedMaterial) => {
+    const line = new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(points), material)
+    line.computeLineDistances()
+    site.add(line)
+  }
+  // dimension lines with extension lines and end ticks
+  const fz = d / 2 + 1.6
+  const sx = w / 2 + 1.6
+  segments(
+    [
+      V(-w / 2, fz), V(w / 2, fz), V(-w / 2, d / 2 + 0.6), V(-w / 2, fz + 0.4), V(w / 2, d / 2 + 0.6), V(w / 2, fz + 0.4),
+      V(-w / 2 - 0.25, fz + 0.25), V(-w / 2 + 0.25, fz - 0.25), V(w / 2 - 0.25, fz + 0.25), V(w / 2 + 0.25, fz - 0.25),
+      V(sx, -d / 2), V(sx, d / 2), V(w / 2 + 0.6, -d / 2), V(sx + 0.4, -d / 2), V(w / 2 + 0.6, d / 2), V(sx + 0.4, d / 2),
+      V(sx - 0.25, -d / 2 - 0.25), V(sx + 0.25, -d / 2 + 0.25), V(sx - 0.25, d / 2 - 0.25), V(sx + 0.25, d / 2 + 0.25),
+    ],
+    ink,
+  )
+  // grid lines through the walls, with a bubble at the end of each
+  const grid: THREE.Vector3[] = []
+  const xs = [-w / 2, -w / 4, 0, w / 4, w / 2]
+  const zs = [-d / 2, 0, d / 2]
+  xs.forEach((x) => grid.push(V(x, -d / 2 - 2.4), V(x, d / 2 + 0.4)))
+  zs.forEach((z) => grid.push(V(-w / 2 - 2.4, z), V(w / 2 + 0.4, z)))
+  segments(grid, dash)
+  const bubble = (x: number, z: number) => {
+    const points = Array.from({ length: 25 }, (_, i) => {
+      const a = (i / 24) * Math.PI * 2
+      return V(x + Math.cos(a) * 0.4, z + Math.sin(a) * 0.4)
+    })
+    site.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), ink))
+  }
+  xs.forEach((x) => bubble(x, -d / 2 - 2.8))
+  zs.forEach((z) => bubble(-w / 2 - 2.8, z))
+
+  const anchors = built.labelAnchors || (built.labelAnchors = {})
+  built.labelAt['Dimensions'] = 0
+  anchors['Dimensions'] = V(0, fz)
+  built.labelAt['Grid lines'] = 0
+  anchors['Grid lines'] = V(-w / 4, -d / 2 - 2.4)
+
+  const dispose = built.dispose
+  built.dispose = () => {
+    dispose()
+    ink.dispose()
+    dash.dispose()
+  }
+  return built
 }
 
 // Architectural design: the house as drawing lines, with the faces barely there
@@ -911,11 +1029,15 @@ export function buildModel(type: ModelType, group: THREE.Group, variant: Variant
         labels: { ground: 'Ground floor', upper: 'First floor', roof: 'Roof' },
       })
     case 'blueprint':
-      return toBlueprint(
-        buildBuilding(group, {
-          w: 12, d: 9, storeys: 2, roof: 'hip', front: 5, side: 3, arch: true,
-          labels: { ground: 'Ground floor', upper: 'First floor', roof: 'Roof' },
-        }),
+      return drawingMarks(
+        toBlueprint(
+          buildBuilding(group, {
+            w: 12, d: 9, storeys: 2, roof: 'hip', front: 5, side: 3, arch: true,
+            labels: { foundation: 'Site plan', ground: 'Ground floor plan', upper: 'First floor plan', roof: 'Roof plan' },
+          }),
+        ),
+        12,
+        9,
       )
     case 'construction':
       return buildFrame(group, 3, true)

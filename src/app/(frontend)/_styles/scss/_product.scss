@@ -111,6 +111,7 @@ $localnav-h: 5.2rem;
     align-items: center;
     gap: 4rem;
     max-width: 128rem;
+    min-height: calc(100vh - #{$nav-h + $localnav-h});
     min-height: calc(100svh - #{$nav-h + $localnav-h});
     margin: 0 auto;
     padding: 8rem 4rem;
@@ -296,6 +297,7 @@ $localnav-h: 5.2rem;
     align-items: center;
     gap: 4rem;
     max-width: 128rem;
+    height: calc(100vh - #{$nav-h + $localnav-h});
     height: calc(100svh - #{$nav-h + $localnav-h});
     margin: 0 auto;
     padding: 0 4rem;
@@ -800,8 +802,10 @@ $localnav-h: 5.2rem;
         background: linear-gradient(180deg, rgba($b-1, .72) 0%, rgba($b-1, .32) 38%, rgba($b-1, 0) 60%);
     }
 
-    &:active {
-        transform: scale(.98);
+    @media (hover: hover) and (pointer: fine) {
+        &:active {
+            transform: scale(.98);
+        }
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -891,8 +895,10 @@ $localnav-h: 5.2rem;
     color: inherit;
     transition: transform .3s $ease-out, box-shadow .3s $ease-out;
 
-    &:active {
-        transform: scale(.98);
+    @media (hover: hover) and (pointer: fine) {
+        &:active {
+            transform: scale(.98);
+        }
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -1312,3 +1318,34 @@ $localnav-h: 5.2rem;
     height: 100%;
     min-height: 0;
 }
+
+/* ---------- touch scrolling (iOS Safari and others) ---------- */
+
+.snow-scroll-row,
+.snow-service-row {
+    -webkit-overflow-scrolling: touch;
+    // sideways swipes move the row, up and down still scroll the page
+    touch-action: pan-x pan-y;
+    overscroll-behavior-x: contain;
+    // avoid the "rubber band" fighting the snap on iOS
+    scroll-snap-stop: normal;
+
+    & > * {
+        // a card never flashes grey when a swipe starts on it
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
+    // images inside rows are never dragged like files on desktop browsers
+    & img {
+        -webkit-user-drag: none;
+        user-select: none;
+    }
+}
+
+// the 3D stages never trap a vertical swipe
+.snow-block-canvas:not(.is-interactive) {
+    touch-action: pan-y;
+    pointer-events: none;
+}
+

@@ -1,5 +1,6 @@
 'use client'
 
+import { ContactLabel } from '@/components/ContactLabel'
 import Link from 'next/link'
 import type { Footer as FooterType } from '@/types/content'
 import { usePageContext } from '@/providers/PageProvider'
@@ -197,7 +198,9 @@ export const FooterClient: React.FC<FooterProps> = ({ data }) => {
                   <p className="mil-t-14 mil-c-m-2 mil-mb-2">{location.address}</p>
                   {location.phone && (
                     <p className="mil-h6 mil-mb-2">
-                      <a href={location.phone_link || `tel:${location.phone}`} target={location.phone_link ? "_blank" : undefined} rel="noopener noreferrer">{location.phone}</a>
+                      <a href={location.phone_link || `tel:${location.phone}`} target={location.phone_link ? "_blank" : undefined} rel="noopener noreferrer">
+                        {location.phone_link?.includes('wa.me') && <ContactLabel label="WhatsApp" />} {location.phone}
+                      </a>
                     </p>
                   )}
                   {location.email && (

@@ -1,5 +1,7 @@
 "use client"
 
+import { ContactLabel } from '@/components/ContactLabel'
+
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
@@ -108,7 +110,7 @@ export const HeaderClient: React.FC<HeaderClientProps> = ({ data }) => {
           {contact?.popupItems && contact.popupItems.length > 0 && (
             contact.popupItems.map((item, i) => (
               <li className="mil-mb-3" key={`popup-item-${i}`}>
-                <p className="mil-c-m-2">{item.label}</p>
+                <p className="mil-c-m-2"><ContactLabel label={item.label} /></p>
                 <div className="mil-dots"></div>
                 <p>{item.link ? <a href={item.link} target={item.link.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">{item.value}</a> : item.value}</p>
               </li>

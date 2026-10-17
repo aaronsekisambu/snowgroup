@@ -48,10 +48,11 @@ export const FormBuilder: React.FC<FormBuilderProps> = (props) => {
           setIsLoading(true)
         }, 1000)
 
+        // the site's own endpoint delivers to info@snowgroup.ltd; a Formspree address still works if one is set
         const endpoint =
           process.env.NEXT_PUBLIC_FORMSPREE_URL ||
           (AppData as { settings?: { formspreeURL?: string } }).settings?.formspreeURL ||
-          ''
+          '/api/contact'
 
         try {
           if (!endpoint) {
@@ -75,9 +76,10 @@ export const FormBuilder: React.FC<FormBuilderProps> = (props) => {
           clearTimeout(loadingTimerID)
 
           if (req.status >= 400) {
+            const reply = (await req.json().catch(() => ({}))) as { error?: string }
             setIsLoading(false)
             setError({
-              message: 'Unable to submit the form.',
+              message: reply.error || 'We could not send your message. Please try again, or email info@snowgroup.ltd.',
               status: String(req.status),
             })
             return
@@ -93,7 +95,7 @@ export const FormBuilder: React.FC<FormBuilderProps> = (props) => {
           console.warn(err)
           setIsLoading(false)
           setError({
-            message: 'Something went wrong.',
+            message: 'We could not reach the server. Check your connection and try again, or email info@snowgroup.ltd.',
           })
         }
       }
@@ -108,10 +110,16 @@ export const FormBuilder: React.FC<FormBuilderProps> = (props) => {
       {!isLoading && hasSubmitted && confirmationType === 'message' && (
         <RichText data={confirmationMessage} className={'form-message'} />
       )}
-      {isLoading && !hasSubmitted && <p className="form-loading">Loading, please wait...</p>}
-      {error && <div>{`${error.status || '500'}: ${error.message || ''}`}</div>}
+      {isLoading && !hasSubmitted && <p className="form-loading">Sending…</p>}
+      {error && (
+        <p className="form-error" role="alert">
+          {error.message}
+        </p>
+      )}
       {!hasSubmitted && (
         <form id={formID} onSubmit={handleSubmit(onSubmit)}>
+          {/* left empty by people; bots fill it in */}
+          <input type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" className="form-honey" {...register('_honey')} />
           <div className="row mil-aic">
             {formFromProps &&
               formFromProps.fields &&
